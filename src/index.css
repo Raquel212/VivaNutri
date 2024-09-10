@@ -1,0 +1,69 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* --primary: #424242;
+  --secondary: #607D8B;
+  --terceary: #F8BBD0;
+  --green: #BDBDBD;
+  --white: #FFFFFF; */
+
+  /* --primary: #002F6C;
+  --secondary: #00B2A9;
+  --terceary: #FF6F00;
+  --green: #F2F2F2;
+  --white: #FFFFFF; */
+
+  /* --primary: #4A0072;
+  --secondary: #D1C4E9;
+  --terceary: #FFAB91;
+  --green: #E0E0E0;
+  --white: #FFFFFF; */
+
+  /* --primary: #00BFAE;
+  --secondary: #D81B60;
+  --terceary: #FBC02D;
+  --green: #F5F5F5;
+  --white: #FFFFFF; */
+
+  /* --primary: #6D4C41;
+  --secondary: #D84A3D;
+  --terceary: #FFF4E6;
+  --green: #8A9A5B;
+  --white: #F5F5F5; */
+
+  /* --primary: #96f79f ;
+  --secondary: #FFC107;
+  --terceary: #FF8A80 ;
+  --teste: #00BFAE;
+  --green: #8E8E93;
+  --white: #FFFFFF;
+  --black: #000; */
+
+
+  /* As que estavam antes */
+  --primary: #F9EBC7;
+  --secondary: #5F6F52;
+  --terceary: #C4661F;
+  --green: #A9B388;
+  --soft-white:#FEFAE0;
+  --beige: #F9EBC7;
+  --brown: #B99470;
+  --russet: #783D19;
+  --logo: #f1f1f1;
+  --black: #000;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--logo);
+}
+
+

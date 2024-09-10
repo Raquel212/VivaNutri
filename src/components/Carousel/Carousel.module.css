@@ -1,0 +1,107 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative; 
+  margin-bottom: 5rem;/* Necessário para o posicionamento absoluto dos botões */
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: .9375rem;
+  color: var(--black);
+  margin-top: 1.25rem;
+}
+
+.title span {
+  color: var(--terceary);
+  font-weight: bold;
+}
+
+.slideItem {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: .0625rem solid var(--primary);
+  border-radius: .625rem;
+  background-color: var(--primary);
+  box-shadow: 0 .1875rem .625rem;
+  margin: 1.875rem auto; /* Remover margens laterais fixas */
+  max-width: 62.5rem; /* Limitar a largura máxima do slide */
+}
+
+.testimonialImage {
+  width: 100%; /* Ajustar a largura da imagem para 100% do contêiner */
+  max-width: 21.875rem; /* Definir a largura máxima da imagem */
+  height: auto; /* Manter a proporção da imagem */
+  border-radius: 10%;
+  object-fit: cover;
+  
+}
+
+.testimonialContent {
+  text-align: left;
+}
+
+.testimonialText {
+  font-size: 1.125rem;
+  margin-bottom: .625rem;
+  font-weight: bold;
+  line-height: 1.875rem;
+}
+
+.testimonialName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--terceary);
+  margin-top: 3.125rem;
+}
+
+
+/* ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .slideItem {
+    flex-direction: column;
+    padding: .625rem;
+    margin: .625rem 1.25rem; /* Ajuste as margens laterais para dispositivos móveis */
+  }
+
+  .testimonialImage {
+    max-width: 100%; /* Ajuste a largura máxima da imagem para 100% do contêiner */
+    height: auto; /* Manter a proporção da imagem */
+  }
+
+  .testimonialText {
+    font-size: 1rem;
+  }
+
+  .testimonialName {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 1.875rem; /* Ajuste o tamanho dos botões para dispositivos menores */
+    height: 1.875rem;
+  }
+
+  .testimonialText {
+    font-size: 0.875rem;
+  }
+
+  .testimonialName {
+    font-size: 0.875rem;
+  }
+}

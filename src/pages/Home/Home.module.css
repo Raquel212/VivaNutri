@@ -1,0 +1,148 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .containerHome {
+    max-width: 75rem;
+    height: auto;
+    margin: 6.25rem;
+    height: 31.25rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 1.875rem;
+  }
+  
+  .containerHome .img_home {
+    width: auto;
+    height: 21.875rem;
+    border-radius: 1.875rem;
+    margin-left: 1.875rem;
+  }
+  
+  .home h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    margin-left: 1.25rem;
+    width: 80%;
+    text-align: left;
+    margin-left: 3.125rem;
+  }
+  
+  .home span {
+    color: var(--black);
+    font-weight: lighter;
+    font-size: 1.125rem;
+  }
+  
+  .btn {
+    width: 12.5rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-left: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .btn_red {
+    background-color: var(--terceary);
+    color: var(--logo);
+  }
+  
+  .btn_red:hover {
+    background-color: var(--logo);
+    color: var(--terceary);
+    transition: 0.5s ease;
+  }
+  
+  /* Funcionalidades:  */
+  .funcionalidade h2 {
+    text-align: center;
+    margin-top: 3.75rem;
+    font-size: 1.875rem;
+    font-weight: 600;
+  }
+  
+  .funcionalidade .txtSobre {
+    color: var(--secondary);
+  }
+  
+  .funcionalidade p {
+    text-align: center;
+    margin-top: 0.9375rem;
+  }
+  
+  .container {
+    margin: 3.75rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .box {
+    max-width: 25rem;
+    padding: 1rem;
+    box-shadow: 0 0.1875rem 0.625rem;
+    background-color: var(--primary);
+    border-radius: 0.625rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .icon {
+    font-size: 3.125rem;
+    margin: 1.5rem 0;
+    color: var(--terceary);
+  }
+  
+  .titloBox {
+    margin-bottom: 0.9375rem;
+    padding: 0.3125rem;
+    font-size: 1.25rem;
+  }
+  
+  .txtBox {
+    margin-bottom: 0.9375rem;
+    padding: 0.3125rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .containerHome {
+      margin: 3.125rem 4.375rem 3.125rem 4.375rem;
+      border: 0.0625rem solid black;
+      flex-direction: column;
+      height: auto;
+      padding: 1.25rem;
+      text-align: center;
+    }
+  
+    .containerHome .img_home {
+      width: 80%;
+      text-align: center;
+      height: auto;
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .apresentacao h1 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .btn {
+      margin: auto;
+    }
+  }
+  

@@ -1,0 +1,104 @@
+.containerPsicologo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.psicologoFrom {
+    background-color: var(--primary);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.1);
+    width: 31.25rem;
+    margin: 1.875rem 0;
+}
+
+.tituloPsicologo {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.psicologoLabel {
+    color: var(--terceary);
+    display: block;
+    margin-bottom: 0.9375rem;
+}
+
+.intPsicologo {
+    display: block;
+    width: 100%;
+    padding: 0.625rem;
+    margin-top: 0.625rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+}
+
+.btnPsicologo {
+    width: 100%;
+    margin-top: 0.625rem;
+    border: none;
+    background-color: var(--terceary);
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    border: 0.1875rem solid var(--terceary);
+    color: var(--logo);
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.125rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btnPsicologo:hover {
+    background-color: var(--logo);
+    border-color: var(--logo);
+    color: var(--terceary);
+}
+
+.voltarPsico {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--terceary);
+}
+
+.voltarPsico:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .psicologoFrom {
+        width: 80%;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .psicologoFrom {
+        width: 90%;
+        padding: 1.25rem;
+    }
+
+    .btnPsicologo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .psicologoFrom {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .btnPsicologo {
+        width: 100%;
+    }
+}

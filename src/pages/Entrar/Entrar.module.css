@@ -1,0 +1,158 @@
+/* Estilo Base */
+.container {
+  max-width: 75rem;
+  height: auto;
+  margin: 9.6875rem auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.1875rem 0.625rem;
+  background-color: var(--primary);
+  padding: 1rem;
+}
+
+.checkboxEntrar {
+  cursor: pointer;
+  margin-top: 0.625rem;
+}
+
+.formimagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.875rem;
+  width: 60%;
+}
+
+.formimagem img {
+  width: 100%;
+  border-radius: 1.875rem;
+}
+
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary);
+  padding: 2rem;
+}
+
+form .tituloEntrar {
+  text-align: center;
+  color: var(--terceary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.inputfield input {
+  width: 100%;
+  height: 3.125rem;
+  font-size: 1rem;
+  padding: 0.625rem;
+  margin-bottom: 0.9375rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+}
+
+.recallforget {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.recallforget label input {
+  accent-color: var(--black);
+  margin-top: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+
+.esqueceusenha {
+  margin-top: 0.625rem;
+}
+
+.recallforget .esqueceusenha {
+  color: var(--secondary);
+  text-decoration: none;
+  margin-top: 0.625rem;
+  font-weight: 600;
+}
+
+.recallforget .esqueceusenha:hover {
+  text-decoration: underline;
+}
+
+.btnsubmit {
+  width: 100%;
+  margin-top: 2rem;
+  margin-left: 0;
+  border: 0.125rem solid var(--terceary);
+  background-color: var(--terceary);
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  color: var(--logo);
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.125rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btnsubmit:hover {
+  background-color: var(--logo);
+  border-radius: 0.3125rem;
+  color: var(--terceary);
+  transition: 0.5s ease;
+  border: 0.125rem solid var(--terceary);
+}
+
+.signuplink {
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 1.25rem 0 0.9375rem;
+}
+
+.signuplink p .registrar {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signuplink p .registrar:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 75rem;
+    height: auto;
+    margin: 6.25rem 3.125rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 2.5rem;
+  }
+
+  .formimagem {
+    width: 90%;
+    margin: 0 auto 2rem auto;
+  }
+
+  form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .btnsubmit {
+    width: 100%;
+    margin-left: 0;
+  }
+}

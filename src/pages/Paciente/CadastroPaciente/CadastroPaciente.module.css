@@ -1,0 +1,114 @@
+.containerPaciente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.pacienteFrom {
+  background-color: var(--primary);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1875rem 0.625rem;
+  width: 31.25rem;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  transition: all 0.3s ease;
+}
+
+.tituloPaciente {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.pacienteLabel {
+  color: var(--terceary);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.intPaciente {
+  display: block;
+  width: 100%;
+  padding: 0.625rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.9375rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.intPaciente:focus {
+  border-color: var(--terceary);
+  outline: none;
+}
+
+.btnPaciente {
+  width: 100%;
+  margin-top: 0.625rem;
+  border: none;
+  background-color: var(--terceary);
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  color: var(--logo);
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.125rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btnPaciente:hover {
+  background-color: var(--logo);
+  border-color: var(--logo);
+  color: var(--terceary);
+}
+
+.voltarPaciente {
+  text-decoration: none;
+  margin: auto;
+  font-size: 0.9375rem;
+  color: var(--terceary);
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.voltarPaciente:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .pacienteFrom {
+    width: 90%;
+    padding: 1.25rem;
+  }
+
+  .intPaciente {
+    width: 100%;
+  }
+
+  .btnPaciente {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pacienteFrom {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .intPaciente {
+    width: 100%;
+  }
+
+  .btnPaciente {
+    width: 100%;
+  }
+}
