@@ -100,7 +100,7 @@ function ChatPaciente() {
       </nav>
 
       <main>
-        <h1>ChatPaciente</h1>
+        <h1>Chat Paciente</h1>
       </main>
 
       <footer>
