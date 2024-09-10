@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import Container from "../../components/Container"
-import Footer from "../../components/Footer"
+
 import Header from "../../components/Header"
 import styles from "./ForgotPassword.module.css"
 
@@ -56,7 +56,7 @@ function ForgotPassword() {
           {/* <button className={styles.btnForgotred} onClick={onBack}>Voltar ao Login</button> */}
         </div>
       </Container>
-      <Footer />
+
     </>
   )
 }

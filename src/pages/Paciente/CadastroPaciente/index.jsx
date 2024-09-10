@@ -1,7 +1,7 @@
 // src/pages/CadastroPaciente.jsx
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import Footer from "../../../components/Footer"
+
 import Header from "../../../components/Header"
 import styles from "./CadastroPaciente.module.css"
 
@@ -118,7 +118,7 @@ function CadastroPaciente() {
           </Link>
         </form>
       </div>
-      <Footer />
+
     </>
   )
 }

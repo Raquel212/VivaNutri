@@ -2,7 +2,7 @@ import { useState } from "react"
 import { FaBrain, FaUserAlt } from "react-icons/fa" // Ícone para Paciente
 import { GiFruitBowl } from "react-icons/gi" // Ícone para Nutricionista
 import { Link, useNavigate } from "react-router-dom"
-import Footer from "../../components/Footer"
+
 import Header from "../../components/Header"
 import styles from "./Registrar.module.css"
 
@@ -63,7 +63,7 @@ function Registrar() {
           </div>
         </div>
       </div>
-      <Footer />
+
     </>
   )
 }
