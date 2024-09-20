@@ -180,6 +180,36 @@ main {
   margin: auto;
   display: block;
 }
+.footerHomeP {
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  height: 4.375rem;
+  font-size: 1.125rem;
+  color: var(--terceary);
+  padding: 0 2.25rem;
+}
+
+.footerHomeP ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.footerHomeP ul li a {
+  text-decoration: none;
+  color: var(--terceary);
+}
+
+.footerHomeP ul li a:hover {
+  text-decoration: underline;
+}
+
 
 
 
@@ -198,7 +228,7 @@ main {
   }
 
   main,
-  footer {
+  .footerHomeP {
     margin-left: 200px;
     width: calc(100% - 200px);
   }
@@ -218,7 +248,7 @@ main {
   }
 
   main,
-  footer {
+  .footerHomeP {
     margin-left: 180px;
     width: calc(100% - 180px);
   }
@@ -243,7 +273,7 @@ main {
   }
 
   main,
-  footer {
+  .footerHomeP {
     margin-left: 150px;
     width: calc(100% - 150px);
   }

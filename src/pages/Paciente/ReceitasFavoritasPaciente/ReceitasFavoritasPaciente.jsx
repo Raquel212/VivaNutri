@@ -103,7 +103,7 @@ function ReceitasFavoritasPaciente() {
         <h1>Receitas Favoritas</h1>
       </main>
 
-      <footer>
+      <footer className={styles.footerHomeP}>
         <p className={styles.copyright}>&copy; 2024 VivaNutri</p>
         <ul className={styles.links}>
           <li className={styles.linksLi}>
