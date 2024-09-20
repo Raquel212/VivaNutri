@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-
+import Footer from "../../../components/Footer";
 import Header from "../../../components/Header"
 import styles from "./CadastroPsicologo.module.css"
 
@@ -147,7 +147,7 @@ const CadastroPsicologo = () => {
           </Link>
         </form>
       </div>
-
+      <Footer/>
     </>
   )
 }

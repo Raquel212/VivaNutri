@@ -1,5 +1,5 @@
 import Header from "../../components/Header";
-
+import Footer from "../../components/Footer";
 import styles from './Sobre.module.css';
 
 function Sobre() {
@@ -70,8 +70,7 @@ function Sobre() {
                     </p>
                 </div>
             </section>
-
-
+            <Footer/>
         </>
     )
 }

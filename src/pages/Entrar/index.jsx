@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import Header from "../../components/Header"
 import styles from "./Entrar.module.css"
 // import { FaLock} from "react-icons/fa";
+import Footer from "../../components/Footer";
 
 const Entrar = () => {
   const [username, setUsername] = useState("")
@@ -94,7 +95,7 @@ const Entrar = () => {
           </div>
         </form>
       </div>
-
+      <Footer/>
     </>
   )
 }
