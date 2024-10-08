@@ -5,13 +5,48 @@ import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
 import { MdFlatware } from "react-icons/md"
 import { Link } from "react-router-dom"
 import styles from "./ConsultaPaciente.module.css"
+import { SiGoogleforms } from "react-icons/si";
 
 function ConsultaPaciente() {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split("T")[0]) // Data atual
+  const [selectedNutricionistaTime, setSelectedNutricionistaTime] = useState("")
+  const [selectedPsicologoTime, setSelectedPsicologoTime] = useState("")
+
+  // Simulação de horários disponíveis para diferentes datas
+  const availableTimes = {
+    "2024-10-07": {
+      nutricionista: ["10:00", "14:00", "16:00"],
+      psicologo: ["09:00", "11:00", "15:00"],
+    },
+    "2024-10-08": {
+      nutricionista: ["09:00", "12:00"],
+      psicologo: ["10:00", "13:00", "16:00"],
+    },
+    // Adicione mais datas e horários conforme necessário
+  }
 
   const toggleUserMenu = () => {
     setUserMenuOpen(!userMenuOpen)
   }
+
+  const handleChangeDate = (e) => {
+    setSelectedDate(e.target.value)
+    setSelectedNutricionistaTime("")
+    setSelectedPsicologoTime("")
+  }
+
+  const handleChangeNutricionistaTime = (e) => {
+    setSelectedNutricionistaTime(e.target.value)
+  }
+
+  const handleChangePsicologoTime = (e) => {
+    setSelectedPsicologoTime(e.target.value)
+  }
+
+  // Obtém os horários disponíveis para a data selecionada
+  const nutricionistaTimes = availableTimes[selectedDate]?.nutricionista || []
+  const psicologoTimes = availableTimes[selectedDate]?.psicologo || []
 
   return (
     <>
@@ -81,6 +116,14 @@ function ConsultaPaciente() {
             </Link>
           </li>
           <li>
+            <Link to="/questionarioPaciente">
+              <div className={styles.linkSlider}>
+                <SiGoogleforms className={styles.icon} />
+                <p>Questionários</p>
+              </div>
+            </Link>
+          </li>
+          <li>
             <Link to="/receitasFavoritasPaciente">
               <div className={styles.linkSlider}>
                 <FaStar className={styles.icon} />
@@ -101,6 +144,63 @@ function ConsultaPaciente() {
 
       <main>
         <h1>Consultas</h1>
+        
+        <div className={styles.consultaSection}>
+          <h2>Consultas com Nutricionista</h2>
+          <div className={styles.consultaDetails}>
+            <label htmlFor="date">Escolha uma data:</label>
+            <input
+              type="date"
+              id="date"
+              value={selectedDate}
+              onChange={handleChangeDate}
+            />
+            <p>Data da Consulta: <strong>{selectedDate}</strong></p>
+            <form>
+              <label htmlFor="nutricionista-time">Escolha um horário:</label>
+              <select 
+                id="nutricionista-time" 
+                value={selectedNutricionistaTime} 
+                onChange={handleChangeNutricionistaTime}
+              >
+                <option value="" disabled>Selecione um horário</option>
+                {nutricionistaTimes.map((time, index) => (
+                  <option key={index} value={time}>{time}</option>
+                ))}
+              </select>
+              <button type="button">Solicitar Troca de Horário</button>
+            </form>
+          </div>
+        </div>
+
+        <div className={styles.consultaSection}>
+          <h2>Consultas com Psicólogo</h2>
+          <div className={styles.consultaDetails}>
+            <label htmlFor="date-psicologo">Escolha uma data:</label>
+            <input
+              type="date"
+              id="date-psicologo"
+              value={selectedDate}
+              onChange={handleChangeDate}
+            />
+            <p>Data da Consulta: <strong>{selectedDate}</strong></p>
+            <form>
+              <label htmlFor="psicologo-time">Escolha um horário:</label>
+              <select 
+                id="psicologo-time" 
+                value={selectedPsicologoTime} 
+                onChange={handleChangePsicologoTime}
+              >
+                <option value="" disabled>Selecione um horário</option>
+                {psicologoTimes.map((time, index) => (
+                  <option key={index} value={time}>{time}</option>
+                ))}
+              </select>
+              <button type="button">Solicitar Troca de Horário</button>
+            </form>
+          </div>
+        </div>
+
       </main>
 
       <footer className={styles.footerHomeP}>
