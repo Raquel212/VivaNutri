@@ -1,0 +1,252 @@
+/* Glassmorphism Sidebar */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: var(--primary);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    transition: all 0.3s ease;
+}
+  
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.sidebar ul li {
+    padding: 20px;
+}
+  
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+    display: block;
+    transition: color 0.3s ease;
+}
+  
+.linkSlider {
+    display: flex;
+    align-items: center;
+}
+  
+.icon {
+    padding-right: 5px;
+    font-size: 30px;
+}
+  
+.sidebar ul li a:hover {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+  
+.headerHomePacie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.25rem;
+    width: 100%;
+    background-color: var(--primary);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+}
+  
+.headerHomePacie svg {
+    font-size: 30px;
+    cursor: pointer;
+}
+  
+.menuAndLogo {
+    display: flex;
+    align-items: center;
+}
+  
+.logo img {
+    height: 50px;
+}
+  
+.userName {
+    position: relative;
+}
+  
+.userIcon {
+    font-size: 30px;
+    cursor: pointer;
+}
+  
+.dropdownMenu {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: var(--soft-white);
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+  
+.dropdownMenu .linkHome {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+.dropdownMenu .linkHome:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+  
+.dropdownMenu .linkHome:hover {
+    background-color: var(--light-gray);
+}
+  
+/* Main Content */
+.questionarioMain{
+    border: 1px solid red;
+    margin-top: 70px;
+    width: calc(100% - 250px);
+    height: 589px;
+    margin-left: 250px;
+    padding: 30px;
+    transition: margin-left 0.3s ease;
+}
+  
+/* Footer */
+.footerHomeP {
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: 4.375rem;
+    font-size: 1.125rem;
+    color: var(--terceary);
+    padding: 0 2.25rem;
+}
+  
+.footerHomeP ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+  
+.footerHomeP ul li a {
+    text-decoration: none;
+    color: var(--terceary);
+}
+  
+.footerHomeP ul li a:hover {
+    text-decoration: underline;
+}
+  
+/* Button to Redirect to Form */
+.questionarioButton {
+    background-color: var(--primary);
+    color: var(--terceary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.questionarioButton:hover {
+    background-color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .headerHomePacie {
+      padding: 0 1.5rem;
+    }
+  
+    .mainContent {
+      padding: 20px;
+    }
+  
+    .sidebar {
+      width: 200px;
+    }
+  
+    main,
+    .footerHomeP {
+      margin-left: 200px;
+      width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .headerHomePacie {
+      padding: 0 1rem;
+    }
+  
+    .mainContent {
+      padding: 15px;
+    }
+  
+    .sidebar {
+      width: 180px;
+    }
+  
+    main,
+    .footerHomeP {
+      margin-left: 180px;
+      width: calc(100% - 180px);
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerHomePacie {
+      padding: 0 0.5rem;
+    }
+  
+    .mainContent {
+      padding: 10px;
+    }
+  
+    .sidebar {
+      width: 150px;
+    }
+  
+    main,
+    .footerHomeP {
+      margin-left: 150px;
+      width: calc(100% - 150px);
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card,
+    .progressCard,
+    .consultationCard {
+      width: 100%;
+      max-width: none;
+    }
+}
