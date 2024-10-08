@@ -120,6 +120,165 @@ main {
   transition: margin-left 0.3s ease;
 }
 
+/* Adicione este CSS ao final do seu ChatPaciente.module.css */
+
+/* Container do Chat */
+.chatContainer {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: var(--soft-white);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Área de mensagens */
+.messagesContainer {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #e5ddd5; /* Cor similar ao WhatsApp */
+}
+
+/* Mensagem geral */
+.message {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 60%;
+  word-wrap: break-word;
+  position: relative;
+  font-size: 1rem;
+}
+
+/* Mensagem do Paciente - Alinhada à direita */
+.messagePaciente {
+  background-color: #dcf8c6; /* Verde claro */
+  align-self: flex-end;
+  margin-right: 10px;
+}
+
+/* Mensagem do Nutricionista - Alinhada à esquerda */
+.messageNutricionista {
+  background-color: #ffffff; /* Branco */
+  align-self: flex-start;
+  margin-left: 10px;
+}
+
+/* Mensagem do Psicólogo - Alinhada à esquerda com cor diferente */
+.messagePsicologo {
+  background-color: #f1f0f0; /* Cinza claro */
+  align-self: flex-start;
+  margin-left: 10px;
+}
+
+/* Container para o input e botão de envio */
+.inputContainer {
+  display: flex;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+}
+
+/* Input de mensagem */
+.chatInput {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+  background-color: #ffffff;
+}
+
+/* Foco no input */
+.chatInput:focus {
+  border: 2px solid var(--primary);
+}
+
+/* Botão de enviar */
+.sendButton {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--soft-white);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.sendButton:hover {
+  background-color: var(--secondary);
+}
+
+/* Scroll personalizado para mensagens */
+.messagesContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background: #e5ddd5; /* Cor similar ao WhatsApp */
+  border-radius: 4px;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+/* Responsividade para o chat */
+@media (max-width: 1024px) {
+  .chatContainer {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chatContainer {
+    height: 400px;
+  }
+
+  .message {
+    font-size: 0.9rem;
+  }
+
+  .sendButton {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .chatInput {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatContainer {
+    height: 300px;
+  }
+
+  .message {
+    font-size: 0.8rem;
+  }
+
+  .sendButton {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .chatInput {
+    font-size: 0.8rem;
+  }
+}
+
+
 /* Footer */
 .footerHomeP {
   background: var(--primary);
