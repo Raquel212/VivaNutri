@@ -1,17 +1,72 @@
-import { useState } from "react"
-import { FaStar, FaUserCircle } from "react-icons/fa"
-import { HiDocumentReport } from "react-icons/hi"
-import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
-import { MdFlatware } from "react-icons/md"
-import { Link } from "react-router-dom"
-import styles from "./MeuProgressoPaciente.module.css"
+import { useState } from "react";
+import { FaStar, FaUserCircle } from "react-icons/fa";
+import { HiDocumentReport } from "react-icons/hi";
+import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5";
+import { MdFlatware } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { SiGoogleforms } from "react-icons/si";
+import { Line, Bar } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js'; // Importar os componentes necessários
+import styles from "./MeuProgressoPaciente.module.css";
+
+// Registrar os componentes necessários
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 function MeuProgressoPaciente() {
-  const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
 
   const toggleUserMenu = () => {
-    setUserMenuOpen(!userMenuOpen)
+    setUserMenuOpen(!userMenuOpen);
   }
+
+  // Dados dos gráficos
+  const massData = {
+    labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'], // Etiquetas para o eixo x
+    datasets: [
+      {
+        label: 'Massa Magra (kg)',
+        data: [60, 62, 63, 64], // Dados da massa magra
+        borderColor: 'rgba(75,192,192,1)',
+        backgroundColor: 'rgba(75,192,192,0.2)',
+      },
+      {
+        label: 'Massa Gorda (kg)',
+        data: [20, 19, 18, 17], // Dados da massa gorda
+        borderColor: 'rgba(255,99,132,1)',
+        backgroundColor: 'rgba(255,99,132,0.2)',
+      },
+    ],
+  };
+
+  const foodData = {
+    labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'], // Etiquetas para o eixo x
+    datasets: [
+      {
+        label: 'Calorias Consumidas',
+        data: [2000, 2200, 2100, 2300], // Dados de calorias consumidas
+        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+      },
+    ],
+  };
 
   return (
     <>
@@ -81,6 +136,14 @@ function MeuProgressoPaciente() {
             </Link>
           </li>
           <li>
+            <Link to="/questionarioPaciente">
+              <div className={styles.linkSlider}>
+                <SiGoogleforms className={styles.icon} />
+                <p>Questionários</p>
+              </div>
+            </Link>
+          </li>
+          <li>
             <Link to="/receitasFavoritasPaciente">
               <div className={styles.linkSlider}>
                 <FaStar className={styles.icon} />
@@ -101,6 +164,14 @@ function MeuProgressoPaciente() {
 
       <main>
         <h1>Meu Progresso</h1>
+        <div className={styles.chartContainer}>
+          <h2>Massa Magra e Gorda</h2>
+          <Line data={massData} options={{ responsive: true }} />
+        </div>
+        <div className={styles.chartContainer}>
+          <h2>Calorias Consumidas no Mês</h2>
+          <Bar data={foodData} options={{ responsive: true }} />
+        </div>
       </main>
 
       <footer className={styles.footerHomeP}>
@@ -115,7 +186,7 @@ function MeuProgressoPaciente() {
         </ul>
       </footer>
     </>
-  )
+  );
 }
 
-export default MeuProgressoPaciente
+export default MeuProgressoPaciente;
