@@ -5,6 +5,7 @@ import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
 import { MdFlatware } from "react-icons/md"
 import { Link } from "react-router-dom"
 import styles from "./RefeicaoPaciente.module.css"
+import { SiGoogleforms } from "react-icons/si";
 
 function RefeicaoPaciente() {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
@@ -77,6 +78,14 @@ function RefeicaoPaciente() {
               <div className={styles.linkSlider}>
                 <HiDocumentReport className={styles.icon} />
                 <p>Consultas</p>
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link to="/questionarioPaciente">
+              <div className={styles.linkSlider}>
+                <SiGoogleforms className={styles.icon} />
+                <p>Questionários</p>
               </div>
             </Link>
           </li>
