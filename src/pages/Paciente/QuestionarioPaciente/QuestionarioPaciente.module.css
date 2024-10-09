@@ -1,252 +1,272 @@
 /* Glassmorphism Sidebar */
 .sidebar {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 250px;
-    height: calc(100vh - 70px);
-    background: var(--primary);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 20px;
-    transition: all 0.3s ease;
+  position: fixed;
+  top: 4.375rem;
+  left: 0;
+  width: 15.625rem;
+  height: calc(100vh - 4.375rem);
+  background: var(--primary);
+  backdrop-filter: blur(.625rem);
+  box-shadow: 0 .25rem 1.875rem rgba(0, 0, 0, 0.1);
+  border-right: .0625rem solid rgba(255, 255, 255, 0.3);
+  padding-top: 1.25rem;
+  transition: all 0.3s ease;
 }
-  
+
 .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-  
+
 .sidebar ul li {
-    padding: 20px;
+  padding: 1.25rem;
 }
-  
+
 .sidebar ul li a {
-    text-decoration: none;
-    color: var(--black);
-    font-size: 20px;
-    display: block;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.25rem;
+  display: block;
+  transition: color 0.3s ease;
 }
-  
+
 .linkSlider {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-  
+
 .icon {
-    padding-right: 5px;
-    font-size: 30px;
+  padding-right: .3125rem;
+  font-size: 1.875rem;
 }
-  
+
 .sidebar ul li a:hover {
-    color: var(--secondary);
-    transition: color 0.3s ease;
-    text-decoration: underline;
+  color: var(--secondary);
+  transition: color 0.3s ease;
+  text-decoration: underline;
 }
-  
+
+/* Header */
 .headerHomePacie {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2.25rem;
-    width: 100%;
-    background-color: var(--primary);
-    height: 70px;
-    position: fixed;
-    top: 0;
-    z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.25rem;
+  width: 100%;
+  background-color: var(--primary);
+  height: 4.375rem;
+  position: fixed;
+  top: 0;
+  z-index: 1001;
 }
-  
+
 .headerHomePacie svg {
-    font-size: 30px;
-    cursor: pointer;
+  font-size: 1.875rem;
+  cursor: pointer;
 }
-  
+
 .menuAndLogo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-  
+
 .logo img {
-    height: 50px;
+  height: 3.125rem;
 }
-  
+
 .userName {
-    position: relative;
+  position: relative;
 }
-  
+
 .userIcon {
-    font-size: 30px;
-    cursor: pointer;
+  font-size: 1.875rem;
+  cursor: pointer;
 }
-  
+
 .dropdownMenu {
-    position: absolute;
-    right: 0;
-    top: 40px;
-    background-color: var(--soft-white);
-    border: 1px solid var(--primary);
-    border-radius: 6px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  position: absolute;
+  right: 0;
+  top: 2.5rem;
+  background-color: var(--soft-white);
+  border: .0625rem solid var(--primary);
+  border-radius: .375rem;
+  box-shadow: 0rem .25rem .375rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
-  
+
 .dropdownMenu .linkHome {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
+  display: block;
+  padding: .625rem 1.25rem;
+  text-decoration: none;
+  color: var(--black);
 }
+
 .dropdownMenu .linkHome:hover {
-    color: var(--secondary);
-    text-decoration: underline;
-    transition: color 0.3s ease;
+  color: var(--secondary);
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
-  
-.dropdownMenu .linkHome:hover {
-    background-color: var(--light-gray);
-}
-  
+
 /* Main Content */
-.questionarioMain{
-    border: 1px solid red;
-    margin-top: 70px;
-    width: calc(100% - 250px);
-    height: 589px;
-    margin-left: 250px;
-    padding: 30px;
-    transition: margin-left 0.3s ease;
+.questionarioMain {
+  margin-top: 4.375rem;
+  width: calc(100% - 15.625rem);
+  height: 36.8125rem;
+  margin-left: 15.625rem;
+  padding: 1.875rem;
+  transition: margin-left 0.3s ease;
 }
-  
-/* Footer */
-.footerHomeP {
-    background: var(--primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 250px);
-    margin-left: 250px;
-    height: 4.375rem;
-    font-size: 1.125rem;
-    color: var(--terceary);
-    padding: 0 2.25rem;
+
+.questionarioMain h1{
+  text-align: center;
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: var(--secondary);
+  font-weight: 600;
 }
-  
-.footerHomeP ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+
+/* Questionário Card */
+.questionarioContainer {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-left: 9.375rem;
 }
-  
-.footerHomeP ul li a {
-    text-decoration: none;
-    color: var(--terceary);
+
+.questionarioCard {
+  background-color: var(--primary);
+  border-radius: .625rem;
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  width: 18.75rem;
 }
-  
-.footerHomeP ul li a:hover {
-    text-decoration: underline;
+
+.questionarioCard p{
+  margin-bottom: 15px;
+  font-weight: 600;
+
+
 }
-  
-/* Button to Redirect to Form */
+
+.progress {
+  background-color: #f2f2f2;
+  border-radius: .3125rem;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progressBar {
+  height: .625rem;
+  background-color: #00b33c;
+}
+
 .questionarioButton {
-    background-color: var(--primary);
-    color: var(--terceary);
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    margin-left: 40px;
-    margin-top: 20px;
+  background-color: var(--terceary);
+  color: var(--logo);
+  padding: .625rem 1.25rem;
+  border-radius: .3125rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.25rem;
 }
 
 .questionarioButton:hover {
-    background-color: var(--secondary);
-    text-decoration: underline;
+  background-color: var(--logo);
+  color: var(--terceary);
+  transition: 0.5s ease;
+}
+
+/* Footer */
+.footerHomeP {
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 15.625rem);
+  margin-left: 15.625rem;
+  height: 4.375rem;
+  font-size: 1.125rem;
+  color: var(--terceary);
+  padding: 0 2.25rem;
+}
+
+.footerHomeP ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footerHomeP ul li a {
+  text-decoration: none;
+  color: var(--terceary);
+}
+
+.footerHomeP ul li a:hover {
+  text-decoration: underline;
 }
 
 /* Media Queries para responsividade */
 @media (max-width: 1024px) {
-    .headerHomePacie {
-      padding: 0 1.5rem;
-    }
-  
-    .mainContent {
-      padding: 20px;
-    }
-  
-    .sidebar {
-      width: 200px;
-    }
-  
-    main,
-    .footerHomeP {
-      margin-left: 200px;
-      width: calc(100% - 200px);
-    }
+  .headerHomePacie {
+    padding: 0 1.5rem;
+  }
+
+  .sidebar {
+    width: 12.5rem;
+  }
+
+  .questionarioMain,
+  .footerHomeP {
+    margin-left: 12.5rem;
+    width: calc(100% - 12.5rem);
+  }
 }
 
 @media (max-width: 768px) {
-    .headerHomePacie {
-      padding: 0 1rem;
-    }
-  
-    .mainContent {
-      padding: 15px;
-    }
-  
-    .sidebar {
-      width: 180px;
-    }
-  
-    main,
-    .footerHomeP {
-      margin-left: 180px;
-      width: calc(100% - 180px);
-    }
-  
-    .cards {
-      flex-direction: column;
-      align-items: center;
-    }
+  .headerHomePacie {
+    padding: 0 1rem;
+  }
+
+  .sidebar {
+    width: 11.25rem;
+  }
+
+  .questionarioMain,
+  .footerHomeP {
+    margin-left: 11.25rem;
+    width: calc(100% - 11.25rem);
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .headerHomePacie {
-      padding: 0 0.5rem;
-    }
-  
-    .mainContent {
-      padding: 10px;
-    }
-  
-    .sidebar {
-      width: 150px;
-    }
-  
-    main,
-    .footerHomeP {
-      margin-left: 150px;
-      width: calc(100% - 150px);
-    }
-  
-    .cards {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .card,
-    .progressCard,
-    .consultationCard {
-      width: 100%;
-      max-width: none;
-    }
+  .headerHomePacie {
+    padding: 0 0.5rem;
+  }
+
+  .sidebar {
+    width: 9.375rem;
+  }
+
+  .questionarioMain,
+  .footerHomeP {
+    margin-left: 9.375rem;
+    width: calc(100% - 9.375rem);
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }

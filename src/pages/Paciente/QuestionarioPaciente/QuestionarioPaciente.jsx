@@ -16,9 +16,12 @@ function QuestionarioPaciente() {
 
   // Links dos formulários (substitua pelos URLs reais dos seus formulários)
   const formsLinks = {
-    nutricionista: "https://docs.google.com/document/d/1WgVdleqAeljJNb6NY1rzkpHlvnwibNuUZ7lrj0ZvS2s/edit?usp=sharing",
-    psicologo: "https://docs.google.com/document/d/1jLdv_jzL2G1srs_lCSC9xtilOfNujrpyCejdjxb01Vw/edit?usp=sharing",
-    conjunto: "https://docs.google.com/document/d/1LXZv2LT9b1P3ZhdFwCJ_5um-HcNkGg9fw9USHSX4hWs/edit?usp=sharing",
+    nutricionista: "https://forms.gle/cDx2U2sTfQvjpFbT8",
+    psicologo: "https://forms.gle/kTdKLNqghurYppbv8",
+    corporal: "https://forms.gle/npyrYjrxWjntgj5V8",
+    emocional: "https://forms.gle/zCrGmVBsstmvELV7A",
+    saude: "https://forms.gle/L16cRvwDWJUvZTVe6",
+    conjunto: "https://forms.gle/tU2S7KQx6jfdhVPv5",
   };
 
   return (
@@ -108,35 +111,107 @@ function QuestionarioPaciente() {
       <main className={styles.questionarioMain}>
         <h1>Questionários</h1>
         <div className={styles.questionarioContainer}>
-          {/* Botão para Questionário Nutricionista */}
-          <a
-            href={formsLinks.nutricionista}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.questionarioButton}
-          >
-            Questionário Nutricionista
-          </a>
+          {/* Cartão Questionário Nutricionista */}
+          <div className={styles.questionarioCard}>
+            <p>Questionário Nutricionista</p>
+            <div className={styles.progress}>
+              <div className={styles.progressBar} style={{ width: "80%" }}></div>
+            </div>
+            <p>Última atualização: 17/07/2024</p>
+            <a
+              href={formsLinks.nutricionista}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.questionarioButton}
+            >
+              Responder
+            </a>
+          </div>
 
-          {/* Botão para Questionário Psicólogo */}
-          <a
-            href={formsLinks.psicologo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.questionarioButton}
-          >
-            Questionário Psicólogo
-          </a>
+          {/* Cartão Questionário Psicólogo */}
+          <div className={styles.questionarioCard}>
+            <p>Questionário Psicólogo - Alimentar</p>
+            <div className={styles.progress}>
+              <div className={styles.progressBar} style={{ width: "100%" }}></div>
+            </div>
+            <p>Última atualização: 20/08/2024</p>
+            <a
+              href={formsLinks.psicologo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.questionarioButton}
+            >
+              Ver Resposta
+            </a>
+          </div>
 
-          {/* Botão para Questionário Conjunto */}
-          <a
-            href={formsLinks.conjunto}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.questionarioButton}
-          >
-            Questionário Conjunto
-          </a>
+          {/* Cartão Questionário Psicólogo */}
+          <div className={styles.questionarioCard}>
+            <p>Questionário Psicólogo - Corporal</p>
+            <div className={styles.progress}>
+              <div className={styles.progressBar} style={{ width: "0%" }}></div>
+            </div>
+            <p>Última atualização: 20/08/2024</p>
+            <a
+              href={formsLinks.corporal}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.questionarioButton}
+            >
+              Responder
+            </a>
+          </div>
+
+          {/* Cartão Questionário Psicólogo */}
+          <div className={styles.questionarioCard}>
+            <p>Questionário Psicólogo - Emocional</p>
+            <div className={styles.progress}>
+              <div className={styles.progressBar} style={{ width: "0%" }}></div>
+            </div>
+            <p>Última atualização: 20/08/2024</p>
+            <a
+              href={formsLinks.emocional}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.questionarioButton}
+            >
+              Responder
+            </a>
+          </div>
+
+          {/* Cartão Questionário Psicólogo */}
+          <div className={styles.questionarioCard}>
+            <p>Questionário Psicólogo - Sáude</p>
+            <div className={styles.progress}>
+              <div className={styles.progressBar} style={{ width: "0%" }}></div>
+            </div>
+            <p>Última atualização: 20/08/2024</p>
+            <a
+              href={formsLinks.saude}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.questionarioButton}
+            >
+              Responder
+            </a>
+          </div>
+
+          {/* Cartão Questionário Conjunto */}
+          <div className={styles.questionarioCard}>
+            <p>Questionário Conjunto</p>
+            <div className={styles.progress}>
+              <div className={styles.progressBar} style={{ width: "100%" }}></div>
+            </div>
+            <p>Última atualização: 25/09/2024</p>
+            <a
+              href={formsLinks.conjunto}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.questionarioButton}
+            >
+              Ver Resposta
+            </a>
+          </div>
         </div>
       </main>
 
