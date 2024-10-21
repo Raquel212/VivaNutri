@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FaStar, FaUserCircle } from "react-icons/fa"
+import {  FaBlender , FaUserCircle } from "react-icons/fa"
 import { HiDocumentReport } from "react-icons/hi"
 import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
 import { MdFlatware } from "react-icons/md"
@@ -64,6 +64,9 @@ function ConsultaPaciente() {
               <Link to="/notifications" className={styles.linkHome}>
                 Notificações
               </Link>
+              <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
+                Receitas Favoritas
+              </Link>
               <Link to="/" className={styles.linkHome}>
                 Nutricionista
               </Link>
@@ -124,10 +127,10 @@ function ConsultaPaciente() {
             </Link>
           </li>
           <li>
-            <Link to="/receitasFavoritasPaciente">
+            <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                <FaStar className={styles.icon} />
-                <p>Receitas Favoritas</p>
+                < FaBlender  className={styles.icon} />
+                <p>Receitas</p>
               </div>
             </Link>
           </li>
@@ -168,7 +171,7 @@ function ConsultaPaciente() {
                   <option key={index} value={time}>{time}</option>
                 ))}
               </select>
-              <button type="button">Solicitar Troca de Horário</button>
+              <button type="button" className={styles.buttonConsulta}>Solicitar Troca de Horário</button>
             </form>
           </div>
         </div>
@@ -196,7 +199,7 @@ function ConsultaPaciente() {
                   <option key={index} value={time}>{time}</option>
                 ))}
               </select>
-              <button type="button">Solicitar Troca de Horário</button>
+              <button type="button" className={styles.buttonConsulta}>Solicitar Troca de Horário</button>
             </form>
           </div>
         </div>

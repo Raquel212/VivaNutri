@@ -154,7 +154,7 @@ select {
   width: 100%;
 }
 
-button {
+.buttonConsulta {
   padding: 10px 15px;
   background-color: var(--secondary);
   color: white;
@@ -165,7 +165,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.buttonConsulta:hover {
   background-color: darken(var(--secondary), 10%);
 }
 
