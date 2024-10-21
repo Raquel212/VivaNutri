@@ -25,7 +25,7 @@
 
 .sidebar ul li a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--terceary);
   font-size: 20px;
   display: block;
   transition: color 0.3s ease;
@@ -87,7 +87,7 @@
   position: absolute;
   right: 0;
   top: 40px;
-  background-color: var(--soft-white);
+  background-color: var(--terceary);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -98,16 +98,14 @@
   display: block;
   padding: 10px 20px;
   text-decoration: none;
-  color: black;
-}
-.dropdownMenu .linkHome:hover {
-  color: var(--secondary);
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  color: var(--black);
 }
 
 .dropdownMenu .linkHome:hover {
+  color: var(--secondary);
+  text-decoration: underline;
   background-color: var(--light-gray);
+  transition: color 0.3s ease;
 }
 
 /* Main Content */
@@ -119,165 +117,6 @@ main {
   padding: 30px;
   transition: margin-left 0.3s ease;
 }
-
-/* Adicione este CSS ao final do seu ChatPaciente.module.css */
-
-/* Container do Chat */
-.chatContainer {
-  width: 100%;
-  max-width: 800px;
-  height: 600px;
-  margin: 0 auto;
-  background-color: var(--soft-white);
-  border: 1px solid var(--primary);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Área de mensagens */
-.messagesContainer {
-  flex-grow: 1;
-  padding: 20px;
-  overflow-y: auto;
-  background-color: #e5ddd5; /* Cor similar ao WhatsApp */
-}
-
-/* Mensagem geral */
-.message {
-  margin-bottom: 15px;
-  padding: 10px 15px;
-  border-radius: 20px;
-  max-width: 60%;
-  word-wrap: break-word;
-  position: relative;
-  font-size: 1rem;
-}
-
-/* Mensagem do Paciente - Alinhada à direita */
-.messagePaciente {
-  background-color: #dcf8c6; /* Verde claro */
-  align-self: flex-end;
-  margin-right: 10px;
-}
-
-/* Mensagem do Nutricionista - Alinhada à esquerda */
-.messageNutricionista {
-  background-color: #ffffff; /* Branco */
-  align-self: flex-start;
-  margin-left: 10px;
-}
-
-/* Mensagem do Psicólogo - Alinhada à esquerda com cor diferente */
-.messagePsicologo {
-  background-color: #f1f0f0; /* Cinza claro */
-  align-self: flex-start;
-  margin-left: 10px;
-}
-
-/* Container para o input e botão de envio */
-.inputContainer {
-  display: flex;
-  padding: 15px;
-  background-color: #f0f0f0;
-  border-top: 1px solid #ccc;
-}
-
-/* Input de mensagem */
-.chatInput {
-  flex-grow: 1;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 1rem;
-  outline: none;
-  transition: border 0.3s ease;
-  background-color: #ffffff;
-}
-
-/* Foco no input */
-.chatInput:focus {
-  border: 2px solid var(--primary);
-}
-
-/* Botão de enviar */
-.sendButton {
-  margin-left: 10px;
-  padding: 10px 20px;
-  background-color: var(--primary);
-  color: var(--soft-white);
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 1rem;
-}
-
-.sendButton:hover {
-  background-color: var(--secondary);
-}
-
-/* Scroll personalizado para mensagens */
-.messagesContainer::-webkit-scrollbar {
-  width: 8px;
-}
-
-.messagesContainer::-webkit-scrollbar-track {
-  background: #e5ddd5; /* Cor similar ao WhatsApp */
-  border-radius: 4px;
-}
-
-.messagesContainer::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
-  border-radius: 4px;
-}
-
-/* Responsividade para o chat */
-@media (max-width: 1024px) {
-  .chatContainer {
-    height: 500px;
-  }
-}
-
-@media (max-width: 768px) {
-  .chatContainer {
-    height: 400px;
-  }
-
-  .message {
-    font-size: 0.9rem;
-  }
-
-  .sendButton {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
-  .chatInput {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .chatContainer {
-    height: 300px;
-  }
-
-  .message {
-    font-size: 0.8rem;
-  }
-
-  .sendButton {
-    padding: 6px 12px;
-    font-size: 0.8rem;
-  }
-
-  .chatInput {
-    font-size: 0.8rem;
-  }
-}
-
 
 /* Footer */
 .footerHomeP {
@@ -385,5 +224,250 @@ main {
   .consultationCard {
     width: 100%;
     max-width: none;
+  }
+}
+
+/* --- Novos Estilos para o ChatPaciente --- */
+
+/* Container do Chat */
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-color: var(--soft-white);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header do Chat */
+.chatHeader {
+  background-color: var(--primary);
+  color: var(--terceary);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatHeader .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.chatHeader .videoCallButtons a {
+  margin-left: 10px;
+  background-color: var(--secondary);
+  color: var(--terceary);
+  padding: 8px 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.chatHeader .videoCallButtons a:hover {
+  background-color: var(--dark-gray);
+}
+
+/* Corpo do Chat */
+.messagesContainer {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-image: url('/chat-background.png'); /* Opcional: imagem de fundo */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mensagens */
+.message {
+  max-width: 60%;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  position: relative;
+  word-wrap: break-word;
+  font-size: 16px;
+}
+
+.messagePaciente {
+  background-color: var(--secondary);
+  color: var(--terceary);
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.messageNutricionista,
+.messagePsicologo {
+  background-color: var(--light-gray);
+  color: var(--black);
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.messageNutricionista::after,
+.messagePsicologo::after,
+.messagePaciente::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.messagePaciente::after {
+  border-top-color: var(--secondary);
+  top: 10px;
+  right: -20px;
+}
+
+.messageNutricionista::after {
+  border-top-color: var(--light-gray);
+  top: 10px;
+  left: -20px;
+}
+
+.messagePsicologo::after {
+  border-top-color: var(--light-gray);
+  top: 10px;
+  left: -20px;
+}
+
+/* Input do Chat */
+.inputContainer {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid var(--light-gray);
+  background-color: var(--terceary);
+}
+
+.chatInput {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid var(--light-gray);
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.chatInput:focus {
+  border-color: var(--secondary);
+}
+
+.sendButton {
+  background-color: var(--primary);
+  color: var(--terceary);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: var(--secondary);
+}
+
+/* Estilos dos Botões de Video Call */
+.videoCallButtons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoCallButtons a svg {
+  font-size: 20px;
+}
+
+/* Scroll personalizado para mensagens */
+.messagesContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background: var(--soft-white);
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 10px;
+  border: 3px solid var(--soft-white);
+}
+
+/* Responsividade do Chat */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px;
+  }
+
+  main,
+  .footerHomeP {
+      margin-left: 200px;
+      width: calc(100% - 200px);
+  }
+
+  .chatHeader .title {
+      font-size: 18px;
+  }
+
+  .chatHeader .videoCallButtons a {
+      padding: 6px 10px;
+  }
+
+  .message {
+      max-width: 70%;
+      font-size: 14px;
+  }
+
+  .chatInput {
+      font-size: 14px;
+  }
+
+  .sendButton {
+      width: 35px;
+      height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      width: 150px;
+  }
+
+  main,
+  .footerHomeP {
+      margin-left: 150px;
+      width: calc(100% - 150px);
+  }
+
+  .chatHeader .title {
+      font-size: 16px;
+  }
+
+  .chatHeader .videoCallButtons a {
+      padding: 5px 8px;
+  }
+
+  .message {
+      max-width: 80%;
+      font-size: 12px;
+  }
+
+  .chatInput {
+      font-size: 14px;
+  }
+
+  .sendButton {
+      width: 30px;
+      height: 30px;
   }
 }

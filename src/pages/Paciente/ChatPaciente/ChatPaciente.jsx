@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { FaStar, FaUserCircle } from "react-icons/fa";
+import {  FaBlender , FaUserCircle } from "react-icons/fa";
 import { HiDocumentReport } from "react-icons/hi";
-import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5";
+import { IoBarChart, IoChatbox, IoFastFood, IoVideocam } from "react-icons/io5";
 import { MdFlatware } from "react-icons/md";
 import { Link } from "react-router-dom";
 import styles from "./ChatPaciente.module.css";
@@ -16,14 +16,11 @@ function ChatPaciente() {
     setUserMenuOpen(!userMenuOpen);
   };
 
-  // Função para adicionar uma nova mensagem
   const addMessage = (sender, text) => {
     setMessages((prevMessages) => [...prevMessages, { sender, text }]);
   };
 
-  // Inicializa a conversa com mensagens automáticas
   useEffect(() => {
-    // Mensagens iniciais após 1 segundo
     const initialMessages = [
       { sender: "Nutricionista", text: "Olá! Como posso te ajudar hoje?" },
       { sender: "Psicólogo", text: "Olá! Como você está se sentindo?" },
@@ -32,11 +29,10 @@ function ChatPaciente() {
     initialMessages.forEach((msg, index) => {
       setTimeout(() => {
         addMessage(msg.sender, msg.text);
-      }, 1000 * (index + 1)); // 1s, 2s, etc.
+      }, 1000 * (index + 1));
     });
   }, []);
 
-  // Função para responder automaticamente com base na mensagem do paciente
   const respondToMessage = (patientMessage) => {
     const lowerCaseMessage = patientMessage.toLowerCase();
 
@@ -72,7 +68,6 @@ function ChatPaciente() {
     }
   };
 
-  // Função para enviar uma mensagem
   const handleSendMessage = () => {
     if (newMessage.trim() !== "") {
       addMessage("Paciente", newMessage.trim());
@@ -81,9 +76,9 @@ function ChatPaciente() {
     }
   };
 
-  // Função para enviar mensagem ao pressionar Enter
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       handleSendMessage();
     }
   };
@@ -101,21 +96,14 @@ function ChatPaciente() {
           <FaUserCircle onClick={toggleUserMenu} className={styles.userIcon} />
           {userMenuOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/notifications" className={styles.linkHome}>
-                Notificações
+              <Link to="/notifications" className={styles.linkHome}>Notificações</Link>
+              <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
+                Receitas Favoritas
               </Link>
-              <Link to="/nutricionista" className={styles.linkHome}>
-                Nutricionista
-              </Link>
-              <Link to="/psicologo" className={styles.linkHome}>
-                Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
-                Editar Perfil
-              </Link>
-              <Link to="/entrar" className={styles.linkHome}>
-                Logoff
-              </Link>
+              <Link to="/nutricionista" className={styles.linkHome}>Nutricionista</Link>
+              <Link to="/psicologo" className={styles.linkHome}>Psicólogo</Link>
+              <Link to="/edit-profile" className={styles.linkHome}>Editar Perfil</Link>
+              <Link to="/entrar" className={styles.linkHome}>Logoff</Link>
             </div>
           )}
         </div>
@@ -164,10 +152,10 @@ function ChatPaciente() {
             </Link>
           </li>
           <li>
-            <Link to="/receitasFavoritasPaciente">
+            <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                <FaStar className={styles.icon} />
-                <p>Receitas Favoritas</p>
+                < FaBlender  className={styles.icon} />
+                <p>Receitas</p>
               </div>
             </Link>
           </li>
@@ -185,6 +173,28 @@ function ChatPaciente() {
       <main className={styles.mainContent}>
         <h1>Chat Paciente</h1>
         <div className={styles.chatContainer}>
+          <div className={styles.chatHeader}>
+            <div className={styles.title}>VivaNutri Chat</div>
+            <div className={styles.videoCallButtons}>
+              <a
+                href="https://meet.google.com/nutricionista-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chamada de Vídeo com Nutricionista"
+              >
+                <IoVideocam />
+              </a>
+              <a
+                href="https://meet.google.com/psicologo-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chamada de Vídeo com Psicólogo"
+              >
+                <IoVideocam />
+              </a>
+            </div>
+          </div>
+
           <div className={styles.messagesContainer}>
             {messages.map((msg, index) => (
               <div
@@ -201,6 +211,7 @@ function ChatPaciente() {
               </div>
             ))}
           </div>
+
           <div className={styles.inputContainer}>
             <input
               type="text"
@@ -211,7 +222,7 @@ function ChatPaciente() {
               className={styles.chatInput}
             />
             <button onClick={handleSendMessage} className={styles.sendButton}>
-              Enviar
+              <IoChatbox />
             </button>
           </div>
         </div>
