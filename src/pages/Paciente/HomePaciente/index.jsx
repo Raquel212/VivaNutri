@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaStar, FaUserCircle } from "react-icons/fa";
+import {  FaBlender , FaUserCircle } from "react-icons/fa";
 import { HiDocumentReport } from "react-icons/hi";
 import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5";
 import { MdFlatware } from "react-icons/md";
@@ -32,6 +32,9 @@ function HomePaciente() {
             <div className={styles.dropdownMenu}>
               <Link to="/notifications" className={styles.linkHome}>
                 Notificações
+              </Link>
+              <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
+                Receitas Favoritas
               </Link>
               <Link to="/" className={styles.linkHome}>
                 Nutricionista
@@ -93,10 +96,10 @@ function HomePaciente() {
             </Link>
           </li>
           <li>
-            <Link to="/receitasFavoritasPaciente">
+            <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                <FaStar className={styles.icon} />
-                <p>Receitas Favoritas</p>
+                < FaBlender  className={styles.icon} />
+                <p>Receitas</p>
               </div>
             </Link>
           </li>
