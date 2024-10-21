@@ -1,18 +1,23 @@
-import { useState } from "react"
-import { FaStar, FaUserCircle } from "react-icons/fa"
-import { HiDocumentReport } from "react-icons/hi"
-import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
-import { MdFlatware } from "react-icons/md"
-import { Link } from "react-router-dom"
-import styles from "./ReceitasFavoritasPaciente.module.css"
+import { useState } from "react";
+import {  FaBlender , FaUserCircle } from "react-icons/fa";
+import { HiDocumentReport } from "react-icons/hi";
+import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5";
+import { MdFlatware } from "react-icons/md";
+import { Link } from "react-router-dom";
+import styles from "./ReceitasFavoritasPaciente.module.css";
 import { SiGoogleforms } from "react-icons/si";
 
 function ReceitasFavoritasPaciente() {
-  const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const [favoriteRecipes] = useState([
+    { id: 1, name: "Salada de Frutas", description: "Uma mistura refrescante de frutas variadas." },
+    { id: 2, name: "Frango Grelhado com Legumes", description: "Frango grelhado acompanhado de legumes assados." },
+    { id: 3, name: "Smoothie Verde", description: "Bebida nutritiva com espinafre, abacate e maçã." }
+  ]);
 
   const toggleUserMenu = () => {
-    setUserMenuOpen(!userMenuOpen)
-  }
+    setUserMenuOpen(!userMenuOpen);
+  };
 
   return (
     <>
@@ -29,6 +34,9 @@ function ReceitasFavoritasPaciente() {
             <div className={styles.dropdownMenu}>
               <Link to="/notifications" className={styles.linkHome}>
                 Notificações
+              </Link>
+              <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
+                Receitas Favoritas
               </Link>
               <Link to="/" className={styles.linkHome}>
                 Nutricionista
@@ -90,10 +98,10 @@ function ReceitasFavoritasPaciente() {
             </Link>
           </li>
           <li>
-            <Link to="/receitasFavoritasPaciente">
+            <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                <FaStar className={styles.icon} />
-                <p>Receitas Favoritas</p>
+                < FaBlender  className={styles.icon} />
+                <p>Receitas</p>
               </div>
             </Link>
           </li>
@@ -110,6 +118,14 @@ function ReceitasFavoritasPaciente() {
 
       <main>
         <h1>Receitas Favoritas</h1>
+        <div className={styles.favoriteRecipes}>
+          {favoriteRecipes.map((recipe) => (
+            <div key={recipe.id} className={styles.recipeCard}>
+              <h2>{recipe.name}</h2>
+              <p>{recipe.description}</p>
+            </div>
+          ))}
+        </div>
       </main>
 
       <footer className={styles.footerHomeP}>
@@ -124,7 +140,7 @@ function ReceitasFavoritasPaciente() {
         </ul>
       </footer>
     </>
-  )
+  );
 }
 
-export default ReceitasFavoritasPaciente
+export default ReceitasFavoritasPaciente;

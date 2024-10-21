@@ -37,8 +37,8 @@
 }
 
 .icon {
-  padding-right: 5px;
-  font-size: 30px;
+  padding-right: 10px;
+  font-size: 24px;
 }
 
 .sidebar ul li a:hover {
@@ -58,6 +58,7 @@
   position: fixed;
   top: 0;
   z-index: 1001;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .headerHomePacie svg {
@@ -86,38 +87,75 @@
 .dropdownMenu {
   position: absolute;
   right: 0;
-  top: 40px;
+  top: 50px;
   background-color: var(--soft-white);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  width: 200px;
 }
 
 .dropdownMenu .linkHome {
   display: block;
   padding: 10px 20px;
   text-decoration: none;
-  color: black;
-}
-.dropdownMenu .linkHome:hover {
-  color: var(--secondary);
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  color: var(--black);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdownMenu .linkHome:hover {
+  color: var(--secondary);
   background-color: var(--light-gray);
 }
 
 /* Main Content */
 main {
-  border: 1px solid red;
   margin-top: 70px;
-  width: calc(100% - 250px);
   margin-left: 250px;
   padding: 30px;
   transition: margin-left 0.3s ease;
+  background-color: #f9f9f9;
+  min-height: calc(100vh - 70px - 70px); /* Ajuste para altura total menos header e footer */
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--terceary);
+}
+
+/* Receitas Favoritas */
+.favoriteRecipes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recipeCard {
+  background: var(--soft-white);
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(33.333% - 40px); /* Três colunas com espaçamento */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.recipeCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--terceary);
+}
+
+.recipeCard p {
+  font-size: 1rem;
+  color: var(--black);
 }
 
 /* Footer */
@@ -128,10 +166,13 @@ main {
   align-items: center;
   width: calc(100% - 250px);
   margin-left: 250px;
-  height: 4.375rem;
+  height: 70px;
   font-size: 1.125rem;
   color: var(--terceary);
   padding: 0 2.25rem;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footerHomeP ul {
@@ -145,87 +186,92 @@ main {
 .footerHomeP ul li a {
   text-decoration: none;
   color: var(--terceary);
+  transition: color 0.3s ease;
 }
 
 .footerHomeP ul li a:hover {
   text-decoration: underline;
+  color: var(--secondary);
 }
 
+/* Responsividade */
 
-/* Media Queries para responsividade */
+/* Tablets e dispositivos com largura máxima de 1024px */
 @media (max-width: 1024px) {
-  .headerHomePacie {
-    padding: 0 1.5rem;
-  }
-
-  .mainContent {
-    padding: 20px;
-  }
-
   .sidebar {
     width: 200px;
   }
 
-  main,
-  .footerHomeP {
+  main {
     margin-left: 200px;
     width: calc(100% - 200px);
   }
+
+  .footerHomeP {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+  }
+
+  .recipeCard {
+    width: calc(50% - 40px); /* Duas colunas */
+  }
 }
 
+/* Dispositivos com largura máxima de 768px */
 @media (max-width: 768px) {
-  .headerHomePacie {
-    padding: 0 1rem;
-  }
-
-  .mainContent {
-    padding: 15px;
-  }
-
   .sidebar {
     width: 180px;
   }
 
-  main,
-  .footerHomeP {
+  main {
     margin-left: 180px;
     width: calc(100% - 180px);
   }
 
-  .cards {
-    flex-direction: column;
-    align-items: center;
+  .footerHomeP {
+    width: calc(100% - 180px);
+    margin-left: 180px;
+  }
+
+  .recipeCard {
+    width: 100%; /* Uma coluna */
   }
 }
 
+/* Dispositivos móveis com largura máxima de 480px */
 @media (max-width: 480px) {
-  .headerHomePacie {
-    padding: 0 0.5rem;
-  }
-
-  .mainContent {
-    padding: 10px;
-  }
-
   .sidebar {
     width: 150px;
   }
 
-  main,
-  .footerHomeP {
+  main {
     margin-left: 150px;
     width: calc(100% - 150px);
+    padding: 15px;
   }
 
-  .cards {
-    flex-direction: column;
-    align-items: center;
+  .footerHomeP {
+    width: calc(100% - 150px);
+    margin-left: 150px;
+    padding: 0 1rem;
+    height: 60px;
+    font-size: 1rem;
   }
 
-  .card,
-  .progressCard,
-  .consultationCard {
+  .recipeCard {
     width: 100%;
-    max-width: none;
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .sidebar ul li {
+    padding: 15px;
+  }
+
+  .sidebar ul li a {
+    font-size: 18px;
   }
 }
