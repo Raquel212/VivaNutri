@@ -12,6 +12,7 @@ import MeuProgressoPaciente from "./pages/Paciente/MeuProgressoPaciente/MeuProgr
 import PlanoAlimentarPaciente from "./pages/Paciente/PlanoAlimentarPaciente/PlanoAlimentarPaciente"
 import ReceitasFavoritasPaciente from "./pages/Paciente/ReceitasFavoritasPaciente/ReceitasFavoritasPaciente"
 import RefeicaoPaciente from "./pages/Paciente/RefeicoesPaciente/RefeicaoPaciente"
+import ReceitasPaciente from "./pages/Paciente/ReceitasPaciente/ReceitasPaciente"
 import QuestionarioPaciente from "./pages/Paciente/QuestionarioPaciente/QuestionarioPaciente"
 import CadastroPsicologo from "./pages/Psicologo/CadastroPsicologo"
 import Registrar from "./pages/Registrar"
@@ -50,6 +51,7 @@ function AppRoutes() {
           element={<ReceitasFavoritasPaciente />}
         />
         <Route path="chatPaciente" element={<ChatPaciente />} />
+        <Route path="receitasPaciente" element={<ReceitasPaciente />} />
       </Routes>
 
     </BrowserRouter>
