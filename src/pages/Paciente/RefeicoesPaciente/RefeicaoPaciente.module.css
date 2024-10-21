@@ -110,18 +110,166 @@
   background-color: var(--light-gray);
 }
 
-/* Main Content */
-main {
-  border: 1px solid red;
-  margin-top: 70px;
-  width: calc(100% - 250px);
-  margin-left: 250px;
-  padding: 30px;
-  transition: margin-left 0.3s ease;
+.mainContent h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--secondary);
+  text-align: center;
+}
+
+/* Formulário Plano Alimentar */
+.formRefeicao {
+  width: 600px;
+  background: var(--soft-white);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  margin: 0 auto 30px;
+}
+
+.formRefeicao .formGroup {
+  margin-bottom: 15px;
+  
+}
+
+.formRefeicao label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.formRefeicao input[type="file"],
+.formRefeicao select,
+.formRefeicao input[type="date"],
+.formRefeicao input[type="time"],
+.formRefeicao textarea,
+.formRefeicao input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  background: var(--beige);
+  color: var(--black);
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formRefeicao input[type="file"] {
+  padding: 5px;
+  background: var(--primary);
+}
+
+.formRefeicao textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.formRefeicao input:focus,
+.formRefeicao select:focus,
+.formRefeicao textarea:focus,
+.formRefeicao input[type="number"]:focus {
+  outline: none;
+  border-color: var(--terceary);
+  box-shadow: 0 0 5px var(--green);
+}
+
+.previewImagem {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid var(--brown);
+}
+
+.botaoAdicionar {
+  background-color: var(--secondary);
+  color: var(--soft-white);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.botaoAdicionar:hover {
+  background-color: var(--terceary);
+}
+
+/* Lista de Refeições */
+.listaRefeicoes {
+  margin-top: 20px;
+  width: 800px; /* Altere para 100% para ocupar todo o espaço disponível */
+  margin: 0 auto 30px;
+
+}
+
+.refeicaoContainer h2 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-align: center;
+  color: var(--secondary);
+  /* border: 2px solid blue; */
+}
+
+.refeicaoCard {
+  background: var(--beige);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.refeicaoCard:hover {
+  
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imagemRefeicao {
+  max-width: 50%;
+  /* height: auto; */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 2px solid var(--brown);
+  margin: 0 auto 30px;
+}
+
+.infoRefeicao p {
+  margin: 5px 0;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.comentarios {
+  margin-top: 15px;
+  background: var(--green);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--soft-white);
+}
+
+.comentarios h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: var(--terceary);
+}
+
+.comentarios p {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* Footer */
-.footerHomeP {
+.footerRefeicao {
   background: var(--primary);
   display: flex;
   justify-content: space-between;
@@ -134,7 +282,7 @@ main {
   padding: 0 2.25rem;
 }
 
-.footerHomeP ul {
+.footerRefeicao ul {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -142,12 +290,12 @@ main {
   margin: 0;
 }
 
-.footerHomeP ul li a {
+.footerRefeicao ul li a {
   text-decoration: none;
   color: var(--terceary);
 }
 
-.footerHomeP ul li a:hover {
+.footerRefeicao ul li a:hover {
   text-decoration: underline;
 }
 
@@ -167,7 +315,7 @@ main {
   }
 
   main,
-  .footerHomeP {
+  .footerRefeicao {
     margin-left: 200px;
     width: calc(100% - 200px);
   }
@@ -187,7 +335,7 @@ main {
   }
 
   main,
-  .footerHomeP {
+  .footerRefeicao {
     margin-left: 180px;
     width: calc(100% - 180px);
   }
@@ -212,7 +360,7 @@ main {
   }
 
   main,
-  .footerHomeP {
+  .footerRefeicao {
     margin-left: 150px;
     width: calc(100% - 150px);
   }
