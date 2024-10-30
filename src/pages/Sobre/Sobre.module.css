@@ -1,154 +1,153 @@
 /* Geral */
 .heroSection {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--soft-white);
+  flex-wrap: wrap;
+}
+
+.heroContent {
+  max-width: 37.5rem;
+  margin-right: 2rem;
+}
+
+.heroImage {
+  width: 25rem;
+  border-radius: 1.25rem;
+  margin-top: 1.5rem;
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+
+.title {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.title span {
+  color: var(--terceary);
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--terceary);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.contentSection {
+  padding: 3rem;
+  background-color: var(--logo);
+  color: var(--terceary);
+}
+
+.contentSection p {
+  margin-bottom: 1rem;
+}
+
+.contentSection strong {
+  color: var(--black);
+}
+
+.contentSection ol,
+.contentSection ul {
+  margin-left: 2rem;
+}
+
+.contentSection ol li,
+.contentSection ul li {
+  margin-bottom: 1rem;
+}
+
+.contentContainer {
+  max-width: 60rem;
+  margin: auto;
+}
+
+.tituloSobre {
+  font-size: 1.5rem;
+  margin: 2rem 0 1.5rem;
+  color: var(--black);
+}
+
+.textoSobre {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.professionalSection {
+  padding: 2rem;
+  background-color: var(--logo);
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gridItem img {
+  max-width: 350px;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.professionalText {
+  max-width: 60rem;
+  margin: 2rem auto 0;
+  font-size: 1.125rem;
+  text-align: justify;
+  color: var(--terceary);
+}
+
+.tituloProf {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
     align-items: center;
-    padding: 3rem;
-    background-color: var(--soft-white);
-    flex-wrap: wrap;
   }
-  
-  .heroContent {
-    max-width: 37.5rem;
-    margin-right: 2rem;
-  }
-  
+
+  .heroContent,
   .heroImage {
-    width: 25rem;
-    border-radius: 1.25rem;
-    margin-top: 1.5rem;
-    animation: floating 3s ease-in-out infinite;
+    margin-right: 0;
   }
-  
-  @keyframes floating {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-1rem);
-    }
+
+  .heroImage {
+    margin-top: 2rem;
   }
-  
-  .title {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
-    color: var(--black);
-  }
-  
-  .title span {
-    color: var(--terceary);
-    font-weight: 600;
-  }
-  
-  .description {
-    font-size: 1rem;
-    color: var(--terceary);
-    line-height: 1.6;
-    text-align: justify;
-  }
-  
-  .contentSection {
-    padding: 3rem;
-    background-color: var(--logo);
-    color: var(--terceary);
-  }
-  
-  .contentSection p {
-    margin-bottom: 1rem;
-  }
-  
-  .contentSection strong {
-    color: var(--black);
-  }
-  
-  .contentSection ol,
-  .contentSection ul {
-    margin-left: 2rem;
-  }
-  
-  .contentSection ol li,
-  .contentSection ul li {
-    margin-bottom: 1rem;
-  }
-  
+
   .contentContainer {
-    max-width: 60rem;
-    margin: auto;
+    max-width: 100%;
+    padding: 0 1rem;
   }
-  
-  .tituloSobre {
-    font-size: 1.5rem;
-    margin: 2rem 0 1.5rem;
-    color: var(--black);
-  }
-  
-  .textoSobre {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    text-align: justify;
-  }
-  
-  .professionalSection {
-    padding: 2rem;
-    background-color: var(--logo);
-  }
-  
+
   .gridContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-  
-  .gridItem img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-  }
-  
+
   .professionalText {
-    max-width: 60rem;
-    margin: 2rem auto 0;
-    font-size: 1.125rem;
-    text-align: justify;
-    color: var(--terceary);
+    max-width: 100%;
+    padding: 0 1rem;
   }
-  
-  .tituloProf {
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .heroSection {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .heroContent,
-    .heroImage {
-      margin-right: 0;
-    }
-  
-    .heroImage {
-      margin-top: 2rem;
-    }
-  
-    .contentContainer {
-      max-width: 100%;
-      padding: 0 1rem;
-    }
-  
-    .gridContainer {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-  
-    .professionalText {
-      max-width: 100%;
-      padding: 0 1rem;
-    }
-  }
-  
+}
