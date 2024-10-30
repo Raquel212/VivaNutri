@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
-import { FaUserCircle, FaBlender } from "react-icons/fa"
+import { useEffect, useState } from "react"
+import { FaBlender, FaUserCircle } from "react-icons/fa"
 import { HiDocumentReport } from "react-icons/hi"
-import { IoFastFood, IoBarChart, IoChatbox } from "react-icons/io5"
+import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
 import { MdFlatware } from "react-icons/md"
 import { SiGoogleforms } from "react-icons/si"
 import { Link } from "react-router-dom"
@@ -10,6 +10,7 @@ import styles from "./PlanoAlimentarPaciente.module.css"
 function PlanoAlimentarPaciente() {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const [planoAlimentar, setPlanoAlimentar] = useState([]) // Estado para armazenar o plano alimentar
+  const [diaSelecionado, setDiaSelecionado] = useState("Segunda-feira") // Estado para armazenar o dia selecionado
 
   const toggleUserMenu = () => {
     setUserMenuOpen(!userMenuOpen)
@@ -26,8 +27,8 @@ function PlanoAlimentarPaciente() {
           almoco: "Frango grelhado com salada",
           lancheTarde: "Não sei ainda",
           jantar: "Sopa de legumes",
-          ceia: "Uma maça"
-        }
+          ceia: "Uma maça",
+        },
       },
       {
         dia: "Terça-feira",
@@ -37,45 +38,55 @@ function PlanoAlimentarPaciente() {
           almoco: "Peixe assado com arroz integral",
           lancheTarde: "Não sei ainda",
           jantar: "Salada de grãos",
-          ceia: "Uma maça"
-        }
+          ceia: "Uma maça",
+        },
       },
       {
         dia: "Quarta-feira",
         refeicoes: {
-          cafeManha: "Iogurte com granola",
-          lancheManha: "Biscoito e suco",
-          almoco: "Peixe assado com arroz integral",
-          lancheTarde: "Não sei ainda",
-          jantar: "Salada de grãos",
-          ceia: "Uma maça"
-        }
+          cafeManha: "Pão integral com queijo",
+          lancheManha: "Frutas",
+          almoco: "Carne com legumes",
+          lancheTarde: "Iogurte",
+          jantar: "Sopa de lentilha",
+          ceia: "Uma banana",
+        },
       },
       {
         dia: "Quinta-feira",
         refeicoes: {
-          cafeManha: "Iogurte com granola",
-          lancheManha: "Biscoito e suco",
-          almoco: "Peixe assado com arroz integral",
-          lancheTarde: "Não sei ainda",
-          jantar: "Salada de grãos",
-          ceia: "Uma maça"
-        }
+          cafeManha: "Omelete com vegetais",
+          lancheManha: "Frutas",
+          almoco: "Frango grelhado com arroz integral",
+          lancheTarde: "Biscoito de arroz",
+          jantar: "Sopa de legumes",
+          ceia: "Iogurte",
+        },
       },
       {
         dia: "Sexta-feira",
         refeicoes: {
           cafeManha: "Iogurte com granola",
-          lancheManha: "Biscoito e suco",
-          almoco: "Peixe assado com arroz integral",
-          lancheTarde: "Não sei ainda",
-          jantar: "Salada de grãos",
-          ceia: "Uma maça"
-        }
+          lancheManha: "Suco natural",
+          almoco: "Salada de grãos com peixe",
+          lancheTarde: "Frutas secas",
+          jantar: "Pizza de vegetais",
+          ceia: "Chá",
+        },
       },
     ]
     setPlanoAlimentar(planoExemplo)
   }, [])
+
+  // Função para mudar o dia selecionado
+  const handleDiaClick = (dia) => {
+    setDiaSelecionado(dia)
+  }
+
+  // Encontrando o plano alimentar para o dia selecionado
+  const planoDiaSelecionado = planoAlimentar.find(
+    (plano) => plano.dia === diaSelecionado
+  )
 
   return (
     <>
@@ -96,13 +107,13 @@ function PlanoAlimentarPaciente() {
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/" className={styles.linkHome}>
+              {/* <Link to="/" className={styles.linkHome}>
                 Nutricionista
               </Link>
               <Link to="/" className={styles.linkHome}>
                 Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              </Link> */}
+              <Link to="/EditarPaciente" className={styles.linkHome}>
                 Editar Perfil
               </Link>
               <Link to="/entrar" className={styles.linkHome}>
@@ -175,36 +186,50 @@ function PlanoAlimentarPaciente() {
       </nav>
 
       <main className={styles.mainContent}>
-        <h1>Plano Alimentar da Semana 1</h1>
-        <div className={styles.planoAlimentar}>
-          {planoAlimentar.map((dia, index) => (
-            <div key={index} className={styles.diaPlano}>
-              <h2>{dia.dia}</h2>
-              <ul>
-                <li><strong>Café da Manhã:</strong> {dia.refeicoes.cafeManha}</li>
-                <li><strong>Lanche da Manhã:</strong> {dia.refeicoes.lancheManha}</li>
-                <li><strong>Almoço:</strong> {dia.refeicoes.almoco}</li>
-                <li><strong>Lanche da Tarde:</strong> {dia.refeicoes.lancheTarde}</li>
-                <li><strong>Jantar:</strong> {dia.refeicoes.jantar}</li>
-                <li><strong>Ceia:</strong> {dia.refeicoes.ceia}</li>
-              </ul>
-            </div>
+        <h1>Plano Alimentar</h1>
+
+        <div className={styles.diasSemana}>
+          {planoAlimentar.map((plano) => (
+            <button
+              key={plano.dia}
+              className={
+                diaSelecionado === plano.dia ? styles.diaAtivo : styles.dia
+              }
+              onClick={() => handleDiaClick(plano.dia)}
+            >
+              {plano.dia}
+            </button>
           ))}
         </div>
 
-        <h2 className={styles.tituloPlanoAlimentar}>Plano Alimentar da Semana 2</h2>
-        <div className={styles.planoAlimentar}>
-          {planoAlimentar.map((dia, index) => (
-            <div key={index} className={styles.diaPlano}>
-              <h2>{dia.dia}</h2>
-              <ul>
-                <li><strong>Café da Manhã:</strong> {dia.refeicoes.cafeManha}</li>
-                <li><strong>Almoço:</strong> {dia.refeicoes.almoco}</li>
-                <li><strong>Jantar:</strong> {dia.refeicoes.jantar}</li>
-              </ul>
-            </div>
-          ))}
-        </div>
+        {planoDiaSelecionado && (
+          <div className={styles.planoAlimentarDia}>
+            <h2>{planoDiaSelecionado.dia}</h2>
+            <ul>
+              <li>
+                <strong>Café da Manhã:</strong>{" "}
+                {planoDiaSelecionado.refeicoes.cafeManha}
+              </li>
+              <li>
+                <strong>Lanche da Manhã:</strong>{" "}
+                {planoDiaSelecionado.refeicoes.lancheManha}
+              </li>
+              <li>
+                <strong>Almoço:</strong> {planoDiaSelecionado.refeicoes.almoco}
+              </li>
+              <li>
+                <strong>Lanche da Tarde:</strong>{" "}
+                {planoDiaSelecionado.refeicoes.lancheTarde}
+              </li>
+              <li>
+                <strong>Jantar:</strong> {planoDiaSelecionado.refeicoes.jantar}
+              </li>
+              <li>
+                <strong>Ceia:</strong> {planoDiaSelecionado.refeicoes.ceia}
+              </li>
+            </ul>
+          </div>
+        )}
       </main>
 
       <footer className={styles.footerHomeP}>
