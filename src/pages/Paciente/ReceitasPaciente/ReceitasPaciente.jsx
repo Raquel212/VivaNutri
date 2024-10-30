@@ -1,72 +1,71 @@
-import { useState } from "react";
-import { FaBlender, FaUserCircle, FaHeart, FaRegHeart } from "react-icons/fa";
-import { HiDocumentReport } from "react-icons/hi";
-import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5";
-import { MdFlatware } from "react-icons/md";
-import { Link } from "react-router-dom";
-import styles from "./ReceitasPaciente.module.css";
-import { SiGoogleforms } from "react-icons/si";
+import { useState } from "react"
+import { FaBlender, FaHeart, FaRegHeart, FaUserCircle } from "react-icons/fa"
+import { HiDocumentReport } from "react-icons/hi"
+import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
+import { MdFlatware } from "react-icons/md"
+import { SiGoogleforms } from "react-icons/si"
+import { Link } from "react-router-dom"
+import styles from "./ReceitasPaciente.module.css"
 
 function ReceitasFavoritasPaciente() {
-  const [userMenuOpen, setUserMenuOpen] = useState(false);
-  const [favoritas, setFavoritas] = useState(new Set());
+  const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const [favoritas, setFavoritas] = useState(new Set())
 
   const toggleUserMenu = () => {
-    setUserMenuOpen(!userMenuOpen);
-  };
+    setUserMenuOpen(!userMenuOpen)
+  }
 
   // Exemplo de receitas com vídeos do YouTube e informações adicionais
   const receitas = [
-    { 
-      id: 1, 
-      nome: "Cheesecake", 
+    {
+      id: 1,
+      nome: "Cheesecake",
       video: "0bGuTy1fWHw", // Código do vídeo do YouTube
-      ingredientes: ["Cream Cheese", "Biscoito", "Açúcar", "Manteiga"], 
-      preparo: "Misture todos os ingredientes e leve ao forno.", 
-      estrelas: 4, 
-      tempoPreparo: "44 min", 
-      porcoes: 8, 
-      valorNutricional: "534,00 kcal", 
-      detalhesNutricionais: { 
+      ingredientes: ["Cream Cheese", "Biscoito", "Açúcar", "Manteiga"],
+      preparo: "Misture todos os ingredientes e leve ao forno.",
+      estrelas: 4,
+      tempoPreparo: "44 min",
+      porcoes: 8,
+      valorNutricional: "534,00 kcal",
+      detalhesNutricionais: {
         carboidratos: "30g",
         proteina: "10g",
         gordura: "20g",
         fibra: "2g",
         monoinsaturadas: "8g",
-        poliinsaturadas: "5g"
-      }
+        poliinsaturadas: "5g",
+      },
     },
-    { 
-      id: 2, 
-      nome: "Salada de Quinoa", 
+    {
+      id: 2,
+      nome: "Salada de Quinoa",
       video: "0bGuTy1fWHw", // Código do vídeo do YouTube
-      ingredientes: ["Quinoa", "Tomate", "Pepino", "Limão"], 
-      preparo: "Cozinhe a quinoa e misture todos os ingredientes.", 
-      estrelas: 5, 
-      tempoPreparo: "20 min", 
-      porcoes: 4, 
-      valorNutricional: "200,00 kcal", 
-      detalhesNutricionais: { 
+      ingredientes: ["Quinoa", "Tomate", "Pepino", "Limão"],
+      preparo: "Cozinhe a quinoa e misture todos os ingredientes.",
+      estrelas: 5,
+      tempoPreparo: "20 min",
+      porcoes: 4,
+      valorNutricional: "200,00 kcal",
+      detalhesNutricionais: {
         carboidratos: "45g",
         proteina: "8g",
         gordura: "5g",
         fibra: "6g",
         monoinsaturadas: "2g",
-        poliinsaturadas: "1g"
-      }
-    }
-  ];
+        poliinsaturadas: "1g",
+      },
+    },
+  ]
 
   const toggleFavorita = (id) => {
-    const updatedFavoritas = new Set(favoritas);
+    const updatedFavoritas = new Set(favoritas)
     if (updatedFavoritas.has(id)) {
-      updatedFavoritas.delete(id);
+      updatedFavoritas.delete(id)
     } else {
-      updatedFavoritas.add(id);
+      updatedFavoritas.add(id)
     }
-    setFavoritas(updatedFavoritas);
-  };
-
+    setFavoritas(updatedFavoritas)
+  }
 
   return (
     <>
@@ -87,13 +86,13 @@ function ReceitasFavoritasPaciente() {
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/" className={styles.linkHome}>
+              {/* <Link to="/" className={styles.linkHome}>
                 Nutricionista
               </Link>
               <Link to="/" className={styles.linkHome}>
                 Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              </Link> */}
+              <Link to="/EditarPaciente" className={styles.linkHome}>
                 Editar Perfil
               </Link>
               <Link to="/entrar" className={styles.linkHome}>
@@ -165,10 +164,10 @@ function ReceitasFavoritasPaciente() {
         </ul>
       </nav>
 
-      <main>
+      <main className={styles.mainReceitas}>
         <h1>Receitas</h1>
         <div className={styles.receitasContainer}>
-          {receitas.map(receita => (
+          {receitas.map((receita) => (
             <div key={receita.id} className={styles.receitaCard}>
               <iframe
                 className={styles.receitaVideo}
@@ -184,31 +183,47 @@ function ReceitasFavoritasPaciente() {
                 <span>{`⏳ ${receita.tempoPreparo}`}</span>
                 <span>{`${receita.porcoes} porções`}</span>
               </div>
-              <p><strong>Ingredientes:</strong> {receita.ingredientes.join(", ")}</p>
-              <p><strong>Modo de Preparo:</strong> {receita.preparo}</p>
+              <p>
+                <strong>Ingredientes:</strong> {receita.ingredientes.join(", ")}
+              </p>
+              <p>
+                <strong>Modo de Preparo:</strong> {receita.preparo}
+              </p>
               <div className={styles.receitaValores}>
                 <div className={styles.nutritionalDetails}>
                   <p>
-                    <strong>Carboidratos:</strong> {receita.detalhesNutricionais.carboidratos}
+                    <strong>Carboidratos:</strong>{" "}
+                    {receita.detalhesNutricionais.carboidratos}
                   </p>
                   <p>
-                    <strong>Proteínas:</strong> {receita.detalhesNutricionais.proteina}
+                    <strong>Proteínas:</strong>{" "}
+                    {receita.detalhesNutricionais.proteina}
                   </p>
                   <p>
-                    <strong>Gordura:</strong> {receita.detalhesNutricionais.gordura}
+                    <strong>Gordura:</strong>{" "}
+                    {receita.detalhesNutricionais.gordura}
                   </p>
                   <p>
                     <strong>Fibra:</strong> {receita.detalhesNutricionais.fibra}
                   </p>
                   <p>
-                    <strong>Monoinsaturadas:</strong> {receita.detalhesNutricionais.monoinsaturadas}
+                    <strong>Monoinsaturadas:</strong>{" "}
+                    {receita.detalhesNutricionais.monoinsaturadas}
                   </p>
                   <p>
-                    <strong>Poli-insaturadas:</strong> {receita.detalhesNutricionais.poliinsaturadas}
+                    <strong>Poli-insaturadas:</strong>{" "}
+                    {receita.detalhesNutricionais.poliinsaturadas}
                   </p>
                 </div>
-                <button onClick={() => toggleFavorita(receita.id)} className={styles.favoritarButton}>
-                  {favoritas.has(receita.id) ? ( <FaHeart className={styles.favoritarIcon} /> ) : ( <FaRegHeart className={styles.favoritarIcon} /> )}
+                <button
+                  onClick={() => toggleFavorita(receita.id)}
+                  className={styles.favoritarButton}
+                >
+                  {favoritas.has(receita.id) ? (
+                    <FaHeart className={styles.favoritarIcon} />
+                  ) : (
+                    <FaRegHeart className={styles.favoritarIcon} />
+                  )}
                 </button>
               </div>
             </div>
@@ -227,7 +242,7 @@ function ReceitasFavoritasPaciente() {
         </ul>
       </footer>
     </>
-  );
+  )
 }
 
-export default ReceitasFavoritasPaciente;
+export default ReceitasFavoritasPaciente

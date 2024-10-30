@@ -1,88 +1,89 @@
 /* Glassmorphism Sidebar */
 .sidebar {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 250px;
-    height: calc(100vh - 70px);
-    background: var(--primary);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 20px;
-    transition: all 0.3s ease;
-  }
+  position: fixed;
+  top: 4.375rem;
+  left: 0;
+  width: 15.625rem;
+  height: calc(100vh - 4.375rem);
+  background: var(--primary);
+  backdrop-filter: blur(0.625rem);
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  border-right: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  padding-top: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 1.25rem;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.25rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.linkSlider {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 0.3125rem;
+  font-size: 1.875rem;
+}
+
+.sidebar ul li a:hover {
+  color: var(--secondary);
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
   
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .sidebar ul li {
-    padding: 20px;
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    color: var(--black);
-    font-size: 20px;
-    display: block;
-    transition: color 0.3s ease;
-  }
-  
-  .linkSlider {
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon {
-    padding-right: 10px;
-    font-size: 35px;
-  }
-  
-  .sidebar ul li a:hover {
-    color: var(--secondary);
-    transition: color 0.3s ease;
-    text-decoration: underline;
-  }
-  
-  .headerHomePacie {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2.25rem;
-    width: 100%;
-    background-color: var(--primary);
-    height: 70px;
-    position: fixed;
-    top: 0;
-    z-index: 1001;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .headerHomePacie svg {
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
-  .menuAndLogo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 50px;
-  }
-  
-  .userName {
-    position: relative;
-  }
-  
-  .userIcon {
-    font-size: 30px;
-    cursor: pointer;
-  }
+ /* Header */
+.headerHomePacie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.25rem;
+  width: 100%;
+  background-color: var(--primary);
+  height: 4.375rem;
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+}
+
+.headerHomePacie svg {
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
+.menuAndLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 3.125rem;
+}
+
+.userName {
+  position: relative;
+}
+
+.userIcon {
+  font-size: 1.875rem;
+  cursor: pointer;
+}
   
   .dropdownMenu {
     position: absolute;
@@ -108,9 +109,11 @@
     color: var(--secondary);
     background-color: var(--light-gray);
   }
+
+  
   
   /* Main Content */
-  main {
+  .mainReceitas {
     margin-top: 70px;
     margin-left: 250px;
     padding: 30px;
@@ -119,7 +122,7 @@
     min-height: calc(100vh - 70px - 70px); /* Ajuste para altura total menos header e footer */
   }
   
-  main h1 {
+  .mainReceitas h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: var(--terceary);
