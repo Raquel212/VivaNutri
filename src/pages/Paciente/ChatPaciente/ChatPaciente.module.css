@@ -1,4 +1,3 @@
-/* Glassmorphism Sidebar */
 .sidebar {
   position: fixed;
   top: 70px;
@@ -25,7 +24,7 @@
 
 .sidebar ul li a {
   text-decoration: none;
-  color: var(--terceary);
+  color: var(--black);
   font-size: 20px;
   display: block;
   transition: color 0.3s ease;
@@ -86,12 +85,13 @@
 .dropdownMenu {
   position: absolute;
   right: 0;
-  top: 40px;
-  background-color: var(--terceary);
+  top: 50px;
+  background-color: var(--soft-white);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  width: 200px;
 }
 
 .dropdownMenu .linkHome {
@@ -99,18 +99,45 @@
   padding: 10px 20px;
   text-decoration: none;
   color: var(--black);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdownMenu .linkHome:hover {
   color: var(--secondary);
-  text-decoration: underline;
   background-color: var(--light-gray);
-  transition: color 0.3s ease;
+}
+
+.dropdownMenu .linkHome:hover {
+  background-color: var(--beige);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.messageInput {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  margin-right: 10px;
+  font-size: 1rem;
+  resize: none;
+  
+}
+
+.sendButton {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 /* Main Content */
 main {
-  border: 1px solid red;
   margin-top: 70px;
   width: calc(100% - 250px);
   margin-left: 250px;
@@ -118,7 +145,120 @@ main {
   transition: margin-left 0.3s ease;
 }
 
-/* Footer */
+
+/* --- Novos Estilos para o ChatPaciente --- */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 20px; */
+}
+
+.chatContainer {
+  width: 70%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.videoCallButtons a {
+  font-size: 1.8rem;
+  color: var(--terceary);
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.messagesContainer {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.messagePaciente {
+  background-color: #e0f7fa;
+  align-self: flex-end;
+}
+
+.messageNutricionista {
+  background-color: #ffecb3;
+}
+
+.messagePsicologo {
+  background-color: #e1bee7;
+}
+
+.inputContainer {
+  display: flex;
+  margin-top: 10px;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.sendButton {
+  padding: 10px;
+  background-color: var(--terceary);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.suggestionsContainer {
+  margin-top: 20px;
+}
+
+.suggestionList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.suggestionButton {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+}
+
+.suggestionButton:hover {
+  background-color: #d0d0d0;
+}
+
+ /* Footer */
 .footerHomeP {
   background: var(--primary);
   display: flex;
@@ -126,10 +266,13 @@ main {
   align-items: center;
   width: calc(100% - 250px);
   margin-left: 250px;
-  height: 4.375rem;
+  height: 70px;
   font-size: 1.125rem;
   color: var(--terceary);
   padding: 0 2.25rem;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footerHomeP ul {
@@ -143,331 +286,10 @@ main {
 .footerHomeP ul li a {
   text-decoration: none;
   color: var(--terceary);
+  transition: color 0.3s ease;
 }
 
 .footerHomeP ul li a:hover {
   text-decoration: underline;
-}
-
-/* Media Queries para responsividade */
-@media (max-width: 1024px) {
-  .headerHomePacie {
-    padding: 0 1.5rem;
-  }
-
-  .mainContent {
-    padding: 20px;
-  }
-
-  .sidebar {
-    width: 200px;
-  }
-
-  main,
-  .footerHomeP {
-    margin-left: 200px;
-    width: calc(100% - 200px);
-  }
-}
-
-@media (max-width: 768px) {
-  .headerHomePacie {
-    padding: 0 1rem;
-  }
-
-  .mainContent {
-    padding: 15px;
-  }
-
-  .sidebar {
-    width: 180px;
-  }
-
-  main,
-  .footerHomeP {
-    margin-left: 180px;
-    width: calc(100% - 180px);
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .headerHomePacie {
-    padding: 0 0.5rem;
-  }
-
-  .mainContent {
-    padding: 10px;
-  }
-
-  .sidebar {
-    width: 150px;
-  }
-
-  main,
-  .footerHomeP {
-    margin-left: 150px;
-    width: calc(100% - 150px);
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card,
-  .progressCard,
-  .consultationCard {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-/* --- Novos Estilos para o ChatPaciente --- */
-
-/* Container do Chat */
-.chatContainer {
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  background-color: var(--soft-white);
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-/* Header do Chat */
-.chatHeader {
-  background-color: var(--primary);
-  color: var(--terceary);
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.chatHeader .title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.chatHeader .videoCallButtons a {
-  margin-left: 10px;
-  background-color: var(--secondary);
-  color: var(--terceary);
-  padding: 8px 12px;
-  border-radius: 50%;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-
-.chatHeader .videoCallButtons a:hover {
-  background-color: var(--dark-gray);
-}
-
-/* Corpo do Chat */
-.messagesContainer {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-  background-image: url('/chat-background.png'); /* Opcional: imagem de fundo */
-  background-size: cover;
-  background-position: center;
-}
-
-/* Mensagens */
-.message {
-  max-width: 60%;
-  margin-bottom: 15px;
-  padding: 10px 15px;
-  border-radius: 20px;
-  position: relative;
-  word-wrap: break-word;
-  font-size: 16px;
-}
-
-.messagePaciente {
-  background-color: var(--secondary);
-  color: var(--terceary);
-  align-self: flex-end;
-  border-bottom-right-radius: 0;
-}
-
-.messageNutricionista,
-.messagePsicologo {
-  background-color: var(--light-gray);
-  color: var(--black);
-  align-self: flex-start;
-  border-bottom-left-radius: 0;
-}
-
-.messageNutricionista::after,
-.messagePsicologo::after,
-.messagePaciente::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-}
-
-.messagePaciente::after {
-  border-top-color: var(--secondary);
-  top: 10px;
-  right: -20px;
-}
-
-.messageNutricionista::after {
-  border-top-color: var(--light-gray);
-  top: 10px;
-  left: -20px;
-}
-
-.messagePsicologo::after {
-  border-top-color: var(--light-gray);
-  top: 10px;
-  left: -20px;
-}
-
-/* Input do Chat */
-.inputContainer {
-  display: flex;
-  padding: 15px;
-  border-top: 1px solid var(--light-gray);
-  background-color: var(--terceary);
-}
-
-.chatInput {
-  flex: 1;
-  padding: 10px 15px;
-  border: 1px solid var(--light-gray);
-  border-radius: 20px;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.chatInput:focus {
-  border-color: var(--secondary);
-}
-
-.sendButton {
-  background-color: var(--primary);
-  color: var(--terceary);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-
-.sendButton:hover {
-  background-color: var(--secondary);
-}
-
-/* Estilos dos Botões de Video Call */
-.videoCallButtons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.videoCallButtons a svg {
-  font-size: 20px;
-}
-
-/* Scroll personalizado para mensagens */
-.messagesContainer::-webkit-scrollbar {
-  width: 6px;
-}
-
-.messagesContainer::-webkit-scrollbar-track {
-  background: var(--soft-white);
-}
-
-.messagesContainer::-webkit-scrollbar-thumb {
-  background-color: var(--secondary);
-  border-radius: 10px;
-  border: 3px solid var(--soft-white);
-}
-
-/* Responsividade do Chat */
-@media (max-width: 768px) {
-  .sidebar {
-      width: 200px;
-  }
-
-  main,
-  .footerHomeP {
-      margin-left: 200px;
-      width: calc(100% - 200px);
-  }
-
-  .chatHeader .title {
-      font-size: 18px;
-  }
-
-  .chatHeader .videoCallButtons a {
-      padding: 6px 10px;
-  }
-
-  .message {
-      max-width: 70%;
-      font-size: 14px;
-  }
-
-  .chatInput {
-      font-size: 14px;
-  }
-
-  .sendButton {
-      width: 35px;
-      height: 35px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar {
-      width: 150px;
-  }
-
-  main,
-  .footerHomeP {
-      margin-left: 150px;
-      width: calc(100% - 150px);
-  }
-
-  .chatHeader .title {
-      font-size: 16px;
-  }
-
-  .chatHeader .videoCallButtons a {
-      padding: 5px 8px;
-  }
-
-  .message {
-      max-width: 80%;
-      font-size: 12px;
-  }
-
-  .chatInput {
-      font-size: 14px;
-  }
-
-  .sendButton {
-      width: 30px;
-      height: 30px;
-  }
+  color: var(--secondary);
 }
