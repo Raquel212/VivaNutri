@@ -17,6 +17,7 @@ import QuestionarioPaciente from "./pages/Paciente/QuestionarioPaciente/Question
 import CadastroPsicologo from "./pages/Psicologo/CadastroPsicologo"
 import Registrar from "./pages/Registrar"
 import Sobre from "./pages/Sobre"
+import EditarPaciente from "./pages/EditarPaciente"
 
 function AppRoutes() {
   return (
@@ -50,8 +51,9 @@ function AppRoutes() {
           path="/receitasFavoritasPaciente"
           element={<ReceitasFavoritasPaciente />}
         />
-        <Route path="chatPaciente" element={<ChatPaciente />} />
-        <Route path="receitasPaciente" element={<ReceitasPaciente />} />
+        <Route path="/chatPaciente" element={<ChatPaciente />} />
+        <Route path="/receitasPaciente" element={<ReceitasPaciente />} />
+        <Route path="/EditarPaciente" element={<EditarPaciente />} />
       </Routes>
 
     </BrowserRouter>
