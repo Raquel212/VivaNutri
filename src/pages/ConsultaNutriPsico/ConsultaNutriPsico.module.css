@@ -1,0 +1,245 @@
+.sidebar {
+  position: fixed;
+  top: 4.375rem;
+  left: 0;
+  width: 15.625rem;
+  height: calc(100vh - 4.375rem);
+  background: var(--primary);
+  backdrop-filter: blur(0.625rem);
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 1.25rem;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.25rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.linkSlider {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 0.3125rem;
+  font-size: 1.875rem;
+}
+
+.sidebar ul li a:hover {
+  color: var(--secondary);
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+.headerHomePacie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.25rem;
+  width: 100%;
+  background-color: var(--primary);
+  height: 4.375rem;
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+}
+
+.headerHomePacie svg {
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
+.menuAndLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 3.125rem;
+}
+
+.userName {
+  position: relative;
+}
+
+.userIcon {
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: var(--soft-white);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px;
+}
+
+.dropdownMenu .linkHome {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--black);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu .linkHome:hover {
+  color: var(--secondary);
+  background-color: var(--light-gray);
+}
+
+/* Main */
+
+.consultationsContainer {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 28px;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Filtro e Botão de Adição */
+.filterContainer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.icon {
+  margin-right: 5px;
+  color: var(--secondary);
+}
+
+.dateFilter {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  background-color: var(--accent);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.addButton:hover {
+  background-color: var(--accentHover);
+}
+
+/* Lista de Consultas */
+.consultationList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.consultationItem {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consultationDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8daef;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  font-weight: bold;
+  color: #4b0082;
+}
+
+.day {
+  font-size: 24px;
+}
+
+.monthYear {
+  font-size: 12px;
+}
+
+.consultationInfo {
+  flex: 1;
+}
+
+.clientName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Footer ----  */
+.footerHomeP {
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 15.625rem);
+  margin-left: 15.625rem;
+  height: 4.375rem;
+  font-size: 1.125rem;
+  color: var(--terceary);
+  padding: 0 2.25rem;
+}
+
+.footerHomeP ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footerHomeP ul li a {
+  text-decoration: none;
+  color: var(--terceary);
+}
+
+.footerHomeP ul li a:hover {
+  text-decoration: underline;
+}
