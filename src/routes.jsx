@@ -18,6 +18,11 @@ import CadastroPsicologo from "./pages/Psicologo/CadastroPsicologo"
 import Registrar from "./pages/Registrar"
 import Sobre from "./pages/Sobre"
 import EditarPaciente from "./pages/EditarPaciente"
+import GerenciarMental from "./pages/GerenciarMental"
+import GerenciarPlanosAlimentares from "./pages/GerenciarPlanosAlimentares"
+import ConsultaNutriPsico from "./pages/ConsultaNutriPsico/index"
+import ConsultaPsico from "./pages/ConsultaPsico"
+import HomePsico from "./pages/HomePsico"
 
 function AppRoutes() {
   return (
@@ -54,6 +59,14 @@ function AppRoutes() {
         <Route path="/chatPaciente" element={<ChatPaciente />} />
         <Route path="/receitasPaciente" element={<ReceitasPaciente />} />
         <Route path="/EditarPaciente" element={<EditarPaciente />} />
+        <Route path="/ConsultaNutriPsico" element={<ConsultaNutriPsico />} />
+        <Route
+          path="/GerenciarPlanosAlimentares"
+          element={<GerenciarPlanosAlimentares />}
+        />
+        <Route path="/homePsico" element={<HomePsico />} />
+        <Route path="/consultaPsico" element={<ConsultaPsico />} />
+        <Route path="/gerenciarMental" element={<GerenciarMental />} />
       </Routes>
 
     </BrowserRouter>
