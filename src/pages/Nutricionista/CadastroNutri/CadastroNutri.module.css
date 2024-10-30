@@ -39,7 +39,7 @@
 
 .btnNutri {
   width: 100%;
-  margin-top: 0.625rem;
+  margin-top: 10px;
   border: none;
   background-color: var(--terceary);
   padding: 0.625rem;

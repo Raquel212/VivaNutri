@@ -38,7 +38,7 @@ const CadastroNutri = () => {
     }
 
     localStorage.setItem("psicologo", JSON.stringify(form))
-    alert("Cadastro realizado com sucesso!")
+    alert("Cadastro realizado com sucesso!!")
     navigate("/homeNutriPsico")
   }
 
