@@ -38,7 +38,7 @@ function ReceitasFavoritasPaciente() {
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              <Link to="/EditarPaciente" className={styles.linkHome}>
                 Editar Perfil
               </Link>
               <Link to="/entrar" className={styles.linkHome}>
