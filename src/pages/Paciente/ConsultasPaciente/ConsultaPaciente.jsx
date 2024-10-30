@@ -67,13 +67,13 @@ function ConsultaPaciente() {
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/" className={styles.linkHome}>
+              {/* <Link to="/" className={styles.linkHome}>
                 Nutricionista
               </Link>
               <Link to="/" className={styles.linkHome}>
                 Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              </Link> */}
+              <Link to="/EditarPaciente" className={styles.linkHome}>
                 Editar Perfil
               </Link>
               <Link to="/entrar" className={styles.linkHome}>
@@ -129,7 +129,7 @@ function ConsultaPaciente() {
           <li>
             <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                < FaBlender  className={styles.icon} />
+                <FaBlender className={styles.icon} />
                 <p>Receitas</p>
               </div>
             </Link>
@@ -147,7 +147,7 @@ function ConsultaPaciente() {
 
       <main>
         <h1>Consultas</h1>
-        
+
         <div className={styles.consultaSection}>
           <h2>Consultas com Nutricionista</h2>
           <div className={styles.consultaDetails}>
@@ -158,20 +158,28 @@ function ConsultaPaciente() {
               value={selectedDate}
               onChange={handleChangeDate}
             />
-            <p>Data da Consulta: <strong>{selectedDate}</strong></p>
+            <p>
+              Data da Consulta: <strong>{selectedDate}</strong>
+            </p>
             <form>
               <label htmlFor="nutricionista-time">Escolha um horário:</label>
-              <select 
-                id="nutricionista-time" 
-                value={selectedNutricionistaTime} 
+              <select
+                id="nutricionista-time"
+                value={selectedNutricionistaTime}
                 onChange={handleChangeNutricionistaTime}
               >
-                <option value="" disabled>Selecione um horário</option>
+                <option value="" disabled>
+                  Selecione um horário
+                </option>
                 {nutricionistaTimes.map((time, index) => (
-                  <option key={index} value={time}>{time}</option>
+                  <option key={index} value={time}>
+                    {time}
+                  </option>
                 ))}
               </select>
-              <button type="button" className={styles.buttonConsulta}>Solicitar Troca de Horário</button>
+              <button type="button" className={styles.buttonConsulta}>
+                Solicitar Troca de Horário
+              </button>
             </form>
           </div>
         </div>
@@ -186,24 +194,31 @@ function ConsultaPaciente() {
               value={selectedDate}
               onChange={handleChangeDate}
             />
-            <p>Data da Consulta: <strong>{selectedDate}</strong></p>
+            <p>
+              Data da Consulta: <strong>{selectedDate}</strong>
+            </p>
             <form>
               <label htmlFor="psicologo-time">Escolha um horário:</label>
-              <select 
-                id="psicologo-time" 
-                value={selectedPsicologoTime} 
+              <select
+                id="psicologo-time"
+                value={selectedPsicologoTime}
                 onChange={handleChangePsicologoTime}
               >
-                <option value="" disabled>Selecione um horário</option>
+                <option value="" disabled>
+                  Selecione um horário
+                </option>
                 {psicologoTimes.map((time, index) => (
-                  <option key={index} value={time}>{time}</option>
+                  <option key={index} value={time}>
+                    {time}
+                  </option>
                 ))}
               </select>
-              <button type="button" className={styles.buttonConsulta}>Solicitar Troca de Horário</button>
+              <button type="button" className={styles.buttonConsulta}>
+                Solicitar Troca de Horário
+              </button>
             </form>
           </div>
         </div>
-
       </main>
 
       <footer className={styles.footerHomeP}>
