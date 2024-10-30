@@ -1,18 +1,18 @@
-import React from "react";
-import {  FaBlender , FaUserCircle } from "react-icons/fa";
-import { HiDocumentReport } from "react-icons/hi";
-import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5";
-import { MdFlatware } from "react-icons/md";
-import { Link } from "react-router-dom";
-import styles from "./QuestionarioPaciente.module.css";
-import { SiGoogleforms } from "react-icons/si";
+import React from "react"
+import { FaBlender, FaUserCircle } from "react-icons/fa"
+import { HiDocumentReport } from "react-icons/hi"
+import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
+import { MdFlatware } from "react-icons/md"
+import { SiGoogleforms } from "react-icons/si"
+import { Link } from "react-router-dom"
+import styles from "./QuestionarioPaciente.module.css"
 
 function QuestionarioPaciente() {
-  const [userMenuOpen, setUserMenuOpen] = React.useState(false);
+  const [userMenuOpen, setUserMenuOpen] = React.useState(false)
 
   const toggleUserMenu = () => {
-    setUserMenuOpen(!userMenuOpen);
-  };
+    setUserMenuOpen(!userMenuOpen)
+  }
 
   // Links dos formulários (substitua pelos URLs reais dos seus formulários)
   const formsLinks = {
@@ -22,7 +22,7 @@ function QuestionarioPaciente() {
     emocional: "https://forms.gle/zCrGmVBsstmvELV7A",
     saude: "https://forms.gle/L16cRvwDWJUvZTVe6",
     conjunto: "https://forms.gle/tU2S7KQx6jfdhVPv5",
-  };
+  }
 
   return (
     <>
@@ -37,14 +37,24 @@ function QuestionarioPaciente() {
           <FaUserCircle onClick={toggleUserMenu} className={styles.userIcon} />
           {userMenuOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/notifications" className={styles.linkHome}>Notificações</Link>
+              <Link to="/notifications" className={styles.linkHome}>
+                Notificações
+              </Link>
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/nutricionista" className={styles.linkHome}>Nutricionista</Link>
-              <Link to="/psicologo" className={styles.linkHome}>Psicólogo</Link>
-              <Link to="/edit-profile" className={styles.linkHome}>Editar Perfil</Link>
-              <Link to="/entrar" className={styles.linkHome}>Logoff</Link>
+              {/* <Link to="/" className={styles.linkHome}>
+                Nutricionista
+              </Link>
+              <Link to="/" className={styles.linkHome}>
+                Psicólogo
+              </Link> */}
+              <Link to="/EditarPaciente" className={styles.linkHome}>
+                Editar Perfil
+              </Link>
+              <Link to="/entrar" className={styles.linkHome}>
+                Logoff
+              </Link>
             </div>
           )}
         </div>
@@ -95,7 +105,7 @@ function QuestionarioPaciente() {
           <li>
             <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                < FaBlender  className={styles.icon} />
+                <FaBlender className={styles.icon} />
                 <p>Receitas</p>
               </div>
             </Link>
@@ -118,9 +128,10 @@ function QuestionarioPaciente() {
           <div className={styles.questionarioCard}>
             <p>Questionário Nutricionista</p>
             <div className={styles.progress}>
-              <div className={styles.progressBar} style={{ width: "80%" }}></div>
+              <div id={styles.progressBar} style={{ width: "80%" }}></div>
             </div>
             <p>Última atualização: 17/07/2024</p>
+            <p>Progresso: 80%</p>
             <a
               href={formsLinks.nutricionista}
               target="_blank"
@@ -135,9 +146,13 @@ function QuestionarioPaciente() {
           <div className={styles.questionarioCard}>
             <p>Questionário Psicólogo - Alimentar</p>
             <div className={styles.progress}>
-              <div className={styles.progressBar} style={{ width: "100%" }}></div>
+              <div
+                className={styles.progressBar}
+                style={{ width: "100%" }}
+              ></div>
             </div>
             <p>Última atualização: 20/08/2024</p>
+            <p>Progresso: 100%</p>
             <a
               href={formsLinks.psicologo}
               target="_blank"
@@ -155,6 +170,7 @@ function QuestionarioPaciente() {
               <div className={styles.progressBar} style={{ width: "0%" }}></div>
             </div>
             <p>Última atualização: 20/08/2024</p>
+            <p>Progresso: 0%</p>
             <a
               href={formsLinks.corporal}
               target="_blank"
@@ -172,6 +188,7 @@ function QuestionarioPaciente() {
               <div className={styles.progressBar} style={{ width: "0%" }}></div>
             </div>
             <p>Última atualização: 20/08/2024</p>
+            <p>Progresso: 0%</p>
             <a
               href={formsLinks.emocional}
               target="_blank"
@@ -189,6 +206,7 @@ function QuestionarioPaciente() {
               <div className={styles.progressBar} style={{ width: "0%" }}></div>
             </div>
             <p>Última atualização: 20/08/2024</p>
+            <p>0% Conluído</p>
             <a
               href={formsLinks.saude}
               target="_blank"
@@ -203,9 +221,13 @@ function QuestionarioPaciente() {
           <div className={styles.questionarioCard}>
             <p>Questionário Conjunto</p>
             <div className={styles.progress}>
-              <div className={styles.progressBar} style={{ width: "100%" }}></div>
+              <div
+                className={styles.progressBar}
+                style={{ width: "100%" }}
+              ></div>
             </div>
             <p>Última atualização: 25/09/2024</p>
+            <p>Progresso: 0%</p>
             <a
               href={formsLinks.conjunto}
               target="_blank"
@@ -221,12 +243,16 @@ function QuestionarioPaciente() {
       <footer className={styles.footerHomeP}>
         <p className={styles.copyright}>&copy; 2024 VivaNutri</p>
         <ul className={styles.links}>
-          <li className={styles.linksLi}><a href="#">Política de Privacidade</a></li>
-          <li className={styles.linksLi}><a href="#">Termos de Uso</a></li>
+          <li className={styles.linksLi}>
+            <a href="#">Política de Privacidade</a>
+          </li>
+          <li className={styles.linksLi}>
+            <a href="#">Termos de Uso</a>
+          </li>
         </ul>
       </footer>
     </>
-  );
+  )
 }
 
-export default QuestionarioPaciente;
+export default QuestionarioPaciente

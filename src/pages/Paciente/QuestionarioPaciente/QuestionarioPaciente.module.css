@@ -6,9 +6,9 @@
   width: 15.625rem;
   height: calc(100vh - 4.375rem);
   background: var(--primary);
-  backdrop-filter: blur(.625rem);
-  box-shadow: 0 .25rem 1.875rem rgba(0, 0, 0, 0.1);
-  border-right: .0625rem solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(0.625rem);
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  border-right: 0.0625rem solid rgba(255, 255, 255, 0.3);
   padding-top: 1.25rem;
   transition: all 0.3s ease;
 }
@@ -37,7 +37,7 @@
 }
 
 .icon {
-  padding-right: .3125rem;
+  padding-right: 0.3125rem;
   font-size: 1.875rem;
 }
 
@@ -87,41 +87,42 @@
 .dropdownMenu {
   position: absolute;
   right: 0;
-  top: 2.5rem;
+  top: 50px;
   background-color: var(--soft-white);
-  border: .0625rem solid var(--primary);
-  border-radius: .375rem;
-  box-shadow: 0rem .25rem .375rem rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  width: 200px;
 }
 
 .dropdownMenu .linkHome {
   display: block;
-  padding: .625rem 1.25rem;
+  padding: 10px 20px;
   text-decoration: none;
   color: var(--black);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdownMenu .linkHome:hover {
   color: var(--secondary);
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  background-color: var(--light-gray);
 }
 
 /* Main Content */
 .questionarioMain {
-  margin-top: 4.375rem;
-  width: calc(100% - 15.625rem);
-  height: 36.8125rem;
+  margin-top: 3.75rem;
+  width: calc(100% - 12.5rem);
+  height: 45rem;
   margin-left: 15.625rem;
   padding: 1.875rem;
   transition: margin-left 0.3s ease;
 }
 
-.questionarioMain h1{
+.questionarioMain h1 {
   text-align: center;
-  margin-top: 1.25rem;
-  margin-bottom: 2.5rem;
+  margin-top: .9375rem;
+  margin-bottom: 1.875rem;
   color: var(--secondary);
   font-weight: 600;
 }
@@ -136,36 +137,38 @@
 
 .questionarioCard {
   background-color: var(--primary);
-  border-radius: .625rem;
-  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   padding: 1.25rem;
   width: 18.75rem;
 }
 
-.questionarioCard p{
+.questionarioCard p {
   margin-bottom: 15px;
   font-weight: 600;
-
-
 }
 
 .progress {
   background-color: #f2f2f2;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
 }
 
 .progressBar {
-  height: .625rem;
+  height: 0.625rem;
   background-color: #00b33c;
+}
+#progressBar{
+    height: 0.625rem;
+  background-color: #ffe100;
 }
 
 .questionarioButton {
   background-color: var(--terceary);
   color: var(--logo);
-  padding: .625rem 1.25rem;
-  border-radius: .3125rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -187,18 +190,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 15.625rem);
-  margin-left: 15.625rem;
-  height: 4.375rem;
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  height: 70px;
   font-size: 1.125rem;
   color: var(--terceary);
   padding: 0 2.25rem;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footerHomeP ul {
   list-style: none;
   display: flex;
-  gap: 1.25rem;
+  gap: 20px;
   padding: 0;
   margin: 0;
 }
@@ -206,10 +212,12 @@
 .footerHomeP ul li a {
   text-decoration: none;
   color: var(--terceary);
+  transition: color 0.3s ease;
 }
 
 .footerHomeP ul li a:hover {
   text-decoration: underline;
+  color: var(--secondary);
 }
 
 /* Media Queries para responsividade */
