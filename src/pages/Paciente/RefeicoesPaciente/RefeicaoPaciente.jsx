@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { FaUserCircle,  FaBlender  } from "react-icons/fa"
+import { FaBlender, FaUserCircle } from "react-icons/fa"
 import { HiDocumentReport } from "react-icons/hi"
-import { IoFastFood, IoBarChart, IoChatbox } from "react-icons/io5"
+import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
 import { MdFlatware } from "react-icons/md"
 import { SiGoogleforms } from "react-icons/si"
 import { Link } from "react-router-dom"
@@ -16,68 +16,61 @@ function RefeicaoPaciente() {
   const [descricao, setDescricao] = useState("")
   const [fome, setFome] = useState(0)
   const [saciedade, setSaciedade] = useState(0)
-  
+
   // Refeição pré-adicionada
   const [refeicoes, setRefeicoes] = useState([
     {
       id: 1,
-      foto: "/Img_Home.png", // URL da imagem de exemplo
+      foto: "/Img_Home.png",
       tipoRefeicao: "Almoço",
       data: "2024-10-01",
       horario: "12:30",
       descricao: "Salada de quinoa com legumes grelhados e molho de tahine.",
       fome: 5,
       saciedade: 7,
-      comentarioNutricionista: "Excelente escolha de alimentos balanceados. Continue assim!",
-      avaliacaoNutricionista: 5
-
-      
-      
+      comentarioNutricionista:
+        "Excelente escolha de alimentos balanceados. Continue assim!",
+      avaliacaoNutricionista: 5,
     },
     {
       id: 2,
-      foto: "/Img_Home.png", // URL da imagem de exemplo
+      foto: "/Img_Home.png",
       tipoRefeicao: "Almoço",
       data: "2024-10-01",
       horario: "12:30",
       descricao: "Salada de quinoa com legumes grelhados e molho de tahine.",
       fome: 5,
       saciedade: 7,
-      comentarioNutricionista: "Excelente escolha de alimentos balanceados. Continue assim!",
-      avaliacaoNutricionista: 5
-
-      
-      
+      comentarioNutricionista:
+        "Excelente escolha de alimentos balanceados. Continue assim!",
+      avaliacaoNutricionista: 5,
     },
     {
       id: 3,
-      foto: "/Img_Home.png", // URL da imagem de exemplo
+      foto: "/Img_Home.png",
       tipoRefeicao: "Almoço",
       data: "2024-10-01",
       horario: "12:30",
       descricao: "Salada de quinoa com legumes grelhados e molho de tahine.",
       fome: 5,
       saciedade: 7,
-      comentarioNutricionista: "Excelente escolha de alimentos balanceados. Continue assim!",
-      avaliacaoNutricionista: 5
-
-      
-      
+      comentarioNutricionista:
+        "Excelente escolha de alimentos balanceados. Continue assim!",
+      avaliacaoNutricionista: 5,
     },
     {
       id: 4,
-      foto: "/Img_Home.png", // URL da imagem de exemplo
+      foto: "/Img_Home.png",
       tipoRefeicao: "Almoço",
       data: "2024-10-01",
       horario: "12:30",
       descricao: "Salada de quinoa com legumes grelhados e molho de tahine.",
       fome: 5,
       saciedade: 7,
-      comentarioNutricionista: "Excelente escolha de alimentos balanceados. Continue assim!",
-      avaliacaoNutricionista: 5
-    }
-
-    
+      comentarioNutricionista:
+        "Excelente escolha de alimentos balanceados. Continue assim!",
+      avaliacaoNutricionista: 5,
+    },
   ])
 
   const toggleUserMenu = () => {
@@ -112,7 +105,7 @@ function RefeicaoPaciente() {
       fome,
       saciedade,
       comentarioNutricionista: "Ótima refeição! Continue assim.",
-      avaliacaoNutricionista: 5
+      avaliacaoNutricionista: 5,
     }
 
     setRefeicoes([novaRefeicao, ...refeicoes])
@@ -146,12 +139,12 @@ function RefeicaoPaciente() {
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/" className={styles.linkHome}>
+              {/* <Link to="/" className={styles.linkHome}>
                 Nutricionista
               </Link>
               <Link to="/" className={styles.linkHome}>
                 Psicólogo
-              </Link>
+              </Link> */}
               <Link to="/edit-profile" className={styles.linkHome}>
                 Editar Perfil
               </Link>
@@ -208,7 +201,7 @@ function RefeicaoPaciente() {
           <li>
             <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                < FaBlender  className={styles.icon} />
+                <FaBlender className={styles.icon} />
                 <p>Receitas</p>
               </div>
             </Link>
@@ -231,12 +224,18 @@ function RefeicaoPaciente() {
           <div className={styles.formGroup}>
             <label>Foto da Refeição:</label>
             <input type="file" accept="image/*" onChange={handleFileChange} />
-            {foto && <img src={foto} alt="Refeição" className={styles.previewImagem} />}
+            {foto && (
+              <img src={foto} alt="Refeição" className={styles.previewImagem} />
+            )}
           </div>
 
           <div className={styles.formGroup}>
             <label>Tipo de Refeição:</label>
-            <select value={tipoRefeicao} onChange={(e) => setTipoRefeicao(e.target.value)} required>
+            <select
+              value={tipoRefeicao}
+              onChange={(e) => setTipoRefeicao(e.target.value)}
+              required
+            >
               <option value="">Selecione</option>
               <option value="Café da Manhã">Café da Manhã</option>
               <option value="Lanche da Manhã">Lanche da Manhã</option>
@@ -249,12 +248,22 @@ function RefeicaoPaciente() {
 
           <div className={styles.formGroup}>
             <label>Data:</label>
-            <input type="date" value={data} onChange={(e) => setData(e.target.value)} required />
+            <input
+              type="date"
+              value={data}
+              onChange={(e) => setData(e.target.value)}
+              required
+            />
           </div>
 
           <div className={styles.formGroup}>
             <label>Horário:</label>
-            <input type="time" value={horario} onChange={(e) => setHorario(e.target.value)} required />
+            <input
+              type="time"
+              value={horario}
+              onChange={(e) => setHorario(e.target.value)}
+              required
+            />
           </div>
 
           <div className={styles.formGroup}>
@@ -291,11 +300,9 @@ function RefeicaoPaciente() {
           <button type="submit" className={styles.botaoAdicionar}>
             Adicionar Refeição
           </button>
-          
         </form>
-        
-        <section className={styles.listaRefeicoes}>
 
+        <section className={styles.listaRefeicoes}>
           <div className={styles.refeicaoContainer}>
             <h2>Refeições Adicionadas</h2>
             {refeicoes.length === 0 ? (
@@ -304,15 +311,32 @@ function RefeicaoPaciente() {
               refeicoes.map((refeicao) => (
                 <div key={refeicao.id} className={styles.refeicaoCard}>
                   {refeicao.foto && (
-                    <img src={refeicao.foto} alt="Refeição" className={styles.imagemRefeicao} />
+                    <img
+                      src={refeicao.foto}
+                      alt="Refeição"
+                      className={styles.imagemRefeicao}
+                    />
                   )}
                   <div className={styles.infoRefeicao}>
-                    <p><strong>Tipo:</strong> {refeicao.tipoRefeicao}</p>
-                    <p><strong>Data:</strong> {refeicao.data}</p>
-                    <p><strong>Horário:</strong> {refeicao.horario}</p>
-                    <p><strong>Descrição:</strong> {refeicao.descricao}</p>
-                    <p><strong>Nível de Fome:</strong> {refeicao.fome}/10</p>
-                    <p><strong>Nível de Saciedade:</strong> {refeicao.saciedade}/10</p>
+                    <p>
+                      <strong>Tipo:</strong> {refeicao.tipoRefeicao}
+                    </p>
+                    <p>
+                      <strong>Data:</strong> {refeicao.data}
+                    </p>
+                    <p>
+                      <strong>Horário:</strong> {refeicao.horario}
+                    </p>
+                    <p>
+                      <strong>Descrição:</strong> {refeicao.descricao}
+                    </p>
+                    <p>
+                      <strong>Nível de Fome:</strong> {refeicao.fome}/10
+                    </p>
+                    <p>
+                      <strong>Nível de Saciedade:</strong> {refeicao.saciedade}
+                      /10
+                    </p>
                   </div>
                   <div className={styles.comentarios}>
                     <h3>Comentários do Nutricionista:</h3>
