@@ -1,14 +1,20 @@
-import { useState } from "react";
-import {  FaBlender , FaUserCircle } from "react-icons/fa";
-import { HiDocumentReport } from "react-icons/hi";
-import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5";
-import { MdFlatware } from "react-icons/md";
-import { Link } from "react-router-dom";
-import BarsChart from "../../../components/Grafico";
-import styles from "./HomePaciente.module.css";
-import { IoChevronForward } from 'react-icons/io5';
-import { SiGoogleforms } from "react-icons/si";
+import { useState } from "react"
+import { FaBlender, FaClock, FaUserCircle } from "react-icons/fa"
+import { FaLocationDot } from "react-icons/fa6"
+import { HiDocumentReport } from "react-icons/hi"
 
+import {
+  IoBarChart,
+  IoChatbox,
+  IoChevronForward,
+  IoFastFood,
+} from "react-icons/io5"
+import { MdFlatware } from "react-icons/md"
+import { SiGoogleforms } from "react-icons/si"
+import { SlCalender } from "react-icons/sl"
+import { Link } from "react-router-dom"
+import BarsChart from "../../../components/Grafico"
+import styles from "./HomePaciente.module.css"
 
 function HomePaciente() {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
@@ -36,13 +42,7 @@ function HomePaciente() {
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/" className={styles.linkHome}>
-                Nutricionista
-              </Link>
-              <Link to="/" className={styles.linkHome}>
-                Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              <Link to="/EditarPaciente" className={styles.linkHome}>
                 Editar Perfil
               </Link>
               <Link to="/entrar" className={styles.linkHome}>
@@ -98,7 +98,7 @@ function HomePaciente() {
           <li>
             <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                < FaBlender  className={styles.icon} />
+                <FaBlender className={styles.icon} />
                 <p>Receitas</p>
               </div>
             </Link>
@@ -116,11 +116,17 @@ function HomePaciente() {
 
       <main>
         <div className={styles.planoAlimentarCard}>
-          <img src="/Img_Home.png" alt="Plano Alimentar" className={styles.cardImage} />
+          <img
+            src="/Img_Home.png"
+            alt="Plano Alimentar"
+            className={styles.cardImage}
+          />
           <div className={styles.cardContent}>
             <h3>Plano alimentar</h3>
             <p>Acompanhe todo o planejamento feito pelo seu Nutricionista.</p>
-            <p className={styles.nutriName}>Prescrição feita por: Victor Santos</p>
+            <p className={styles.nutriName}>
+              Prescrição feita por: Victor Santos
+            </p>
           </div>
           <div className={styles.arrowIcon}>
             <IoChevronForward size={40} />
@@ -128,7 +134,7 @@ function HomePaciente() {
         </div>
 
         <div className={styles.mainContent}>
-        {/* 1 */}
+          {/* 1 */}
           <section className={styles.section01}>
             <h2>Próximas refeições</h2>
             <div className={styles.cards}>
@@ -168,9 +174,9 @@ function HomePaciente() {
           <section className={styles.section02}>
             <h2>Meu progresso</h2>
             <div className={styles.progressCard}>
-              <p>Peso Corporal</p>
-              <h3>87.25Kg</h3>
               <div className={styles.progressDetails}>
+                <h3>Peso Corporal</h3>
+                <h1>87.25Kg</h1>
                 <p>25% Massa Gorda</p>
                 <p>75% Massa Magra</p>
               </div>
@@ -187,10 +193,21 @@ function HomePaciente() {
           <section className={styles.section03}>
             <h2>Próxima consulta</h2>
             <div className={styles.consultationCard}>
-              <p>Domingo | 18/08/2024</p>
-              <p>JFC Trade Center</p>
-              <p>12h</p>
-              <p>Dra. Martins</p>
+              <div className={styles.sectionIcon}>
+                <SlCalender />
+              </div>
+              <div className={styles.sectionTitle}>
+                <p>Domingo | 18/08/2024</p>
+                <div className={styles.sectionTitleIcon}>
+                  <FaLocationDot />
+                  <p>JFC Trade Center</p>
+                </div>
+                <div className={styles.sectionTitleIcon}>
+                  <FaClock />
+                  <p>12h</p>
+                </div>
+                <p>Dra. Martins</p>
+              </div>
             </div>
           </section>
         </div>
