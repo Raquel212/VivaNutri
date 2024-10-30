@@ -1,23 +1,23 @@
-import { useState } from "react";
-import {  FaBlender , FaUserCircle } from "react-icons/fa";
-import { HiDocumentReport } from "react-icons/hi";
-import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5";
-import { MdFlatware } from "react-icons/md";
-import { Link } from "react-router-dom";
-import { SiGoogleforms } from "react-icons/si";
-import { Line, Bar } from 'react-chartjs-2';
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
   BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
   Title,
   Tooltip,
-  Legend,
-} from 'chart.js'; // Importar os componentes necessários
-import styles from "./MeuProgressoPaciente.module.css";
+} from "chart.js" // Importar os componentes necessários
+import { useState } from "react"
+import { Bar, Line } from "react-chartjs-2"
+import { FaBlender, FaUserCircle } from "react-icons/fa"
+import { HiDocumentReport } from "react-icons/hi"
+import { IoBarChart, IoChatbox, IoFastFood } from "react-icons/io5"
+import { MdFlatware } from "react-icons/md"
+import { SiGoogleforms } from "react-icons/si"
+import { Link } from "react-router-dom"
+import styles from "./MeuProgressoPaciente.module.css"
 
 // Registrar os componentes necessários
 ChartJS.register(
@@ -29,44 +29,44 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend
-);
+)
 
 function MeuProgressoPaciente() {
-  const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false)
 
   const toggleUserMenu = () => {
-    setUserMenuOpen(!userMenuOpen);
+    setUserMenuOpen(!userMenuOpen)
   }
 
   // Dados dos gráficos
   const massData = {
-    labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'], // Etiquetas para o eixo x
+    labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4"], // Etiquetas para o eixo x
     datasets: [
       {
-        label: 'Massa Magra (kg)',
+        label: "Massa Magra (kg)",
         data: [60, 62, 63, 64], // Dados da massa magra
-        borderColor: 'rgba(75,192,192,1)',
-        backgroundColor: 'rgba(75,192,192,0.2)',
+        borderColor: "rgba(75,192,192,1)",
+        backgroundColor: "rgba(75,192,192,0.2)",
       },
       {
-        label: 'Massa Gorda (kg)',
+        label: "Massa Gorda (kg)",
         data: [20, 19, 18, 17], // Dados da massa gorda
-        borderColor: 'rgba(255,99,132,1)',
-        backgroundColor: 'rgba(255,99,132,0.2)',
+        borderColor: "rgba(255,99,132,1)",
+        backgroundColor: "rgba(255,99,132,0.2)",
       },
     ],
-  };
+  }
 
   const foodData = {
-    labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'], // Etiquetas para o eixo x
+    labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4"], // Etiquetas para o eixo x
     datasets: [
       {
-        label: 'Calorias Consumidas',
+        label: "Calorias Consumidas",
         data: [2000, 2200, 2100, 2300], // Dados de calorias consumidas
-        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+        backgroundColor: "rgba(54, 162, 235, 0.6)",
       },
     ],
-  };
+  }
 
   return (
     <>
@@ -87,13 +87,13 @@ function MeuProgressoPaciente() {
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/" className={styles.linkHome}>
+              {/* <Link to="/" className={styles.linkHome}>
                 Nutricionista
               </Link>
               <Link to="/" className={styles.linkHome}>
                 Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              </Link> */}
+              <Link to="/EditarPaciente" className={styles.linkHome}>
                 Editar Perfil
               </Link>
               <Link to="/entrar" className={styles.linkHome}>
@@ -149,7 +149,7 @@ function MeuProgressoPaciente() {
           <li>
             <Link to="/receitasPaciente">
               <div className={styles.linkSlider}>
-                < FaBlender  className={styles.icon} />
+                <FaBlender className={styles.icon} />
                 <p>Receitas</p>
               </div>
             </Link>
@@ -189,7 +189,7 @@ function MeuProgressoPaciente() {
         </ul>
       </footer>
     </>
-  );
+  )
 }
 
-export default MeuProgressoPaciente;
+export default MeuProgressoPaciente
