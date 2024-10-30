@@ -38,12 +38,12 @@ function ReceitasFavoritasPaciente() {
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
                 Receitas Favoritas
               </Link>
-              <Link to="/" className={styles.linkHome}>
+              {/* <Link to="/" className={styles.linkHome}>
                 Nutricionista
               </Link>
               <Link to="/" className={styles.linkHome}>
                 Psicólogo
-              </Link>
+              </Link> */}
               <Link to="/edit-profile" className={styles.linkHome}>
                 Editar Perfil
               </Link>
