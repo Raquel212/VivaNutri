@@ -127,7 +127,7 @@ function HomeNutriPsico() {
               src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Beatriz Pereira"
             />
-            <div className={styles.name}>Beatriz Pereira</div>
+            <div className={styles.name}>Beatriz Souza</div>
           </div>
           <div className={styles.clientCard}>
             <img

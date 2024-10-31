@@ -262,7 +262,7 @@
 }
 
  /* Footer */
- .footerHomeP {
+.footerHomeP {
   background: var(--primary);
   display: flex;
   justify-content: space-between;
