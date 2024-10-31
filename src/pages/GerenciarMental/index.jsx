@@ -101,7 +101,7 @@ function GerenciarMental() {
       </nav>
 
       <main>
-        <h1 className={styles.pageTitle}>Gerenciar Planos Alimentares</h1>
+        <h1 className={styles.pageTitle}>Gerenciar Bem-Estar Emocional</h1>
 
         {/* Lista de Planos */}
         <div className={styles.planList}>
