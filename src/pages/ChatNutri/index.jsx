@@ -26,7 +26,7 @@ function ChatNutri() {
     if (!initialMessagesAdded.current) {
       const initialMessages = [
         { sender: "Paciente", text: "Olá, estou querendo melhorar minha dieta." },
-        { sender: "Paciente", text: "Também gostaria de algumas dicas para reduzir o estresse." },
+        // { sender: "Paciente", text: "Também gostaria de algumas dicas para reduzir o estresse." },
       ]
 
       initialMessages.forEach((msg, index) => {
@@ -140,7 +140,7 @@ function ChatNutri() {
       </nav>
 
       <main className={styles.mainContent}>
-        <h1>Chat Paciente</h1>
+        <h1>Chat Nutricionista</h1>
         <div className={styles.chatContainer}>
           <div className={styles.chatHeader}>
             <div className={styles.title}>VivaNutri Chat</div>
