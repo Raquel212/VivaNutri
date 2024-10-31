@@ -1,7 +1,12 @@
 import { useState } from "react"
 import { FaUserCircle } from "react-icons/fa"
 import { HiDocumentReport } from "react-icons/hi"
-
+import { HiCalendar } from "react-icons/hi";
+import { HiUsers } from "react-icons/hi";
+import { HiBookOpen } from "react-icons/hi";
+import { HiChartBar } from "react-icons/hi";
+import { HiClipboardList } from "react-icons/hi";
+import { HiChatAlt2 } from "react-icons/hi";
 import { Link } from "react-router-dom"
 import styles from "./ConsultaNutriPsico.module.css"
 
@@ -15,7 +20,7 @@ function ConsultaNutriPsico() {
     <>
       <header className={styles.headerHomePacie}>
         <div className={styles.logo}>
-          <Link to="/homeNutri">
+          <Link to="/homeNutriPsico">
             <img src="/Logo_Sem.png" alt="Logo" className={styles.imagemLogo} />
           </Link>
         </div>
@@ -27,18 +32,9 @@ function ConsultaNutriPsico() {
               <Link to="/notifications" className={styles.linkHome}>
                 Notificações
               </Link>
-              {/* <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
-                Receitas Favoritas
-              </Link>
-              <Link to="/" className={styles.linkHome}>
-                Nutricionista
-              </Link>
-              <Link to="/" className={styles.linkHome}>
-                Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              <Link to="/EditarNutri" className={styles.linkHome}>
                 Editar Perfil
-              </Link> */}
+              </Link>
               <Link to="/entrar" className={styles.linkHome}>
                 Logoff
               </Link>
@@ -50,19 +46,64 @@ function ConsultaNutriPsico() {
       <nav className={styles.sidebar}>
         <ul>
           <li>
-            <Link to="/consultaNutriPsico">
+            <Link to="/gerenciarPlanosAlimentares">
               <div className={styles.linkSlider}>
                 <HiDocumentReport className={styles.icon} />
+                <p>Plano Alimentar </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/consultaNutriPsico">
+              <div className={styles.linkSlider}>
+                <HiCalendar className={styles.icon} />
                 <p>Consultas</p>
               </div>
             </Link>
           </li>
 
           <li>
-            <Link to="/gerenciarPlanosAlimentares">
+            <Link to="/gerenciarClientesNutri">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
-                <p>Gerenciar Planos </p>
+                <HiUsers  className={styles.icon} />
+                <p>Gerenciar Clientes </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/receitasNutri">
+              <div className={styles.linkSlider}>
+                <HiBookOpen className={styles.icon} />
+                <p>Adicionar Receitas </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/analisarProgresso">
+              <div className={styles.linkSlider}>
+                < HiChartBar className={styles.icon} />
+                <p>Analisar Progresso </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/questionariosNutri">
+              <div className={styles.linkSlider}>
+                <HiClipboardList className={styles.icon} />
+                <p>Questionários </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/chatNutri">
+              <div className={styles.linkSlider}>
+                <HiChatAlt2  className={styles.icon} />
+                <p>Chat </p>
               </div>
             </Link>
           </li>
@@ -127,17 +168,6 @@ function ConsultaNutriPsico() {
             </div>
           </div>
 
-          <div className={styles.consultationItem}>
-            <div className={styles.consultationDate}>
-              <p className={styles.day}>09</p>
-              <p className={styles.monthYear}>Ago 2023</p>
-            </div>
-            <div className={styles.consultationInfo}>
-              <p className={styles.clientName}>Marina Barros</p>
-              <p>Quarta-Feira | 09/08/2024</p>
-              <p>JFC Trade Center - 16h</p>
-            </div>
-          </div>
         </div>
       </main>
 
