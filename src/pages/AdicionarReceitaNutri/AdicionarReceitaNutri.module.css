@@ -1,129 +1,129 @@
 .sidebar {
-    position: fixed;
-    top: 4.375rem;
-    left: 0;
-    width: 15.625rem;
-    height: calc(100vh - 4.375rem);
-    background: var(--primary);
-    backdrop-filter: blur(0.625rem);
-    box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 1.25rem;
-    transition: all 0.3s ease;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .sidebar ul li {
-    padding: 1.25rem;
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    color: var(--black);
-    font-size: 1.25rem;
-    display: block;
-    transition: color 0.3s ease;
-  }
-  
-  .linkSlider {
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon {
-    padding-right: 0.3125rem;
-    font-size: 1.875rem;
-  }
-  
-  .sidebar ul li a:hover {
-    color: var(--secondary);
-    transition: color 0.3s ease;
-    text-decoration: underline;
-  }
-  
-  .headerHomePacie {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2.25rem;
-    width: 100%;
-    background-color: var(--primary);
-    height: 4.375rem;
-    position: fixed;
-    top: 0;
-    z-index: 1001;
-  }
-  
-  .headerHomePacie svg {
-    font-size: 1.875rem;
-    cursor: pointer;
-  }
-  
-  .menuAndLogo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 3.125rem;
-  }
-  
-  .userName {
-    position: relative;
-  }
-  
-  .userIcon {
-    font-size: 1.875rem;
-    cursor: pointer;
-  }
-  
+  position: fixed;
+  top: 4.375rem;
+  left: 0;
+  width: 15.625rem;
+  height: calc(100vh - 4.375rem);
+  background: var(--primary);
+  backdrop-filter: blur(0.625rem);
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 1.25rem;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.25rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.linkSlider {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 0.3125rem;
+  font-size: 1.875rem;
+}
+
+.sidebar ul li a:hover {
+  color: var(--secondary);
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+.headerHomePacie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.25rem;
+  width: 100%;
+  background-color: var(--primary);
+  height: 4.375rem;
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+}
+
+.headerHomePacie svg {
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
+.menuAndLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 3.125rem;
+}
+
+.userName {
+  position: relative;
+}
+
+.userIcon {
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
 .dropdownMenu {
-    position: absolute;
-    right: 0;
-    top: 50px;
-    background-color: var(--soft-white);
-    border: 1px solid var(--primary);
-    border-radius: 6px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 200px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: var(--soft-white);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px;
 }
 
 .dropdownMenu .linkHome {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: var(--black);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--black);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdownMenu .linkHome:hover {
-    color: var(--secondary);
-    background-color: var(--light-gray);
+  color: var(--secondary);
+  background-color: var(--light-gray);
 }
-
 
 /* Título */
 .nutriHomeTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--terceary);
-  margin-right: 230px;
-  /* margin: 32px 0 24px 288px; */
+  margin: 1.5rem 0;
   text-align: center;
+  font-weight: 600;
 }
 
 /* Formulário */
 .formContainer {
-  margin: 0 18rem;
+  max-width: 600px;
+  margin: 2rem auto;
   padding: 2rem;
   background-color: var(--primary);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .formGroup {
@@ -131,9 +131,9 @@
 }
 
 .formGroup label {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--black);
-  display: block;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
@@ -141,56 +141,69 @@
 .formGroup input[type="number"],
 .formGroup textarea {
   width: 100%;
-  padding: 0.625rem;
+  padding: 0.75rem;
   border: 1px solid var(--black);
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
-.formGroup textarea {
-  resize: vertical;
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: var(--terceary);
+  outline: none;
 }
 
 .botaoAdicionar {
   background-color: var(--terceary);
   color: var(--soft-white);
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .botaoAdicionar:hover {
   background-color: var(--secondary);
+  transform: scale(1.05);
 }
 
 /* Lista de Receitas */
 .listaReceitas {
-  margin: 2rem 18rem;
+  max-width: 700px;
+  margin: 3rem auto;
   background-color: var(--primary);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .receitaContainer h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--terceary);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .receitaCard {
   background-color: var(--logo);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.receitaCard:hover {
+  transform: translateY(-5px);
 }
 
 .infoReceita p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--black);
   margin: 0.5rem 0;
 }
@@ -200,38 +213,38 @@
 }
 
 
-
+/* Footer --------------------------  */
 .footerHomeP {
-    background: var(--primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 250px);
-    margin-left: 250px;
-    height: 70px;
-    font-size: 1.125rem;
-    color: var(--terceary);
-    padding: 0 2.25rem;
-    position: fixed;
-    bottom: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  height: 70px;
+  font-size: 1.125rem;
+  color: var(--terceary);
+  padding: 0 2.25rem;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footerHomeP ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .footerHomeP ul li a {
-    text-decoration: none;
-    color: var(--terceary);
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--terceary);
+  transition: color 0.3s ease;
 }
 
 .footerHomeP ul li a:hover {
-    text-decoration: underline;
-    color: var(--secondary);
+  text-decoration: underline;
+  color: var(--secondary);
 }
