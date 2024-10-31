@@ -27,18 +27,9 @@ function HomePsico() {
               <Link to="/notifications" className={styles.linkHome}>
                 Notificações
               </Link>
-              {/* <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
-                Receitas Favoritas
-              </Link>
-              <Link to="/" className={styles.linkHome}>
-                Nutricionista
-              </Link>
-              <Link to="/" className={styles.linkHome}>
-                Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              <Link to="/EditarPsico" className={styles.linkHome}>
                 Editar Perfil
-              </Link> */}
+              </Link>
               <Link to="/entrar" className={styles.linkHome}>
                 Logoff
               </Link>
@@ -66,11 +57,38 @@ function HomePsico() {
               </div>
             </Link>
           </li>
+
+          <li>
+            <Link to="/questionarioPsico">
+              <div className={styles.linkSlider}>
+                <HiDocumentReport className={styles.icon} />
+                <p>Questiónarios </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/chatPsico">
+              <div className={styles.linkSlider}>
+                <HiDocumentReport className={styles.icon} />
+                <p>Chat </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/analisarProgressoPsico">
+              <div className={styles.linkSlider}>
+                <HiDocumentReport className={styles.icon} />
+                <p>Analisar Progresso</p>
+              </div>
+            </Link>
+          </li>
         </ul>
       </nav>
 
       <main>
-        <h1 className={styles.nutriHomeTitle}>Olá, Maria!</h1>
+        <h1 className={styles.nutriHomeTitle}>Olá, Fernanda!</h1>
 
         <p className={styles.sectionTitle}>Gerenciar clientes</p>
         <div className={styles.clients}>
