@@ -39,7 +39,7 @@ const Entrar = () => {
     } else if (userType === "nutri") {
       navigate("/homeNutriPsico")
     } else if (userType === "psicologo") {
-      navigate("/homeNutriPsico")
+      navigate("/homePsico")
     }
   }
 
