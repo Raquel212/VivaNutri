@@ -33,6 +33,7 @@ import GerenciarClienteNutri from "./pages/GerenciarClienteNutri"
 import GerenciarClientePsico from "./pages/GerenciarClientesPsico"
 import QuestionarioNutri from "./pages/QuestionarioNutri"
 import QuestionarioPsico from "./pages/QuestionarioPsico"
+import VerPerfilNutri from "./pages/VerPerfilNutri"
 
 function AppRoutes() {
   return (
@@ -87,6 +88,7 @@ function AppRoutes() {
         <Route path="/analisarProgressoPsico" element={<GerenciarClientePsico/>} />
         <Route path="/questionariosNutri" element={<QuestionarioNutri/>} />
         <Route path="/questionarioPsico" element={<QuestionarioPsico/>} />
+        <Route path="/verPerfilNutri" element={<VerPerfilNutri/>} />
       </Routes>
 
     </BrowserRouter>
