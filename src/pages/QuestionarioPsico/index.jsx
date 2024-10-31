@@ -74,6 +74,15 @@ function QuestionarioPsico() {
           </li>
 
           <li>
+            <Link to="/gerenciarClientesPsico">
+              <div className={styles.linkSlider}>
+                <HiDocumentReport className={styles.icon} />
+                <p>Gerenciar Clientes</p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
             <Link to="/gerenciarMental">
               <div className={styles.linkSlider}>
                 <HiDocumentReport className={styles.icon} />
