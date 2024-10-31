@@ -1,0 +1,237 @@
+.sidebar {
+    position: fixed;
+    top: 4.375rem;
+    left: 0;
+    width: 15.625rem;
+    height: calc(100vh - 4.375rem);
+    background: var(--primary);
+    backdrop-filter: blur(0.625rem);
+    box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 1.25rem;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 1.25rem;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.25rem;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .linkSlider {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    padding-right: 0.3125rem;
+    font-size: 1.875rem;
+  }
+  
+  .sidebar ul li a:hover {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+    text-decoration: underline;
+  }
+  
+  .headerHomePacie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.25rem;
+    width: 100%;
+    background-color: var(--primary);
+    height: 4.375rem;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+  }
+  
+  .headerHomePacie svg {
+    font-size: 1.875rem;
+    cursor: pointer;
+  }
+  
+  .menuAndLogo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 3.125rem;
+  }
+  
+  .userName {
+    position: relative;
+  }
+  
+  .userIcon {
+    font-size: 1.875rem;
+    cursor: pointer;
+  }
+  
+.dropdownMenu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: var(--soft-white);
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 200px;
+}
+
+.dropdownMenu .linkHome {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--black);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu .linkHome:hover {
+    color: var(--secondary);
+    background-color: var(--light-gray);
+}
+
+
+/* Título */
+.nutriHomeTitle {
+  font-size: 2rem;
+  color: var(--terceary);
+  margin-right: 230px;
+  /* margin: 32px 0 24px 288px; */
+  text-align: center;
+}
+
+/* Formulário */
+.formContainer {
+  margin: 0 18rem;
+  padding: 2rem;
+  background-color: var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  font-size: 1rem;
+  color: var(--black);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="number"],
+.formGroup textarea {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.botaoAdicionar {
+  background-color: var(--terceary);
+  color: var(--soft-white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botaoAdicionar:hover {
+  background-color: var(--secondary);
+}
+
+/* Lista de Receitas */
+.listaReceitas {
+  margin: 2rem 18rem;
+  background-color: var(--primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.receitaContainer h2 {
+  font-size: 1.5rem;
+  color: var(--terceary);
+  margin-bottom: 1rem;
+}
+
+.receitaCard {
+  background-color: var(--logo);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.infoReceita p {
+  font-size: 1rem;
+  color: var(--black);
+  margin: 0.5rem 0;
+}
+
+.infoReceita p strong {
+  color: var(--black);
+}
+
+
+/* Footer */
+.footerHomeP {
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: 70px;
+    font-size: 1.125rem;
+    color: var(--terceary);
+    padding: 0 2.25rem;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footerHomeP ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footerHomeP ul li a {
+    text-decoration: none;
+    color: var(--terceary);
+    transition: color 0.3s ease;
+}
+
+.footerHomeP ul li a:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
