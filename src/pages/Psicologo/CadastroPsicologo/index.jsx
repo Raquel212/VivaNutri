@@ -39,7 +39,7 @@ const CadastroPsicologo = () => {
 
     localStorage.setItem("psicologo", JSON.stringify(form))
     alert("Cadastro realizado com sucesso!!")
-    navigate("/homeNutriPsico")
+    navigate("/homePsico")
   }
 
   const validateCRP = (crp) => {
