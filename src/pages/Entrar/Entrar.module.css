@@ -1,6 +1,6 @@
 /* Estilo Base */
 .container {
-  max-width: 1300px;
+  max-width: 75rem;
   height: auto;
   margin: 9.6875rem auto;
   display: flex;
