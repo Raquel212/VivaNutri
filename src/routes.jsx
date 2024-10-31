@@ -25,6 +25,7 @@ import ConsultaPsico from "./pages/ConsultaPsico"
 import HomePsico from "./pages/HomePsico"
 import AdicionarReceitaNutri from "./pages/AdicionarReceitaNutri"
 import AnalisarProgressoPsico from "./pages/AnalisarProgressoPsico"
+import AnalisarProgressoNutri from "./pages/AnalisarProgressoNutri"
 import ChatNutri from "./pages/ChatNutri"
 import ChatPsico from "./pages/ChatPsico"
 import EditarNutri from "./pages/EditarNutri"
@@ -34,6 +35,7 @@ import GerenciarClientePsico from "./pages/GerenciarClientesPsico"
 import QuestionarioNutri from "./pages/QuestionarioNutri"
 import QuestionarioPsico from "./pages/QuestionarioPsico"
 import VerPerfilNutri from "./pages/VerPerfilNutri"
+import VerPerfilPsico from "./pages/VerPerfilPsico"
 
 function AppRoutes() {
   return (
@@ -80,15 +82,17 @@ function AppRoutes() {
         <Route path="/gerenciarMental" element={<GerenciarMental />} />
         <Route path="/receitasNutri" element={<AdicionarReceitaNutri />} />
         <Route path="/analisarProgresso" element={<AnalisarProgressoPsico/>} />
+        <Route path="/analisarProgressoPsico" element={<AnalisarProgressoNutri/>} />
         <Route path="/chatNutri" element={<ChatNutri/>} />
         <Route path="/chatPsico" element={<ChatPsico/>} />
         <Route path="/EditarNutri" element={<EditarNutri/>} />
         <Route path="/EditarPsico" element={<EditarPsico/>} />
         <Route path="/gerenciarClientesNutri" element={<GerenciarClienteNutri/>} />
-        <Route path="/analisarProgressoPsico" element={<GerenciarClientePsico/>} />
+        <Route path="/gerenciarClientesPsico" element={<GerenciarClientePsico/>} />
         <Route path="/questionariosNutri" element={<QuestionarioNutri/>} />
         <Route path="/questionarioPsico" element={<QuestionarioPsico/>} />
         <Route path="/verPerfilNutri" element={<VerPerfilNutri/>} />
+        <Route path="/verPerfilPsico" element={<VerPerfilPsico/>} />
       </Routes>
 
     </BrowserRouter>
