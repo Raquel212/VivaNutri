@@ -1,8 +1,11 @@
 import { useState } from "react"
 import { FaSave, FaUserCircle } from "react-icons/fa"
 import { HiDocumentReport } from "react-icons/hi"
-
-
+import { HiCalendar } from "react-icons/hi";
+import { HiUsers } from "react-icons/hi";
+import { HiChartBar } from "react-icons/hi";
+import { HiClipboardList } from "react-icons/hi";
+import { HiChatAlt2 } from "react-icons/hi";
 import { Link } from "react-router-dom"
 import styles from "./EditarPsico.module.css"
 
@@ -22,7 +25,7 @@ function EditarPsico() {
     <>
       <header className={styles.headerHomePacie}>
         <div className={styles.logo}>
-          <Link to="/homeNutriPsico">
+          <Link to="/homePsico">
             <img src="/Logo_Sem.png" alt="Logo" className={styles.imagemLogo} />
           </Link>
         </div>
@@ -34,7 +37,7 @@ function EditarPsico() {
               <Link to="/notifications" className={styles.linkHome}>
                 Notificações
               </Link>
-              <Link to="/EditarNutri" className={styles.linkHome}>
+              <Link to="/EditarPsico" className={styles.linkHome}>
                 Editar Perfil
               </Link>
               <Link to="/entrar" className={styles.linkHome}>
@@ -48,64 +51,55 @@ function EditarPsico() {
       <nav className={styles.sidebar}>
         <ul>
           <li>
-            <Link to="/gerenciarPlanosAlimentares">
+            <Link to="/consultaPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
-                <p>Plano Alimentar </p>
-              </div>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/consultaNutriPsico">
-              <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
+                <HiCalendar className={styles.icon} />
                 <p>Consultas</p>
               </div>
             </Link>
           </li>
 
           <li>
-            <Link to="/chatNutri">
+            <Link to="/gerenciarClientesPsico">
+              <div className={styles.linkSlider}>
+                <HiUsers className={styles.icon} />
+                <p>Gerenciar Clientes</p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/gerenciarMental">
               <div className={styles.linkSlider}>
                 <HiDocumentReport className={styles.icon} />
+                <p>Gerenciar Bem-Estar </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/questionarioPsico">
+              <div className={styles.linkSlider}>
+                <HiClipboardList className={styles.icon} />
+                <p>Questiónarios </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/chatPsico">
+              <div className={styles.linkSlider}>
+                <HiChatAlt2 className={styles.icon} />
                 <p>Chat </p>
               </div>
             </Link>
           </li>
 
           <li>
-            <Link to="/receitasNutri">
+            <Link to="/analisarProgressoPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
-                <p>Adicionar Receitas </p>
-              </div>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/questionariosNutri">
-              <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
-                <p>Questionários </p>
-              </div>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/analisarProgresso">
-              <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
-                <p>Analisar Progresso </p>
-              </div>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/gerenciarClientesNutri">
-              <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
-                <p>Gerenciar Clientes </p>
+                <HiChartBar className={styles.icon} />
+                <p>Analisar Progresso</p>
               </div>
             </Link>
           </li>
@@ -152,7 +146,7 @@ function EditarPsico() {
             <FaSave className={styles.icon} /> Salvar Alterações
           </button>
 
-          <Link to="/homeNutriPsico" className={styles.voltarNutri}>
+          <Link to="/homePsico" className={styles.voltarNutri}>
             Voltar
           </Link>
         </form>
