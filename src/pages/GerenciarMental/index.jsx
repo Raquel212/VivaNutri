@@ -1,7 +1,11 @@
 import { useState } from "react"
 import { FaEdit, FaUserCircle } from "react-icons/fa"
 import { HiDocumentReport } from "react-icons/hi"
-
+import { HiCalendar } from "react-icons/hi";
+import { HiUsers } from "react-icons/hi";
+import { HiChartBar } from "react-icons/hi";
+import { HiClipboardList } from "react-icons/hi";
+import { HiChatAlt2 } from "react-icons/hi";
 import { Link } from "react-router-dom"
 import styles from "./GerenciarMental.module.css"
 
@@ -27,18 +31,9 @@ function GerenciarMental() {
               <Link to="/notifications" className={styles.linkHome}>
                 Notificações
               </Link>
-              {/* <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
-                Receitas Favoritas
-              </Link>
-              <Link to="/" className={styles.linkHome}>
-                Nutricionista
-              </Link>
-              <Link to="/" className={styles.linkHome}>
-                Psicólogo
-              </Link>
-              <Link to="/edit-profile" className={styles.linkHome}>
+              <Link to="/EditarPerfil" className={styles.linkHome}>
                 Editar Perfil
-              </Link> */}
+              </Link>
               <Link to="/entrar" className={styles.linkHome}>
                 Logoff
               </Link>
@@ -49,11 +44,20 @@ function GerenciarMental() {
 
       <nav className={styles.sidebar}>
         <ul>
-          <li>
+        <li>
             <Link to="/consultaPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
+                <HiCalendar className={styles.icon} />
                 <p>Consultas</p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/gerenciarClientesPsico">
+              <div className={styles.linkSlider}>
+                <HiUsers className={styles.icon} />
+                <p>Gerenciar Clientes</p>
               </div>
             </Link>
           </li>
@@ -62,7 +66,34 @@ function GerenciarMental() {
             <Link to="/gerenciarMental">
               <div className={styles.linkSlider}>
                 <HiDocumentReport className={styles.icon} />
-                <p>Gerenciar Pensamentos </p>
+                <p>Gerenciar Bem-Estar </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/questionarioPsico">
+              <div className={styles.linkSlider}>
+                <HiClipboardList className={styles.icon} />
+                <p>Questiónarios </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/chatPsico">
+              <div className={styles.linkSlider}>
+                <HiChatAlt2 className={styles.icon} />
+                <p>Chat </p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/analisarProgressoPsico">
+              <div className={styles.linkSlider}>
+                <HiChartBar className={styles.icon} />
+                <p>Analisar Progresso</p>
               </div>
             </Link>
           </li>
