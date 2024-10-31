@@ -107,60 +107,81 @@
     background-color: var(--green);
   }
   
-  .VerPerfilMain {
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #f9e4b7;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.perfilForm {
+  /* Main ------------------------------------------ */
+  
+  .VerPerfilMain h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    color: var(--terceary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .perfilForm {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-
-.perfilForm label {
+    width: 600px;
+    margin: auto;
+  }
+  
+  .perfilForm label {
     font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-.perfilForm input[type="text"],
-.perfilForm input[type="number"],
-.perfilForm input[type="date"],
-.perfilForm select,
-.perfilForm textarea {
+    font-weight: 600;
+    color: var(--terceary);
+  }
+  
+  .perfilForm input[type="text"],
+  .perfilForm input[type="number"],
+  .perfilForm input[type="date"],
+  .perfilForm select,
+  .perfilForm textarea {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
+    color: #333;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     box-sizing: border-box;
-}
-
-.perfilForm textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .perfilForm input[type="text"]:focus,
+  .perfilForm input[type="number"]:focus,
+  .perfilForm input[type="date"]:focus,
+  .perfilForm select:focus,
+  .perfilForm textarea:focus {
+    border-color: #cc6600;
+    box-shadow: 0px 0px 4px rgba(204, 102, 0, 0.5);
+  }
+  
+  .perfilForm textarea {
     resize: vertical;
-    height: 100px;
-}
-
-.perfilForm button {
+    height: 120px;
+  }
+  
+  .perfilForm button {
     background-color: #cc6600;
     color: #fff;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     border: none;
     padding: 0.75rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.perfilForm button:hover {
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .perfilForm button:hover {
     background-color: #a85200;
-}
+    transform: scale(1.05);
+  }
+  
+  .perfilForm button:active {
+    background-color: #a85200;
+    transform: scale(1);
+  }
+  
+  /* ------------------------------------------ Main */
   
   /* Footer */
   .footerHomeP {
@@ -197,5 +218,4 @@
     text-decoration: underline;
     color: var(--secondary);
   }
-  
   
