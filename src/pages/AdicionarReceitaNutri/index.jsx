@@ -60,7 +60,7 @@ function AdicionarReceitaNutri() {
       </nav>
 
       <main>
-        <h1 className={styles.nutriHomeTitle}>Adicionar Nova Receita</h1>
+        <h1 className={styles.nutriHomeTitle}>Adicionar Novas Receitas</h1>
         
         <form onSubmit={handleSubmit} className={styles.formContainer}>
           <div className={styles.formGroup}>
