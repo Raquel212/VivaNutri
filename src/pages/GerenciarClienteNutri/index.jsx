@@ -147,7 +147,7 @@ function GerenciarClienteNutri() {
                 <img src={client.image} alt={client.name} className={styles.clientImage} />
                 <div className={styles.clientInfo}>
                   <div className={styles.name}>{client.name}</div>
-                  <Link to={`/perfilCliente/${index}`} className={styles.viewProfile}>Ver Perfil</Link>
+                  <Link to={`/verPerfilNutri/`} className={styles.viewProfile}>Ver Perfil</Link>
                 </div>
               </div>
             ))
