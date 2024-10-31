@@ -1,7 +1,11 @@
 import { useState } from "react"
 import { FaUserCircle } from "react-icons/fa"
 import { HiDocumentReport } from "react-icons/hi"
-
+import { HiCalendar } from "react-icons/hi";
+import { HiUsers } from "react-icons/hi";
+import { HiChartBar } from "react-icons/hi";
+import { HiClipboardList } from "react-icons/hi";
+import { HiChatAlt2 } from "react-icons/hi";
 import { Link } from "react-router-dom"
 import styles from "./HomePsico.module.css"
 
@@ -43,8 +47,17 @@ function HomePsico() {
           <li>
             <Link to="/consultaPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
+                <HiCalendar className={styles.icon} />
                 <p>Consultas</p>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/gerenciarClientesPsico">
+              <div className={styles.linkSlider}>
+                <HiUsers className={styles.icon} />
+                <p>Gerenciar Clientes</p>
               </div>
             </Link>
           </li>
@@ -53,7 +66,7 @@ function HomePsico() {
             <Link to="/gerenciarMental">
               <div className={styles.linkSlider}>
                 <HiDocumentReport className={styles.icon} />
-                <p>Gerenciar Pensamentos </p>
+                <p>Gerenciar Bem-Estar </p>
               </div>
             </Link>
           </li>
@@ -61,7 +74,7 @@ function HomePsico() {
           <li>
             <Link to="/questionarioPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
+                <HiClipboardList className={styles.icon} />
                 <p>Questiónarios </p>
               </div>
             </Link>
@@ -70,7 +83,7 @@ function HomePsico() {
           <li>
             <Link to="/chatPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
+                <HiChatAlt2  className={styles.icon} />
                 <p>Chat </p>
               </div>
             </Link>
@@ -79,7 +92,7 @@ function HomePsico() {
           <li>
             <Link to="/analisarProgressoPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
+                <HiChartBar className={styles.icon} />
                 <p>Analisar Progresso</p>
               </div>
             </Link>
