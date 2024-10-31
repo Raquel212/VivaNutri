@@ -110,7 +110,7 @@
 /* Main Content----------------- */
 .nutriHomeTitle {
   font-size: 32px;
-  color: var(--primary);
+  color: var(--terceary);
   text-align: center;
   margin-top: 20px;
 }
@@ -261,23 +261,27 @@
   text-decoration: underline;
 }
 
-.footerHomeP {
+ /* Footer */
+ .footerHomeP {
   background: var(--primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 15.625rem);
-  margin-left: 15.625rem;
-  height: 4.375rem;
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  height: 70px;
   font-size: 1.125rem;
   color: var(--terceary);
   padding: 0 2.25rem;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footerHomeP ul {
   list-style: none;
   display: flex;
-  gap: 1.25rem;
+  gap: 20px;
   padding: 0;
   margin: 0;
 }
@@ -285,8 +289,10 @@
 .footerHomeP ul li a {
   text-decoration: none;
   color: var(--terceary);
+  transition: color 0.3s ease;
 }
 
 .footerHomeP ul li a:hover {
   text-decoration: underline;
+  color: var(--secondary);
 }
