@@ -82,30 +82,30 @@
     cursor: pointer;
   }
   
-.dropdownMenu {
+  .dropdownMenu {
     position: absolute;
     right: 0;
     top: 50px;
-    background-color: var(--soft-white);
+    background-color: var(--green);
     border: 1px solid var(--primary);
     border-radius: 6px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     width: 200px;
-}
-
-.dropdownMenu .linkHome {
+  }
+  
+  .dropdownMenu .linkHome {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
     color: var(--black);
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dropdownMenu .linkHome:hover {
+  }
+  
+  .dropdownMenu .linkHome:hover {
     color: var(--secondary);
-    background-color: var(--light-gray);
-}
+    background-color: var(--logo);
+  }
 
 .container {
   padding: 20px;
@@ -128,7 +128,7 @@
 }
 
 .questionarioCard {
-  background-color: #f9e79f; /* Cor de fundo dos cartões */
+  background-color: var(--primary); /* Cor de fundo dos cartões */
   padding: 15px;
   border-radius: 8px;
   width: 30%;
@@ -138,12 +138,18 @@
 .button {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #e67e22; /* Cor do botão */
-  color: white;
+  background-color: var(--terceary); /* Cor do botão */
+  color: var(--logo);
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
   margin-top: 20px;
+}
+
+.button:hover{
+  background-color: var(--logo);
+  color: var(--terceary);
+  transition: 0.5s ease;
 }
 
 /* Footer */

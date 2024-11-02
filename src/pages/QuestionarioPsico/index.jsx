@@ -4,6 +4,8 @@ import { HiDocumentReport } from "react-icons/hi";
 import { HiCalendar } from "react-icons/hi";
 import { HiClipboardList } from "react-icons/hi";
 import { HiChatAlt2 } from "react-icons/hi";
+import { HiUsers } from "react-icons/hi";
+import {HiChartBar} from "react-icons/hi";
 import { Link } from "react-router-dom";
 import styles from "./QuestionarioPsico.module.css";
 
@@ -76,7 +78,7 @@ function QuestionarioPsico() {
           <li>
             <Link to="/gerenciarClientesPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
+                <HiUsers  className={styles.icon} />
                 <p>Gerenciar Clientes</p>
               </div>
             </Link>
@@ -86,7 +88,7 @@ function QuestionarioPsico() {
             <Link to="/gerenciarMental">
               <div className={styles.linkSlider}>
                 <HiDocumentReport className={styles.icon} />
-                <p>Gerenciar Pensamentos </p>
+                <p>Gerenciar Bem-Estar </p>
               </div>
             </Link>
           </li>
@@ -112,7 +114,7 @@ function QuestionarioPsico() {
           <li>
             <Link to="/analisarProgressoPsico">
               <div className={styles.linkSlider}>
-                <HiDocumentReport className={styles.icon} />
+                <HiChartBar className={styles.icon} />
                 <p>Analisar Progresso</p>
               </div>
             </Link>
