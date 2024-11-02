@@ -86,7 +86,7 @@
   position: absolute;
   right: 0;
   top: 50px;
-  background-color: var(--soft-white);
+  background-color: var(--green);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,7 +104,7 @@
 
 .dropdownMenu .linkHome:hover {
   color: var(--secondary);
-  background-color: var(--light-gray);
+  background-color: var(--logo);
 }
 
 /* Main Content */
@@ -162,7 +162,7 @@ main {
 
 .card {
   box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
-  background-color: var(--terceary);
+  background-color: var(--green);
   padding: 1.25rem;
   border-radius: 0.625rem;
   flex: 1;
@@ -172,7 +172,7 @@ main {
 
 .card p {
   text-align: center;
-  color: var(--primary);
+  color: var(--secondary);
   margin-bottom: 0.625rem;
   font-size: 1.125rem;
 }
@@ -197,7 +197,7 @@ main {
 
 .progressCard {
   max-width: 29.375rem;
-  background-color: var(--terceary);
+  background-color: var(--green);
   padding: 1.25rem;
   border-radius: 0.625rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -210,15 +210,15 @@ main {
 
 .progressDetails h3 {
   font-weight: 500;
-  color: var(--primary);
+  color: var(--secondary);
 }
 .progressDetails h1 {
   margin-top: 0.625rem;
-  color: var(--primary);
+  color: var(--secondary);
   font-weight: bolder;
 }
 .progressDetails p {
-  color: var(--primary);
+  color: var(--secondary);
   font-weight: 300;
 }
 /* ----------------------------------------------- Section02  */
@@ -245,7 +245,7 @@ main {
   justify-content: center;
   display: flex;
   gap: 3.75rem;
-  background-color: var(--terceary);
+  background-color: var(--green);
   border-radius: 0.625rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   flex: 1;
@@ -253,18 +253,18 @@ main {
 }
 .sectionIcon {
   font-size: 6.25rem;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .sectionTitle p {
-  color: var(--primary);
+  color: var(--secondary);
   font-size: 1.125rem;
 }
 .sectionTitleIcon {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  color: var(--primary);
+  color: var(--secondary);
 }
 /* ----------------------------------------------- Section03  */
 
@@ -272,7 +272,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--soft-white);
+  background-color: var(--primary);
   border-radius: 0.625rem;
   padding: 1.25rem;
   margin: 1.25rem 0;
@@ -304,7 +304,7 @@ main {
 
 .nutriName {
   font-style: italic;
-  color: #555;
+  color: var(--logo);
   font-size: 0.9375rem;
 }
 
