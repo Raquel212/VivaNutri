@@ -87,7 +87,7 @@
   position: absolute;
   right: 0;
   top: 50px;
-  background-color: var(--soft-white);
+  background-color: var(--green);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -105,8 +105,9 @@
 
 .dropdownMenu .linkHome:hover {
   color: var(--secondary);
-  background-color: var(--light-gray);
+  background-color: var(--logo);
 }
+
 
 /* Main Content */
 main {
@@ -122,7 +123,7 @@ main {
 .consultaSection {
   margin: 20px 0;
   padding: 20px;
-  border: 1px solid var(--light-gray);
+  border: 1px solid var(--green);
   border-radius: 10px;
   background: var(--primary);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -146,15 +147,15 @@ select {
   padding: 10px;
   font-size: 16px;
   margin-top: 10px;
-  border: 1px solid var(--light-gray);
+  border: 1px solid var(--black);
   border-radius: 5px;
   width: 100%;
 }
 
 .buttonConsulta {
   padding: 10px 15px;
-  background-color: var(--secondary);
-  color: white;
+  background-color: var(--terceary);
+  color: var(--logo);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -163,9 +164,12 @@ select {
 }
 
 .buttonConsulta:hover {
-  background-color: darken(var(--secondary), 10%);
+  background-color: var(--logo);
+  color: var(--terceary);
+  transition: 0.5s ease;
 }
 
+/* Footer */
 .footerHomeP {
   background: var(--primary);
   display: flex;
@@ -173,7 +177,7 @@ select {
   align-items: center;
   width: calc(100% - 250px);
   margin-left: 250px;
-  height: 4.375rem;
+  height: 70px;
   font-size: 1.125rem;
   color: var(--terceary);
   padding: 0 2.25rem;
@@ -190,10 +194,12 @@ select {
 .footerHomeP ul li a {
   text-decoration: none;
   color: var(--terceary);
+  transition: color 0.3s ease;
 }
 
 .footerHomeP ul li a:hover {
   text-decoration: underline;
+  color: var(--secondary);
 }
 
 /* Media Queries para responsividade */
