@@ -206,7 +206,7 @@ function HomePaciente() {
                   <FaClock />
                   <p>12h</p>
                 </div>
-                <p>Dra. Martins</p>
+                <p>Dr. Victor Barreto</p>
               </div>
             </div>
           </section>
