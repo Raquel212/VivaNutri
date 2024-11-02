@@ -45,7 +45,7 @@
 
 
   /* As que estavam antes */
-  --primary: #F9EBC7;
+  /* --primary: #F9EBC7;
   --secondary: #5F6F52;
   --terceary: #C4661F;
   --green: #A9B388;
@@ -54,7 +54,27 @@
   --brown: #B99470;
   --russet: #783D19;
   --logo: #f1f1f1;
-  --black: #000;
+  --black: #000; */
+
+  --primary: #A8E6CF; /* áreas de destaque ou fundo suave em botões */
+  --secondary: #77C593; /* botões principais ou bordas de campos de texto */
+  --terceary: #4DA167; /* botões de destaque ou ícones */
+  --green: #D5E8D4; /* fundo de áreas ou seções suaves */
+  --soft-white: #3B7A57; /* textos e ícones em destaque */
+  --black: #000; /* Preto */
+  --logo: #f1f1f1; /* Cor do logo */
+
+
+  /* --primary: #A8E6CF;
+  --secondary: #77C593;
+  --terceary: #4DA167;
+  --green: #D5E8D4 ;
+  --soft-white:#3B7A57; */
+  /* --beige: #F9EBC7;
+  --brown: #B99470;
+  --russet: #783D19; */
+  /* --logo: #f1f1f1;
+  --black: #000; */
 }
 
 *{
