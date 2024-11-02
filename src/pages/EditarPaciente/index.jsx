@@ -182,6 +182,10 @@ function EditarPaciente() {
           <button type="submit" className={styles.saveButton}>
             <FaSave className={styles.icon} /> Salvar Alterações
           </button>
+
+          <Link to="/homePaciente" className={styles.voltarPaciente}>
+            Voltar
+          </Link>
         </form>
       </main>
 

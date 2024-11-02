@@ -86,7 +86,7 @@
   position: absolute;
   right: 0;
   top: 50px;
-  background-color: var(--soft-white);
+  background-color: var(--green);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,7 +104,7 @@
 
 .dropdownMenu .linkHome:hover {
   color: var(--secondary);
-  background-color: var(--light-gray);
+  background-color: var(--logo);
 }
 
 /* Main Content */
@@ -119,6 +119,7 @@
   color: var(--terceary);
   text-align: center;
   margin-bottom: 20px;
+  margin-right: 500px;
 }
 
 .formEdit {
@@ -161,8 +162,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(58, 178, 2);
-  color: white;
+  background-color: var(--terceary);
+  color: var(--logo);
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -172,12 +173,27 @@
 }
 
 .saveButton:hover {
-  background-color: green;
-  color: #dddddd;
+  background-color: var(--logo);
+  color: var(--terceary);
+  transition: 0.5s ease;
 }
 
 .icon {
   margin-right: 5px;
+}
+
+.voltarPaciente {
+  text-decoration: none;
+  margin: auto;
+  font-size: 0.9375rem;
+  color: var(--terceary);
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.voltarPaciente:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
