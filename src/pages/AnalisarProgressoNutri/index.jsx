@@ -14,7 +14,7 @@ function AnalisarProgressoPsico() {
     labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4"],
     datasets: [
       {
-        label: "Consumo de Calorias",
+        label: "Alimentação da Semana",
         data: [2000, 1800, 2200, 2100],
         borderColor: "rgba(75, 192, 192, 1)",
         backgroundColor: "rgba(75, 192, 192, 0.2)",
@@ -109,7 +109,7 @@ function AnalisarProgressoPsico() {
             <Line data={data} />
           </div>
           <div className={styles.analysisArea}>
-            <h2>Análise do Psicologo</h2>
+            <h2>Análise do Psicólogo</h2>
             <textarea
               placeholder="Escreva sua análise aqui..."
               className={styles.analysisInput}
