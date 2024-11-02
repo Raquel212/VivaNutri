@@ -87,7 +87,7 @@
   position: absolute;
   right: 0;
   top: 50px;
-  background-color: var(--soft-white);
+  background-color: var(--green);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -105,7 +105,7 @@
 
 .dropdownMenu .linkHome:hover {
   color: var(--secondary);
-  background-color: var(--light-gray);
+  background-color: var(--logo);
 }
 
 .mainContent h1 {
@@ -118,7 +118,7 @@
 /* Formulário Plano Alimentar */
 .formRefeicao {
   width: 600px;
-  background: var(--soft-white);
+  background: var(--primary);
   padding: 20px;
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -136,7 +136,7 @@
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: var(--secondary);
+  color: var(--black);
 }
 
 .formRefeicao input[type="file"],
@@ -147,9 +147,9 @@
 .formRefeicao input[type="number"] {
   width: 100%;
   padding: 10px;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--black);
   border-radius: 8px;
-  background: var(--beige);
+  background: var(--logo);
   color: var(--black);
   font-size: 16px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -157,7 +157,7 @@
 
 .formRefeicao input[type="file"] {
   padding: 5px;
-  background: var(--primary);
+  background: var(--logo);
 }
 
 .formRefeicao textarea {
@@ -170,7 +170,7 @@
 .formRefeicao textarea:focus,
 .formRefeicao input[type="number"]:focus {
   outline: none;
-  border-color: var(--terceary);
+  border-color: var(--black);
   box-shadow: 0 0 5px var(--green);
 }
 
@@ -179,12 +179,12 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  border: 2px solid var(--brown);
+  border: 2px solid var(--black);
 }
 
 .botaoAdicionar {
-  background-color: var(--secondary);
-  color: var(--soft-white);
+  background-color: var(--terceary);
+  color: var(--logo);
   padding: 12px 20px;
   border: none;
   border-radius: 8px;
@@ -195,7 +195,9 @@
 }
 
 .botaoAdicionar:hover {
-  background-color: var(--terceary);
+  background-color: var(--logo);
+  color: var(--terceary);
+  transition: 0.5s ease;
 }
 
 /* Lista de Refeições */
@@ -216,7 +218,7 @@
 }
 
 .refeicaoCard {
-  background: var(--beige);
+  background: var(--primary);
   padding: 20px;
   border-radius: 12px;
   backdrop-filter: blur(5px);
@@ -237,13 +239,13 @@
   /* height: auto; */
   border-radius: 8px;
   margin-bottom: 15px;
-  border: 2px solid var(--brown);
+  border: 2px solid var(--black);
   margin: 0 auto 30px;
 }
 
 .infoRefeicao p {
   margin: 5px 0;
-  color: var(--secondary);
+  color: var(--black);
   font-weight: bold;
 }
 
@@ -252,7 +254,7 @@
   background: var(--green);
   padding: 10px;
   border-radius: 8px;
-  color: var(--soft-white);
+  color: var(--black);
 }
 
 .comentarios h3 {
