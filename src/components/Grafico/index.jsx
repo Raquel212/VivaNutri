@@ -10,12 +10,12 @@ const data = {
             label: 'Peso Corporal',
             data: [20, 35],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(0, 92, 4, 1)',
+                'rgba(180, 244, 170, 1)',
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(255, 206, 86, 1)',
+                'rgba(0, 92, 4, 1)',
+                'rgba(180, 244, 170, 1)',
             ],
             borderWidth: 1,
         },
