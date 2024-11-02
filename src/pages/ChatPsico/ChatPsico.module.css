@@ -86,7 +86,7 @@
     position: absolute;
     right: 0;
     top: 50px;
-    background-color: var(--soft-white);
+    background-color: var(--green);
     border: 1px solid var(--primary);
     border-radius: 6px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,11 +104,7 @@
   
   .dropdownMenu .linkHome:hover {
     color: var(--secondary);
-    background-color: var(--light-gray);
-  }
-  
-  .dropdownMenu .linkHome:hover {
-    background-color: var(--beige);
+    background-color: var(--logo);
   }
   
   .inputContainer {
@@ -156,7 +152,7 @@
   
   .chatContainer {
     width: 70%;
-    background-color: #f0f0f0;
+    background-color: var(--green);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -228,7 +224,7 @@
     padding: 10px;
     background-color: var(--terceary);
     border: none;
-    color: white;
+    color: var(--logo);
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2rem;
@@ -244,7 +240,7 @@
   }
   
   .suggestionButton {
-    background-color: #f0f0f0;
+    background-color: var(--green);
     border: none;
     padding: 10px;
     margin: 5px 0;
@@ -255,7 +251,7 @@
   }
   
   .suggestionButton:hover {
-    background-color: #d0d0d0;
+    background-color: var(--logo);
   }
   
    /* Footer */

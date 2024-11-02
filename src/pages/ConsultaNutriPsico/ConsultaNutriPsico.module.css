@@ -86,7 +86,7 @@
   position: absolute;
   right: 0;
   top: 50px;
-  background-color: var(--soft-white);
+  background-color: var(--green);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,7 +104,7 @@
 
 .dropdownMenu .linkHome:hover {
   color: var(--secondary);
-  background-color: var(--light-gray);
+  background-color: var(--logo);
 }
 
 /* Main */
@@ -148,7 +148,7 @@
   border-radius: 4px;
 }
 
-.addButton {
+/* .addButton {
   display: flex;
   align-items: center;
   background-color: red;
@@ -162,7 +162,7 @@
 
 .addButton:hover {
   background-color: var(--accentHover);
-}
+} */
 
 /* Lista de Consultas */
 .consultationList {
@@ -175,7 +175,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
-  background-color: var(--primary);
+  background-color: var(--green);
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -186,12 +186,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--logo);
+  background-color: var(--terceary);
   border-radius: 8px;
   width: 60px;
   height: 60px;
   font-weight: bold;
-  color: var(--secondary);
+  color: var(--green);
 }
 
 .day {
@@ -210,7 +210,7 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #333;
+  color: var(--terceary);
 }
 
 /* Footer ----  */
