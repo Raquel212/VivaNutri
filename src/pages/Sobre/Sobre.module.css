@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 3rem;
-  background-color: var(--soft-white);
+  background-color: var(--green); /* fundo de área */
   flex-wrap: wrap;
 }
 
@@ -37,21 +37,21 @@
 }
 
 .title span {
-  color: var(--terceary);
+  color: var(--terceary); /* cor do destaque */
   font-weight: 600;
 }
 
 .description {
   font-size: 1rem;
-  color: var(--terceary);
+  color: var(--terceary); /* cor do destaque */
   line-height: 1.6;
   text-align: justify;
 }
 
 .contentSection {
   padding: 3rem;
-  background-color: var(--logo);
-  color: var(--terceary);
+  background-color: var(--logo); /* cor do fundo */
+  color: var(--terceary); /* cor do destaque */
 }
 
 .contentSection p {
@@ -59,7 +59,7 @@
 }
 
 .contentSection strong {
-  color: var(--black);
+  color: var(--black); /* Preto */
 }
 
 .contentSection ol,
@@ -80,7 +80,7 @@
 .tituloSobre {
   font-size: 1.5rem;
   margin: 2rem 0 1.5rem;
-  color: var(--black);
+  color: var(--black); /* Preto */
 }
 
 .textoSobre {
@@ -92,7 +92,7 @@
 
 .professionalSection {
   padding: 2rem;
-  background-color: var(--logo);
+  background-color: var(--logo); /* cor do fundo */
 }
 
 .gridContainer {
@@ -112,7 +112,7 @@
   margin: 2rem auto 0;
   font-size: 1.125rem;
   text-align: justify;
-  color: var(--terceary);
+  color: var(--terceary); /* cor do destaque */
 }
 
 .tituloProf {
