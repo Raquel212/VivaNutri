@@ -86,7 +86,7 @@
   position: absolute;
   right: 0;
   top: 50px;
-  background-color: var(--soft-white);
+  background-color: var(--green);
   border: 1px solid var(--primary);
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,7 +104,7 @@
 
 .dropdownMenu .linkHome:hover {
   color: var(--secondary);
-  background-color: var(--light-gray);
+  background-color: var(--logo);
 }
 
 /* Main Content----------------- */
@@ -115,18 +115,18 @@
   margin-top: 20px;
 }
 
-.nutriHomesubtitle {
+/* .nutriHomesubtitle {
   font-size: 18px;
-  color: #666;
+  color: red;
   margin: 5px 0 20px;
   text-align: center;
-}
+} */
 
 .sectionTitle {
   font-size: 26px;
   font-weight: 600;
   margin-top: 40px;
-  color: #4b0082;
+  color: var(--soft-white);
   border-bottom: 2px solid #ccc;
   padding-bottom: 8px;
 }
@@ -143,7 +143,7 @@
 .clientCard {
   flex: 0 0 220px;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: var(--primary);
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -163,8 +163,8 @@
 
 .name {
   font-size: 18px;
-  color: #333;
-  background-color: #a3e4d7;
+  color: var(--black);
+  background-color: var(--primary);
   padding: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -183,7 +183,7 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: var(--primary);
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   width: 48%;
@@ -191,7 +191,7 @@
 
 /* Gerenciar Planos Alimentares */
 .planList {
-  background-color: #e9f7ef;
+  background-color: var(--green);
   padding: 15px;
   border-radius: 10px;
 }
@@ -200,7 +200,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  color: #333;
+  color: var(--black);
   font-size: 16px;
 }
 
@@ -220,7 +220,7 @@
 
 .consultationItem {
   width: 300px;
-  background-color: #e8daef;
+  background-color: var(--green);
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -232,14 +232,14 @@
 
 .consultationDate {
   font-weight: bold;
-  color: #4b0082;
+  color: var(--secondary);
   font-size: 24px;
   text-align: center;
   padding: 12px;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background-color: #e8daef;
+  background-color: var(--logo);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,13 +248,13 @@
 .consultationInfo p {
   margin: 0;
   font-size: 16px;
-  color: #333;
+  color: var(--black);
 }
 
 /* General View All Link */
 .viewAll {
   text-align: center;
-  color: #4b0082;
+  color: var(--black);
   font-size: 14px;
   cursor: pointer;
   margin-top: 15px;
