@@ -74,6 +74,30 @@ function PlanoAlimentarPaciente() {
           ceia: "Chá",
         },
       },
+
+      {
+        dia: "Sabádo",
+        refeicoes: {
+          cafeManha: "Iogurte com granola",
+          lancheManha: "Suco natural",
+          almoco: "Salada de grãos com peixe",
+          lancheTarde: "Frutas secas",
+          jantar: "Pizza de vegetais",
+          ceia: "Chá",
+        },
+      },
+
+      {
+        dia: "Domingo",
+        refeicoes: {
+          cafeManha: "Iogurte com granola",
+          lancheManha: "Suco natural",
+          almoco: "Salada de grãos com peixe",
+          lancheTarde: "Frutas secas",
+          jantar: "Pizza de vegetais",
+          ceia: "Chá",
+        },
+      },
     ]
     setPlanoAlimentar(planoExemplo)
   }, [])
