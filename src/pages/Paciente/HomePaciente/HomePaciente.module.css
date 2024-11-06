@@ -172,7 +172,7 @@ main {
 
 .card p {
   text-align: center;
-  color: var(--secondary);
+  color: var(--terceary);
   margin-bottom: 0.625rem;
   font-size: 1.125rem;
 }
@@ -304,8 +304,9 @@ main {
 
 .nutriName {
   font-style: italic;
-  color: var(--logo);
+  color: var(--terceary);
   font-size: 0.9375rem;
+  font-weight: 600;
 }
 
 .arrowIcon {
