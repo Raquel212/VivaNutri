@@ -73,7 +73,7 @@ form .tituloEntrar {
 }
 
 .recallforget .esqueceusenha {
-  color: var(--secondary);
+  color: var(--terceary);
   text-decoration: none;
   margin-top: 0.625rem;
   font-weight: 600;
@@ -114,7 +114,7 @@ form .tituloEntrar {
 }
 
 .signuplink p .registrar {
-  color: var(--secondary);
+  color: var(--terceary);
   text-decoration: none;
   font-weight: 600;
 }
