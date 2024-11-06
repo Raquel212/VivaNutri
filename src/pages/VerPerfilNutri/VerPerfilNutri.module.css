@@ -145,14 +145,14 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .perfilForm input[type="text"]:focus,
+  /* .perfilForm input[type="text"]:focus,
   .perfilForm input[type="number"]:focus,
   .perfilForm input[type="date"]:focus,
   .perfilForm select:focus,
   .perfilForm textarea:focus {
     border-color: #cc6600;
     box-shadow: 0px 0px 4px rgba(204, 102, 0, 0.5);
-  }
+  } */
   
   .perfilForm textarea {
     resize: vertical;
@@ -160,8 +160,8 @@
   }
   
   .perfilForm button {
-    background-color: #cc6600;
-    color: #fff;
+    background-color: var(--terceary);
+    color: var(--logo);
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -172,15 +172,15 @@
   }
   
   .perfilForm button:hover {
-    background-color: #a85200;
-    transform: scale(1.05);
+    background-color: var(--logo);
+    color: var(--terceary);
   }
   
-  .perfilForm button:active {
+  /* .perfilForm button:active {
     background-color: #a85200;
     transform: scale(1);
   }
-  
+   */
   /* ------------------------------------------ Main */
   
   /* Footer */
