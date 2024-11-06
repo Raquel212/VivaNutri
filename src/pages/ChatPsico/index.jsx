@@ -192,7 +192,7 @@ function ChatPsico() {
             <div className={styles.title}>VivaNutri Chat</div>
             <div className={styles.videoCallButtons}>
               <a
-                href="https://meet.google.com/nutricionista-link"
+                href="https://meet.google.com/qow-eqks-hzb"
                 target="_blank"
                 rel="noopener noreferrer"
               >
