@@ -28,7 +28,7 @@ function GerenciarMental() {
           <FaUserCircle onClick={toggleUserMenu} className={styles.userIcon} />
           {userMenuOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/notifications" className={styles.linkHome}>
+              <Link to="/notificationsPsico" className={styles.linkHome}>
                 Notificações
               </Link>
               <Link to="/EditarPerfil" className={styles.linkHome}>
@@ -111,7 +111,7 @@ function GerenciarMental() {
               <p>Idade: 23 anos</p>
               <p>Foco: Problemas Familiares</p>
             </div>
-            <FaEdit className={styles.editIcon} />
+            <Link to="/planoBemEstar"><FaEdit className={styles.editIcon} /></Link>
           </div>
 
           <div className={styles.planItem}>
@@ -120,7 +120,7 @@ function GerenciarMental() {
               <p>Idade: 21 anos</p>
               <p>Foco: Ansiedade</p>
             </div>
-            <FaEdit className={styles.editIcon} />
+            <Link to="/planoBemEstar"><FaEdit className={styles.editIcon} /></Link>
           </div>
 
           <div className={styles.planItem}>
@@ -129,7 +129,7 @@ function GerenciarMental() {
               <p>Idade: 25 anos</p>
               <p>Foco: Depressão</p>
             </div>
-            <FaEdit className={styles.editIcon} />
+            <Link to="/planoBemEstar"><FaEdit className={styles.editIcon} /></Link>
           </div>
 
           <div className={styles.planItem}>
@@ -138,7 +138,7 @@ function GerenciarMental() {
               <p>Idade: 36 anos</p>
               <p>Foco: Bullying</p>
             </div>
-            <FaEdit className={styles.editIcon} />
+            <Link to="/planoBemEstar"><FaEdit className={styles.editIcon} /></Link>
           </div>
         </div>
       </main>
