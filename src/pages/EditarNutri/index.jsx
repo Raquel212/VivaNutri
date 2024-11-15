@@ -145,7 +145,7 @@ function EditarNutri() {
             Telefone:
             <input
               type="tel"
-              defaultValue="(79) 9 9658-2116"
+              defaultValue="(79) 9 9934-2717"
               className={styles.input}
             />
           </label>

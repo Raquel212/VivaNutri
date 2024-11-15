@@ -35,7 +35,7 @@ function EditarPaciente() {
           <FaUserCircle onClick={toggleUserMenu} className={styles.userIcon} />
           {userMenuOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/notifications" className={styles.linkHome}>
+              <Link to="/notificationsPaci" className={styles.linkHome}>
                 Notificações
               </Link>
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
@@ -146,7 +146,7 @@ function EditarPaciente() {
             Telefone:
             <input
               type="tel"
-              defaultValue="(79) 9 9658-2116"
+              defaultValue="(79) 9 9934-2717"
               className={styles.input}
             />
           </label>
