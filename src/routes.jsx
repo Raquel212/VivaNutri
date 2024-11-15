@@ -36,6 +36,11 @@ import QuestionarioNutri from "./pages/QuestionarioNutri"
 import QuestionarioPsico from "./pages/QuestionarioPsico"
 import VerPerfilNutri from "./pages/VerPerfilNutri"
 import VerPerfilPsico from "./pages/VerPerfilPsico"
+import Notificacao from "./pages/Notificacao"
+import PlanosNutri from "./pages/PlanosNutri"
+import PlanoBemEstar from "./pages/PlanoBemEstar"
+import NotificacaoPsico from "./pages/NotificacaoPsico"
+import NotificacaoPaciente from "./pages/Paciente/NotificacaoPaciente"
 
 function AppRoutes() {
   return (
@@ -93,6 +98,11 @@ function AppRoutes() {
         <Route path="/questionarioPsico" element={<QuestionarioPsico/>} />
         <Route path="/verPerfilNutri" element={<VerPerfilNutri/>} />
         <Route path="/verPerfilPsico" element={<VerPerfilPsico/>} />
+        <Route path="/notifications" element={<Notificacao/>} />
+        <Route path="/planosNutri" element={<PlanosNutri/>} />
+        <Route path="/planoBemEstar" element={<PlanoBemEstar/>} />
+        <Route path="/notificationsPsico" element={<NotificacaoPsico/>} />
+        <Route path="/notificationsPaci" element={<NotificacaoPaciente/>} />
       </Routes>
 
     </BrowserRouter>
