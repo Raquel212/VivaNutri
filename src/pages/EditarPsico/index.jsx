@@ -34,7 +34,7 @@ function EditarPsico() {
           <FaUserCircle onClick={toggleUserMenu} className={styles.userIcon} />
           {userMenuOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/notifications" className={styles.linkHome}>
+              <Link to="/notificationsPsico" className={styles.linkHome}>
                 Notificações
               </Link>
               <Link to="/EditarPsico" className={styles.linkHome}>
@@ -133,7 +133,7 @@ function EditarPsico() {
             Telefone:
             <input
               type="tel"
-              defaultValue="(79) 9 9860-5972"
+              defaultValue="(79) 9 9934-2717"
               className={styles.input}
             />
           </label>
