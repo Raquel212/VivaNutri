@@ -133,7 +133,7 @@ function RefeicaoPaciente() {
           <FaUserCircle onClick={toggleUserMenu} className={styles.userIcon} />
           {userMenuOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/notifications" className={styles.linkHome}>
+              <Link to="/notificationsPaci" className={styles.linkHome}>
                 Notificações
               </Link>
               <Link to="/receitasFavoritasPaciente" className={styles.linkHome}>
