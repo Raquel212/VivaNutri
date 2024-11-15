@@ -123,7 +123,7 @@ function GerenciarPlanosAlimentares() {
               <p>Idade: 23 anos</p>
               <p>Objetivo: Ganho de massa</p>
             </div>
-            <FaEdit className={styles.editIcon} />
+            <Link to="/planosNutri"><FaEdit className={styles.editIcon} /></Link>
           </div>
 
           <div className={styles.planItem}>
@@ -132,7 +132,7 @@ function GerenciarPlanosAlimentares() {
               <p>Idade: 21 anos</p>
               <p>Objetivo: Emagrecimento</p>
             </div>
-            <FaEdit className={styles.editIcon} />
+            <Link to="/planosNutri"><FaEdit className={styles.editIcon} /></Link>
           </div>
 
           <div className={styles.planItem}>
@@ -141,7 +141,7 @@ function GerenciarPlanosAlimentares() {
               <p>Idade: 25 anos</p>
               <p>Objetivo: Manutenção</p>
             </div>
-            <FaEdit className={styles.editIcon} />
+            <Link to="/planosNutri"><FaEdit className={styles.editIcon} /></Link>
           </div>
 
           <div className={styles.planItem}>
@@ -150,7 +150,7 @@ function GerenciarPlanosAlimentares() {
               <p>Idade: 36 anos</p>
               <p>Objetivo: Aumentar resistência</p>
             </div>
-            <FaEdit className={styles.editIcon} />
+            <Link to="/planosNutri"><FaEdit className={styles.editIcon} /></Link>
           </div>
         </div>
       </main>
