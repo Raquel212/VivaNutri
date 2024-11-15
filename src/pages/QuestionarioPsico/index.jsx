@@ -50,7 +50,7 @@ function QuestionarioPsico() {
           <FaUserCircle onClick={toggleUserMenu} className={styles.userIcon} />
           {userMenuOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/notifications" className={styles.linkHome}>
+              <Link to="/notificationsPsico" className={styles.linkHome}>
                 Notificações
               </Link>
               <Link to="/EditarNutri" className={styles.linkHome}>
