@@ -29,7 +29,7 @@
   border-radius: 1.875rem;
 }
 
-form {
+.fromEntrar {
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ form {
   padding: 2rem;
 }
 
-form .tituloEntrar {
+.fromEntrar .tituloEntrar {
   text-align: center;
   color: var(--terceary);
   font-size: 2rem;
@@ -146,7 +146,7 @@ form .tituloEntrar {
     margin: 0 auto 2rem auto;
   }
 
-  form {
+  .fromEntrar {
     width: 100%;
     padding: 1rem;
   }

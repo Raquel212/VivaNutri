@@ -50,7 +50,7 @@ const Entrar = () => {
         <div className={styles.formimagem}>
           <img src="/Logo.png" alt="Imagem" />
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={styles.fromEntrar}>
           <h1 className={styles.tituloEntrar}> Acesse o sistema</h1>
           <div className={styles.inputfield}>
             <input
