@@ -36,7 +36,7 @@ function AnalisarProgressoPsico() {
           <FaUserCircle onClick={toggleUserMenu} className={styles.userIcon} />
           {userMenuOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/notifications" className={styles.linkHome}>Notificações</Link>
+              <Link to="/notificationsPsico" className={styles.linkHome}>Notificações</Link>
               <Link to="/EditarPsico" className={styles.linkHome}>Editar Perfil</Link>
               <Link to="/entrar" className={styles.linkHome}>Logoff</Link>
             </div>
