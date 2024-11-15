@@ -112,7 +112,7 @@ function PlanoBemEstar() {
         </ul>
       </nav>
 
-      <main className={styles.PlanoBemEstar}>
+      <main className={styles.planoBemEstar}>
         <h2>Relatório de Bem-Estar Emocional</h2>
         <form onSubmit={handleSubmit} className={styles.formularioRelatorio}>
           <div className={styles.formGroup}>

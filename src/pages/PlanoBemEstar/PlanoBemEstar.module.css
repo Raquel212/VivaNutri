@@ -109,7 +109,7 @@
 /* Main */
 
 /* Estilo do contêiner para centralizar */
-.PlanoBemEstar {
+.planoBemEstar {
     display: flex;
     flex-direction: column;  /* Garante que os filhos fiquem em coluna, o título ficará em cima */
     justify-content: center; /* Centraliza horizontalmente */
@@ -117,8 +117,14 @@
     height: 100vh;           /* Ocupa a altura total da tela */
     padding: 0 20px;       /* Adiciona um pequeno espaço nas laterais */
   }
+
+.planoBemEstar h2{
+  color: var(--terceary);
+  font-size: 38px;
+  font-weight: 600;
+}
   
-  .formularioRelatorio {
+.formularioRelatorio {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -131,12 +137,7 @@
     width: 100%;             /* Faz com que o contêiner ocupe toda a largura disponível, mas dentro do limite */
   }
 
-/* Estilo do título */
-.VerPerfilMain h2 {
-    font-size: 34px;
-    color: var(--terceary);
-    margin-bottom: 20px;     /* Espaço entre o título e o contêiner */
-  }
+
   
   .formGroup {
     display: flex;
