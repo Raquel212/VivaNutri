@@ -152,15 +152,15 @@ function EditarNutri() {
 
 
           
+          <div className={styles.formActions}>
+            <button type="submit" className={styles.saveButton}>
+              <FaSave className={styles.icon} /> Salvar Alterações
+            </button>
 
-          {/* Botão de Salvar */}
-          <button type="submit" className={styles.saveButton}>
-            <FaSave className={styles.icon} /> Salvar Alterações
-          </button>
-
-          <Link to="/homeNutriPsico" className={styles.voltarNutri}>
-            Voltar
-          </Link>
+            <Link to="/homeNutriPsico" className={styles.voltarPaciente}>
+              Voltar
+            </Link>
+          </div>
         </form>
       </main>
 
