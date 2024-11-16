@@ -183,6 +183,7 @@
 .saveButton:hover {
   background-color: var(--logo); /* Destaque no hover */
   color: var(--terceary);
+  transition: 0.5s ease;
 }
 
 /* Link Voltar */
