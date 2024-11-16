@@ -142,13 +142,15 @@ function EditarPsico() {
           
 
           {/* Botão de Salvar */}
-          <button type="submit" className={styles.saveButton}>
-            <FaSave className={styles.icon} /> Salvar Alterações
-          </button>
+          <div className={styles.formActions}>
+            <button type="submit" className={styles.saveButton}>
+              <FaSave className={styles.icon} /> Salvar Alterações
+            </button>
 
-          <Link to="/homePsico" className={styles.voltarNutri}>
-            Voltar
-          </Link>
+            <Link to="/homePsico" className={styles.voltarPaciente}>
+              Voltar
+            </Link>
+          </div>
         </form>
       </main>
 

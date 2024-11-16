@@ -106,96 +106,107 @@
     color: var(--secondary);
     background-color: var(--logo);
   }
-  
-  /* Main Content */
-  .EditProfileMain {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .pageTitleEdit {
-    font-size: 28px;
-    color: var(--terceary);
-    text-align: center;
-    margin-bottom: 20px;
-    margin-right: 500px;
-  }
-  
-  .formEdit {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-left: 380px;
-    border-radius: 5px;
-  }
-  
-  .label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-  }
-  
-  /* Campo de Justificativa */
-  .textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  /* Botão de Salvar */
-  .saveButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--terceary);
-    color: var(--logo);
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  
-  .saveButton:hover {
-    background-color: var(--logo);
-    color: var(--terceary);
-    transition: 0.5s ease;
-  }
-  
-  .icon {
-    margin-right: 5px;
-  }
 
+/* Centralizar e estilizar o conteúdo principal */
+.EditProfileMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
 
-  .voltarNutri {
-    text-decoration: none;
-    margin: auto;
-    font-size: 0.9375rem;
-    color: var(--terceary);
-    display: block;
-    text-align: center;
-    margin-top: 1rem;
-  }
-  
-  .voltarNutri:hover {
-    text-decoration: underline;
-  }
+/* Título */
+.pageTitleEdit {
+  font-size: 1.875rem;
+  color: var(--terceary); /* Texto em destaque */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Formulário */
+.formEdit {
+  display: flex;
+  flex-direction: column; /* Campos empilhados */
+  gap: 1rem; /* Espaçamento entre os campos */
+  background: var(--primary); /* Fundo suave */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Largura máxima */
+  width: 100%;
+}
+
+/* Div para alinhar label e input */
+.formGroup {
+  display: flex;
+  flex-direction: column; /* Alinhar label acima do input */
+  width: 100%; /* Preencher a largura do formulário */
+}
+
+/* Labels */
+.label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--soft-white);
+  margin-bottom: 0.5rem; /* Espaçamento entre label e input */
+}
+
+/* Inputs */
+.input,
+.select {
+  width: 100%; /* Tamanhos padronizados */
+  max-width: 400px; /* Largura máxima dos campos */
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid var(--secondary);
+  font-size: 1rem;
+  color: var(--black);
+}
+
+/* Botão de Salvar */
+.saveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--terceary); /* Botão principal */
+  color: var(--logo); /* Texto */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  max-width: 200px; /* Largura máxima */
+}
+
+.saveButton:hover {
+  background-color: var(--logo); /* Destaque no hover */
+  color: var(--terceary);
+}
+
+/* Link Voltar */
+.voltarPaciente {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--terceary);
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  display: block; /* Garantir que o link ocupe uma linha inteira */
+  text-align: center; /* Centraliza o texto */
+}
+
+.voltarPaciente:hover {
+  text-decoration: underline;
+}
+
+.formActions {
+  display: flex;
+  flex-direction: column; /* Empilha os itens */
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 1rem; /* Espaçamento entre os itens */
+  margin-top: 1rem; /* Espaçamento superior */
+}
   
   /* Footer */
   .footerHomeP {
