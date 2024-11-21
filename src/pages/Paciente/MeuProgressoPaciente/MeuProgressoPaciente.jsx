@@ -166,7 +166,7 @@ function MeuProgressoPaciente() {
       </nav>
 
       <main>
-        <h1>Meu Progresso</h1>
+        <h1 className={styles.tituloProgresso}>Meu Progresso</h1>
         <div className={styles.chartContainer}>
           <h2>Massa Magra e Gorda</h2>
           <Line data={massData} options={{ responsive: true }} />
