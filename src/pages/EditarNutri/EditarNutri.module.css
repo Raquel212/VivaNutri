@@ -128,7 +128,7 @@
   display: flex;
   flex-direction: column; /* Campos empilhados */
   gap: 1rem; /* Espaçamento entre os campos */
-  background: var(--primary); /* Fundo suave */
+  background: var(--green); /* Fundo suave */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
