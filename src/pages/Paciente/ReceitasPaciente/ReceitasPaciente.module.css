@@ -118,7 +118,7 @@
     margin-left: 250px;
     padding: 30px;
     transition: margin-left 0.3s ease;
-    background-color: #f9f9f9;
+    /* background-color: var(--primary); */
     min-height: calc(100vh - 70px - 70px); /* Ajuste para altura total menos header e footer */
   }
   
@@ -126,6 +126,8 @@
     font-size: 2rem;
     margin-bottom: 20px;
     color: var(--terceary);
+    text-align: center;
+    font-weight: 600;
   }
   
 
@@ -138,7 +140,7 @@
   }
   
   .receitaCard {
-    background: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+    background: var(--green); /* Fundo branco semitransparente */
     border: 1px solid rgba(0, 0, 0, 0.1); /* Borda sutil */
     border-radius: 8px;
     padding: 16px;
