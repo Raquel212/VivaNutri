@@ -186,7 +186,7 @@ function ChatPsico() {
       </nav>
 
       <main className={styles.mainContent}>
-        <h1>Chat Psicologo</h1>
+        <h1>Chat Psicólogo</h1>
         <div className={styles.chatContainer}>
           <div className={styles.chatHeader}>
             <div className={styles.title}>VivaNutri Chat</div>
