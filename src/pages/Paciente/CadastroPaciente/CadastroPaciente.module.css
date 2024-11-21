@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 1.25rem;
+  /* margin-top: 245px; */
 }
 
 .pacienteFrom {
@@ -41,10 +42,10 @@
   transition: border-color 0.3s ease;
 }
 
-.intPaciente:focus {
+/* .intPaciente:focus {
   border-color: var(--terceary);
   outline: none;
-}
+} */
 
 .btnPaciente {
   width: 100%;
