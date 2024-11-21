@@ -121,6 +121,7 @@ main h1 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: var(--terceary);
+  text-align: center;
 }
 
 /* Receitas Favoritas */
@@ -131,8 +132,8 @@ main h1 {
 }
 
 .recipeCard {
-  background: var(--primary);
-  border: 1px solid var(--primary);
+  background: var(--green);
+  border: 1px solid var(--green);
   border-radius: 8px;
   padding: 20px;
   width: calc(33.333% - 40px); /* Três colunas com espaçamento */
