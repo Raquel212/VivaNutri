@@ -146,7 +146,7 @@ function ConsultaPaciente() {
       </nav>
 
       <main>
-        <h1>Consultas</h1>
+        <h1 className={styles.tituloConsulta}>Consultas</h1>
 
         <div className={styles.consultaSection}>
           <h2>Consultas com Nutricionista</h2>
