@@ -128,7 +128,7 @@
 }
 
 .questionarioCard {
-  background-color: var(--primary); /* Cor de fundo dos cartões */
+  background-color: var(--green); /* Cor de fundo dos cartões */
   padding: 15px;
   border-radius: 8px;
   width: 30%;
