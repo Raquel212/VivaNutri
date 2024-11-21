@@ -9,9 +9,10 @@
     background-color: var(--primary);
     padding: 40px;
     border-radius: 0.5rem;
-    box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.1875rem 0.625rem;
     width: 31.25rem;
     margin: 1.875rem 0;
+    transition: all 0.3s ease;
 }
 
 .tituloPsicologo {
@@ -24,7 +25,7 @@
 .psicologoLabel {
     color: var(--black);
     display: block;
-    margin-bottom: 0.9375rem;
+    margin-bottom: 1rem;
 }
 
 .intPsicologo {
@@ -35,6 +36,7 @@
     border: 0.0625rem solid var(--black);
     border-radius: 0.25rem;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
 .btnPsicologo {
@@ -51,7 +53,7 @@
     font-size: 1.125rem;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .btnPsicologo:hover {
