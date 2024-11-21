@@ -125,8 +125,14 @@ main {
   padding: 20px;
   border: 1px solid var(--green);
   border-radius: 10px;
-  background: var(--primary);
+  background: var(--green);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tituloConsulta{
+  text-align: center;
+  color: var(--terceary);
+  font-weight: 600;
 }
 
 .consultaDetails {
