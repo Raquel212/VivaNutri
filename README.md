@@ -1,5 +1,9 @@
 # VivaNutri
 
+Projeto de TCC - VivaNutri: Seu Bem-Estar Com a Nutrição Personalizada
+
+## **Resumo**
+
 O **VivaNutri** é uma plataforma web projetada para facilitar o acompanhamento nutricional e psicológico de pacientes com transtornos alimentares. A ferramenta conecta pacientes a profissionais da saúde, oferecendo recursos personalizados para registro, análise e acompanhamento do progresso em tempo real.
 
 ---
